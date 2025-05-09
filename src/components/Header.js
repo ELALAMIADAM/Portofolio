@@ -1,4 +1,24 @@
 export function Header() {
+  if (typeof window !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', function () {
+      var indicator = document.querySelector('.scroll-indicator');
+      var skillsSection = document.getElementById('skills');
+      if (indicator && skillsSection) {
+        indicator.style.display = 'none';
+        var observer = new window.IntersectionObserver(
+          function(entries) {
+            if (entries[0].isIntersecting) {
+              indicator.style.display = '';
+            } else {
+              indicator.style.display = 'none';
+            }
+          },
+          { threshold: 0.3 }
+        );
+        observer.observe(skillsSection);
+      }
+    });
+  }
   return `
   <div class="scroll-indicator">
     <div class="up">
@@ -31,4 +51,4 @@ export function Header() {
     </nav>
   </header>
   `;
-} 
+}

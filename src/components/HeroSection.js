@@ -39,10 +39,10 @@ export function HeroSection() {
       <div class="md:w-1/2 w-full mb-10 md:mb-0">
         <p class="text-lg font-semibold mb-2 appear-on-scroll text-white">Hi, my name is</p>
         <h1 class="text-4xl md:text-5xl font-extrabold mb-4 appear-on-scroll text-gradient">ADAM EL ALAMI</h1>
-        <p class="text-xl mb-6 appear-on-scroll text-whitet">Software Developer passionate about building impactful digital experiences.</p>
+        <p class="text-xl mb-6 appear-on-scroll text-white">Software Developer passionate about building impactful digital experiences.</p>
         <div class="flex gap-4 mt-4 appear-on-scroll justify-center md:justify-start">
-          <a href="#contact" class="nav-link font-semibold px-6 py-2 rounded-lg shadow transition-colors text-white bg-gradient-to-r from-yellow-400 to-red-500 border-0">Contact me</a>
-          <a href="#about" class="ml-2 nav-link border font-semibold px-6 py-2 rounded-lg shadow transition-colors text-gradient border-yellow-400">Check Portfolio</a>
+          <a href="#contact" class="font-semibold px-6 py-2 rounded-lg shadow transition-colors text-white bg-gradient-to-r from-yellow-400 to-red-500 border-0 hover:scale-105 focus:scale-105">Contact me</a>
+          <a href="#about" class="ml-2 border font-semibold px-6 py-2 rounded-lg shadow transition-colors text-gradient border-yellow-400 hover:bg-yellow-400 hover:text-black hover:border-yellow-400 focus:bg-yellow-400 focus:text-black focus:border-yellow-400">Check Portfolio</a>
         </div>
       </div>
       <!-- Right: Image Carousel -->
@@ -50,13 +50,13 @@ export function HeroSection() {
         <div id="hero-image-carousel" class="relative w-56 h-56 overflow-hidden">
           <div id="carousel-track" class="flex transition-transform duration-700 w-[28rem] h-full">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4E35AQHpz1WN_3_Pew/profile-framedphoto-shrink_400_400/B4EZYLsiI.HkAg-/0/1743952946019?e=1747422000&v=beta&t=n4MU0HbPXzAkMkJviLBAizNSO3pyERFVQU6gALn3ejc"
-              alt="EL ALAMI ADAM"
+              src="https://lh3.googleusercontent.com/a/ACg8ocL1tViQj3hoHslIEPT0E13-smiBhPNHgf23vvxi74moMCORVkbt=s360-c-no"
+              alt="EL ALAMI ADAM 2"
               class="rounded-2xl w-56 h-56 object-cover border-4 shadow-lg appear-on-scroll border-yellow-400 flex-shrink-0"
             />
             <img
-              src="https://lh3.googleusercontent.com/a/ACg8ocL1tViQj3hoHslIEPT0E13-smiBhPNHgf23vvxi74moMCORVkbt=s360-c-no"
-              alt="EL ALAMI ADAM 2"
+              src="https://media.licdn.com/dms/image/v2/D4E35AQHpz1WN_3_Pew/profile-framedphoto-shrink_400_400/B4EZYLsiI.HkAg-/0/1743952946019?e=1747422000&v=beta&t=n4MU0HbPXzAkMkJviLBAizNSO3pyERFVQU6gALn3ejc"
+              alt="EL ALAMI ADAM"
               class="rounded-2xl w-56 h-56 object-cover border-4 shadow-lg appear-on-scroll border-yellow-400 flex-shrink-0"
             />
           </div>
