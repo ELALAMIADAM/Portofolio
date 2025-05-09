@@ -17,19 +17,16 @@ export function SkillsSection() {
               <div class="flex flex-col space-y-4">
                 <div class="skill-item">
                   <span class="flex items-center px-4 py-2 bg-black rounded-full text-white">
-                    <img src="../public/images/french.png" class="w-5 h-5 mr-2" alt="French">
                     French (Fluent)
                   </span>
                 </div>
                 <div class="skill-item">
                   <span class="flex items-center px-4 py-2 bg-black rounded-full text-white">
-                    <img src="../public/images/english.png" class="w-5 h-5 mr-2" alt="English">
                     English (Fluent)
                   </span>
                 </div>
                 <div class="skill-item">
                   <span class="flex items-center px-4 py-2 bg-black rounded-full text-white">
-                    <img src="../public/images/arabic.png" class="w-5 h-5 mr-2" alt="Arabic">
                     Arabic (Native)
                   </span>
                 </div>
@@ -111,13 +108,12 @@ export function SkillsSection() {
               <div class="flex flex-col space-y-4">
                 <div class="skill-item">
                   <span class="flex items-center px-4 py-2 bg-black rounded-full text-white">
-                    <img src="../public/images/starburst.png" class="w-5 h-5 mr-2" alt="Starburst">
+                    <img src="https://avatars.githubusercontent.com/u/33209422?s=200&v=4" class="w-5 h-5 mr-2" alt="Starburst">
                     Starburst
                   </span>
                 </div>
                 <div class="skill-item">
                   <span class="flex items-center px-4 py-2 bg-black rounded-full text-white">
-                    <img src="../public/images/etl.png" class="w-5 h-5 mr-2" alt="ETL">
                     ETL(Extract, Transform, Load)
                   </span>
                 </div>

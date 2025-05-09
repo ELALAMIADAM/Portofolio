@@ -4,7 +4,6 @@ export function HeroSection() {
     <div class="section-content text-center">
       <p class="rockstar-heading text-gradient appear-on-scroll mb-4">EL ALAMI ADAM</h1>
       <p class="rockstar-subheading appear-on-scroll">Software Developer </p>
-      <p class="text-xl appear-on-scroll">Specializing in Data Pipelines & Backend Systems</p>
       <div class="flex justify-center mt-6 space-x-4 appear-on-scroll">
         <a href="mailto:adamelalami27@gmail.com" class="text-white hover:text-yellow-400 transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
