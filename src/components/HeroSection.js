@@ -26,19 +26,18 @@ export function HeroSection() {
       <div>
         <p class="text-3xl font-extrabold text-gradient">30+</p>
         <p class="text-sm text-white">Repositories</p>
-        <p class="text-sm" style="color:#2188ff;">Repositories</p>
       </div>
       <div>
-        <p class="text-3xl font-extrabold" style="color:#2188ff;">50+</p>
-        <p class="text-sm" style="color:#6e7781;">Followers</p>
+        <p class="text-3xl font-extrabold text-gradient">50+</p>
+        <p class="text-sm text-white">Followers</p>
       </div>
       <div>
-        <p class="text-3xl font-extrabold" style="color:#24292f;">120+</p>
-        <p class="text-sm" style="color:#2da44e;">Stars</p>
+        <p class="text-3xl font-extrabold text-gradient">120+</p>
+        <p class="text-sm text-white">Stars</p>
       </div>
       <div>
-        <p class="text-3xl font-extrabold" style="color:#6e7781;">365</p>
-        <p class="text-sm" style="color:#2188ff;">Contributions (2024)</p>
+        <p class="text-3xl font-extrabold text-gradient">365</p>
+        <p class="text-sm text-white">Contributions (2024)</p>
       </div>
     </div>
     <div class="mt-12 flex justify-center appear-on-scroll">
