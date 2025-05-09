@@ -14,8 +14,10 @@ export function EducationSection() {
           </div>
           <div class="flex-1 text-center md:text-left">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <h3 class="text-xl font-bold text-white">Brest national school of engineering</h3>
-              <span class="text-yellow-400 text-lg mt-2 md:mt-0">Sept. 2023 - Sept. 2025</span>
+              <h3 class="text-xl font-bold text-white">
+                <a href="https://www.enib.fr/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-yellow-400 transition-colors">Brest national school of engineering</a>
+              </h3>
+              <span class="text-yellow-400 text-md mt-2 md:mt-0">Sept. 2023 - Sept. 2025</span>
             </div>
             <p class="text-lg italic text-gray-200 mb-1">Software Engineer's Degree | Brest, FR</p>
           </div>
@@ -30,8 +32,10 @@ export function EducationSection() {
           </div>
           <div class="flex-1 text-center md:text-left">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-              <h3 class="text-xl font-bold text-white">National Higher School of Arts and Crafts</h3>
-              <span class="text-yellow-400 text-lg mt-2 md:mt-0">Sept. 2019 - July 2023</span>
+              <h3 class="text-xl font-bold text-white">
+                <a href="http://www.ensam-umi.ac.ma/" target="_blank" rel="noopener noreferrer" class="hover:underline hover:text-yellow-400 transition-colors">National Higher School of Arts and Crafts</a>
+              </h3>
+              <span class="text-yellow-400 text-md mt-2 md:mt-0">Sept. 2019 - July 2023</span>
             </div>
             <p class="text-lg italic text-gray-200 mb-1">Engineer's Degree | Meknes, MA</p>
           </div>
