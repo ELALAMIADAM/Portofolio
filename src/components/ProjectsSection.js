@@ -1,6 +1,6 @@
 export function ProjectsSection() {
   return `
-  <section id="projects" class="rockstar-section bg-rockstar">
+  <section id="projects" class="rockstar-section bg-rockstar mt-24">
     <div class="section-content">
       <h2 class="rockstar-subheading text-gradient appear-on-scroll">Projects</h2>
       

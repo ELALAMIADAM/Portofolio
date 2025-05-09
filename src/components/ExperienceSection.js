@@ -1,6 +1,20 @@
 export function ExperienceSection() {
+  // Auto-scroll carousel script for ARKEA BANKING SERVICE experience
+  if (typeof window !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', function() {
+      var track = document.getElementById('experience-carousel-track');
+      if (track) {
+        var images = track.children;
+        var current = 0;
+        setInterval(function() {
+          current = (current + 1) % images.length;
+          track.style.transform = 'translateX(-' + (current * 224) + 'px)'; // 224px = 14rem = w-56
+        }, 2000);
+      }
+    });
+  }
   return `
-  <section id="experience" class="rockstar-section bg-rockstar">
+  <section id="experience" class="rockstar-section bg-rockstar mt-24">
     <div class="section-content">
       <h2 class="rockstar-subheading text-gradient appear-on-scroll">Professional Experience</h2>
       
@@ -21,8 +35,19 @@ export function ExperienceSection() {
               </ul>
             </div>
             <div class="rounded-lg overflow-hidden">
-              <div class="bg-gradient-to-r from-blue-900 to-purple-900 h-64 flex items-center justify-center rounded-lg">
-                <p class="text-xl text-white font-bold">Image placeholder: ARKEA Project</p>
+              <div class="h-64 flex items-center justify-center rounded-lg relative">
+                <div id="experience-carousel-track" class="flex transition-transform duration-700 w-[56rem] h-full">
+                  <img
+                    src="https://www.techtarget.com/rms/onlineimages/Oracle_Explain_ability_mobile.jpg"
+                    alt="ARKEA Project 1"
+                    class="object-cover flex-shrink-0 mx-auto"
+                  />
+                  <img
+                    src="https://www.techtarget.com/rms/onlineimages/Oracle_Explain_ability_mobile.jpg"
+                    alt="ARKEA Project 2"
+                    class="object-cover flex-shrink-0 mx-auto"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -54,4 +79,4 @@ export function ExperienceSection() {
     </div>
   </section>
   `;
-} 
+}
