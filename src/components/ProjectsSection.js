@@ -1,8 +1,8 @@
 export function ProjectsSection() {
   return `
-  <section id="projects" class="rockstar-section bg-rockstar mt-24">
+  <section id="projects" class="rockstar-section bg-rockstar mt-24 ">
     <div class="section-content">
-      <h2 class="rockstar-subheading text-gradient appear-on-scroll">Projects</h2>
+      <h2 class="rockstar-subheading text-gradient appear-on-scroll ">Projects</h2>
       
       <div class="grid md:grid-cols-2 gap-12 mt-8">
         <!-- Job Market Analytics Scraper -->

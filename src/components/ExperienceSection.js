@@ -77,6 +77,25 @@ export function ExperienceSection() {
               li.classList.add('hidden');
             }
           });
+          // Logo highlight logic for FREERAY
+          var logo0 = document.getElementById('freeray-logo-0');
+          var logo1 = document.getElementById('freeray-logo-1');
+          var logo2 = document.getElementById('freeray-logo-2');
+          var logo3 = document.getElementById('freeray-logo-3');
+          if (logo0 && logo1 && logo2 && logo3) {
+            [logo0, logo1, logo2, logo3].forEach(function(el) {
+              el.classList.remove('ring-2','ring-purple-400','bg-gradient-to-r','from-purple-700','to-indigo-500','font-bold','scale-105');
+              el.classList.add('border-neutral-700','bg-neutral-900/80','text-white');
+            });
+            if(idx === 0) {
+              logo0.classList.add('ring-2','ring-purple-400','bg-gradient-to-r','from-purple-700','to-indigo-500','font-bold','scale-105');
+            } else if(idx === 1) {
+              logo1.classList.add('ring-2','ring-purple-400','bg-gradient-to-r','from-purple-700','to-indigo-500','font-bold','scale-105');
+            } else if(idx === 2) {
+              logo2.classList.add('ring-2','ring-purple-400','bg-gradient-to-r','from-purple-700','to-indigo-500','font-bold','scale-105');
+              logo3.classList.add('ring-2','ring-purple-400','bg-gradient-to-r','from-purple-700','to-indigo-500','font-bold','scale-105');
+            }
+          }
         }
         function scrollFreerayCarousel() {
           if (freerayPaused) return;
@@ -143,22 +162,22 @@ export function ExperienceSection() {
               </div>
             </div>
           </div>
-          <div class="flex flex-wrap gap-3 mb-4 justify-center" id="experience-logos-row">
-            <span id="exp-logo-0" class="flex items-center gap-2 px-3 py-1 rounded-lg border border-neutral-700 bg-neutral-900/70 text-white text-sm font-medium shadow-sm transition-all">
-              <img src="src/images/oracle.png" alt="oracle.js" class="h-5 w-5 object-contain" /> Oracle Analytics
+          <div class="flex flex-wrap gap-4 mb-6 mt-4 justify-center" id="experience-logos-row">
+            <span id="exp-logo-0" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/oracle.png" alt="Oracle Analytics" class="h-6 w-6 object-contain" /> Oracle Analytics
             </span>
-            <span id="exp-logo-1" class="flex items-center gap-2 px-3 py-1 rounded-lg border border-neutral-700 bg-neutral-900/70 text-white text-sm font-medium shadow-sm transition-all">
-              <img src="src/images/tailwind.png" alt="TailwindCSS" class="h-5 w-5 object-contain" /> TailwindCSS
+            <span id="exp-logo-1" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/tailwind.png" alt="TailwindCSS" class="h-6 w-6 object-contain" /> TailwindCSS
             </span>
-            <span id="exp-logo-2" class="flex items-center gap-2 px-3 py-1 rounded-lg border border-neutral-700 bg-neutral-900/70 text-white text-sm font-medium shadow-sm transition-all">
-              <img src="src/images/nextjs.png" alt="Next.js" class="h-5 w-5 object-contain" /> Next.js
+            <span id="exp-logo-2" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/nextjs.png" alt="Next.js" class="h-6 w-6 object-contain" /> Next.js
             </span>
-            <span id="exp-logo-3" class="flex items-center gap-2 px-3 py-1 rounded-lg border border-neutral-700 bg-neutral-900/70 text-white text-sm font-medium shadow-sm transition-all">
-              <img src="src/images/prisma.png" alt="Prisma" class="h-5 w-5 object-contain" /> Prisma
+            <span id="exp-logo-3" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/prisma.png" alt="Prisma" class="h-6 w-6 object-contain" /> Prisma
             </span>
           </div>
           <div class="flex justify-center mt-2">
-            <a href="#" class="px-6 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-400 text-white font-semibold shadow hover:scale-105 transition-transform">Rapport de Stage</a>
+            <a href="#" class="px-6 py-2 rounded-lg bg-gradient-to-r from-red-600 to-yellow-400 text-white font-semibold shadow hover:scale-105 transition-transform">Rapport de Stage</a>
           </div>
         </div>
         
@@ -198,18 +217,18 @@ export function ExperienceSection() {
               </div>
             </div>
           </div>
-          <div class="flex gap-4 mb-4 justify-center">
-            <span class="h-14 w-14 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-indigo-400">
-              <img src="./public/Images/react.png" alt="React.js" class="h-8 w-8 object-contain" title="React.js" />
+          <div class="flex flex-wrap gap-4 mb-6 mt-4 justify-center" id="freeray-logos-row">
+            <span id="freeray-logo-0" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/react.png" alt="React.js" class="h-6 w-6 object-contain" /> React
             </span>
-            <span class="h-14 w-14 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-indigo-400">
-              <img src="./public/Images/node.png" alt="Node.js" class="h-8 w-8 object-contain" title="Node.js" />
+            <span id="freeray-logo-1" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/node.png" alt="Node.js" class="h-6 w-6 object-contain" /> Node.js
             </span>
-            <span class="h-14 w-14 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-indigo-400">
-              <img src="./public/Images/mysql.png" alt="MySQL" class="h-8 w-8 object-contain" title="MySQL" />
+            <span id="freeray-logo-2" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/mysql.png" alt="MySQL" class="h-6 w-6 object-contain" /> MySQL
             </span>
-            <span class="h-14 w-14 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-600 to-indigo-400">
-              <img src="./public/Images/tcpip.png" alt="TCP/IP" class="h-8 w-8 object-contain" title="TCP/IP" />
+            <span id="freeray-logo-3" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/tcpip.png" alt="TCP/IP" class="h-6 w-6 object-contain" /> TCP/IP
             </span>
           </div>
           <div class="flex justify-center mt-2">
