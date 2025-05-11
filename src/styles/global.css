@@ -199,70 +199,6 @@ header.scrolled {
   animation: colorLoop 12s ease infinite;
 }
 
-/* About Section Styles */
-.about-container {
-  display: grid;
-  gap: 1.5rem;
-  max-width: 100%;
-}
-
-.about-main-text {
-  font-size: clamp(1rem, 3vw + 1rem, 2rem);
-  font-weight: 600;
-  background: radial-gradient(
-    50% 100% at 50% 100%, 
-    hsl(var(--accent, 10) 90% 95%), 
-    hsl(var(--accent, 10) 90% 50%), 
-    transparent 50%
-  );
-  background-size: 400% 600%;
-  -webkit-background-clip: text;
-  background-position: 50% 0;
-  color: transparent;
-  opacity: 0;
-  animation: move-bg both linear, fade-in both linear;
-  animation-timeline: scroll(root);
-  animation-range: 0 100vh, 40vh 100vh;
-}
-
-.about-secondary-text {
-  margin: 0;
-  font-size: clamp(1rem, 0.75vw + 1rem, 1.25rem);
-  opacity: 0;
-  animation: fade-in both linear;
-  animation-timeline: scroll(root);
-  animation-range: 75vh 90vh;
-  --opacity: 0.65;
-}
-
-.actions {
-  display: flex;
-  gap: 6ch;
-  flex-wrap: wrap;
-}
-
-.about-link {
-  display: flex;
-  gap: 1ch;
-  align-items: center;
-  color: hsl(0 0% 98%);
-  text-decoration-line: none;
-  opacity: 0;
-  animation: fade-in both linear;
-  animation-timeline: scroll(root);
-  animation-range: 75vh 90vh;
-}
-
-.about-link:is(:hover, :focus-visible) {
-  text-decoration-line: underline;
-  text-decoration-thickness: 0.4ch;
-  text-underline-offset: 0.5ch;
-}
-
-.about-link svg {
-  width: 24px;
-  stroke-width: 2;
-}
 
 @keyframes fade-in {
   to {
@@ -358,7 +294,7 @@ header.scrolled {
 }
 
 .gradient-card-header {
-  background: linear-gradient(90deg, var(--indigo-8), var(--red-6));
+  background: linear-gradient(90deg, var(--indigo-8), var(--purple-8));
   position: relative;
   overflow: hidden;
 }
@@ -423,7 +359,7 @@ header.scrolled {
 .skills-prev,
 .skills-next,
 .slider-prev,
-slider-next {
+.slider-next {
   opacity: 0.3;
   transition: opacity 0.3s ease, background-color 0.3s ease;
 }
@@ -508,4 +444,4 @@ slider-next {
     opacity: 1;
     transform: translateY(0);
   }
-}
+} 

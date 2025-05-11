@@ -33,16 +33,16 @@ export function HeroSection() {
     });
   }
   return `
-  <section id="home" class="rockstar-section bg-black py-16">
-    <div class="section-content max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between text-center md:text-left">
+  <section id="home" class="rockstar-section bg-black py-16 ">
+    <div class="section-content max-w-5xl mx-auto mt-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
       <!-- Left: Description -->
       <div class="md:w-1/2 w-full mb-10 md:mb-0">
         <p class="text-lg font-semibold mb-2 appear-on-scroll text-white">Hi, my name is</p>
         <h1 class="text-4xl md:text-5xl font-extrabold mb-4 appear-on-scroll text-gradient">ADAM EL ALAMI</h1>
         <p class="text-xl mb-6 appear-on-scroll text-white">Software Developer passionate about building impactful digital experiences.</p>
         <div class="flex gap-4 mt-4 appear-on-scroll justify-center md:justify-start">
-          <a href="#contact" class="font-semibold px-6 py-2 rounded-lg shadow transition-colors text-white bg-gradient-to-r from-yellow-400 to-red-500 border-0 hover:scale-105 focus:scale-105">Contact me</a>
-          <a href="#about" class="ml-2 border font-semibold px-6 py-2 rounded-lg shadow transition-colors text-gradient border-yellow-400 hover:bg-yellow-400 hover:text-black hover:border-yellow-400 focus:bg-yellow-400 focus:text-black focus:border-yellow-400">Check Portfolio</a>
+          <a href="#contact" class="font-semibold px-6 py-2 rounded-lg shadow transition-colors text-white bg-gradient-to-r from-yellow-400 to-red-500 border-0 hover:scale-105 focus:scale-105 ">Contact me</a>
+          <a href="#about" class="ml-2 border font-semibold px-6 py-2 rounded-lg shadow transition-colors text-gradient border-yellow-400 hover:bg-yellow-400 hover:scale-105 hover:border-yellow-400 focus:bg-yellow-400 focus:text-black focus:border-yellow-400">Check Portfolio</a>
         </div>
       </div>
       <!-- Right: Image Carousel -->
@@ -66,19 +66,19 @@ export function HeroSection() {
     <!-- Stats Row -->
     <div class="max-w-3xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center bg-black bg-opacity-40 rounded-xl py-6 px-4 appear-on-scroll">
       <div>
-        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="30">0</p>
+        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="20">0</p>
         <p class="text-sm text-white">Repositories</p>
       </div>
       <div>
         <p class="text-3xl font-extrabold text-gradient stat-number" data-target="50">0</p>
-        <p class="text-sm text-white">Followers</p>
+        <p class="text-sm text-white">Technologies Mastered</p>
       </div>
       <div>
-        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="2">0</p>
+        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="10">0</p>
         <p class="text-sm text-white">Projects</p>
       </div>
       <div>
-        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="1">0</p>
+        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="2">0</p>
         <p class="text-sm text-white">Years of Experience</p>
       </div>
     </div>
