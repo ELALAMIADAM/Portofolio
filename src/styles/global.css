@@ -2,26 +2,26 @@
 @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
 
-:root {
+/* :root {
   --accent: 310;
   accent-color: hsl(var(--accent) 90% 60%);
   --col-one: #312d3c;
   --col-two: #1d1e22;
   --col-three: #f4f4f4;
-}
+} */
 
-html {
+/* html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
-}
+} */
 
-body {
+/* body {
   @apply bg-black text-white;
   overflow-x: hidden;
   line-height: 1.5;
-}
+} */
 
 /* Smooth Scrolling Header Styles */
 .smooth-header {
@@ -358,7 +358,7 @@ header.scrolled {
 }
 
 .gradient-card-header {
-  background: linear-gradient(90deg, var(--indigo-8), var(--purple-8));
+  background: linear-gradient(90deg, var(--indigo-8), var(--red-6));
   position: relative;
   overflow: hidden;
 }
@@ -423,7 +423,7 @@ header.scrolled {
 .skills-prev,
 .skills-next,
 .slider-prev,
-.slider-next {
+slider-next {
   opacity: 0.3;
   transition: opacity 0.3s ease, background-color 0.3s ease;
 }
@@ -508,4 +508,4 @@ header.scrolled {
     opacity: 1;
     transform: translateY(0);
   }
-} 
+}

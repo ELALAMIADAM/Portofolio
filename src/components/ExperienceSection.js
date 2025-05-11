@@ -120,9 +120,9 @@ export function ExperienceSection() {
     });
   }
   return `
-  <section id="experience" class="rockstar-section bg-rockstar mt-24">
+  <section id="experience" class="rockstar-section bg-rockstar bg-cover bg-center bg-no-repeat">
     <div class="section-content">
-      <h2 class="rockstar-subheading text-gradient appear-on-scroll">Professional Experience</h2>
+      <h2 class="rockstar-subheading text-gradient appear-on-scroll mt-32">Professional Experience</h2>
       
       <div class="space-y-24">
         <!-- Data Analyst at ARKEA BANKING SERVICE -->

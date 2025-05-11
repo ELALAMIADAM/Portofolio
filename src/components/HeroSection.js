@@ -50,12 +50,12 @@ export function HeroSection() {
         <div id="hero-image-carousel" class="relative w-56 h-56 overflow-hidden">
           <div id="carousel-track" class="flex transition-transform duration-700 w-[28rem] h-full">
             <img
-              src="https://lh3.googleusercontent.com/a/ACg8ocL1tViQj3hoHslIEPT0E13-smiBhPNHgf23vvxi74moMCORVkbt=s360-c-no"
+              src="src/images/adam.jpg"
               alt="EL ALAMI ADAM 2"
               class="rounded-2xl w-56 h-56 object-cover border-4 shadow-lg appear-on-scroll border-yellow-400 flex-shrink-0"
             />
             <img
-              src="https://media.licdn.com/dms/image/v2/D4E35AQHpz1WN_3_Pew/profile-framedphoto-shrink_400_400/B4EZYLsiI.HkAg-/0/1743952946019?e=1747422000&v=beta&t=n4MU0HbPXzAkMkJviLBAizNSO3pyERFVQU6gALn3ejc"
+              src="src/images/adamm.png"
               alt="EL ALAMI ADAM"
               class="rounded-2xl w-56 h-56 object-cover border-4 shadow-lg appear-on-scroll border-yellow-400 flex-shrink-0"
             />

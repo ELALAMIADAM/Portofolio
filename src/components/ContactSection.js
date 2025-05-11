@@ -1,30 +1,27 @@
 export function ContactSection() {
   return `
-  <section id="contact" class="rockstar-section bg-rockstar">
-    <div class="section-content text-center">
-      <h2 class="rockstar-subheading text-gradient appear-on-scroll">Get In Touch</h2>
-      <p class="text-xl mb-8 appear-on-scroll">Let's connect and discuss how we can work together!</p>
-      
-      <div class="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
-        <a href="mailto:adamelalami27@gmail.com" class="appear-on-scroll bg-white bg-opacity-10 hover:bg-opacity-20 p-6 rounded-lg transition-all">
-          <div class="text-3xl mb-2">📧</div>
-          <h3 class="text-xl font-bold">Email</h3>
-          <p class="text-sm text-gray-300">adamelalami27@gmail.com</p>
-        </a>
-        
-        <a href="tel:+33780542575" class="appear-on-scroll bg-white bg-opacity-10 hover:bg-opacity-20 p-6 rounded-lg transition-all">
-          <div class="text-3xl mb-2">📱</div>
-          <h3 class="text-xl font-bold">Phone</h3>
-          <p class="text-sm text-gray-300">+33 7 80 54 25 75</p>
-        </a>
-        
-        <a href="https://www.linkedin.com/in/adam-el-alami-502170215/" target="_blank" class="appear-on-scroll bg-white bg-opacity-10 hover:bg-opacity-20 p-6 rounded-lg transition-all">
-          <div class="text-3xl mb-2">🔗</div>
-          <h3 class="text-xl font-bold">LinkedIn</h3>
-          <p class="text-sm text-gray-300">adam-el-alami-502170215</p>
-        </a>
-      </div>
+  <section id="contact" class="rockstar-section bg-rockstar ">
+    <div class="section-content max-w-4xl mx-auto">
+      <h2 class="text-4xl font-extrabold text-white mb-2 text-left mt-24">Contact <span class="text-gradient">me.</span></h2>
+      <p class="text-lg md:text-xl text-white/80 mb-8 text-left font-mono">I'm always eager to explore new opportunities and take on exciting projects. If you have a project in mind, or just want to say hi, feel free to send me a message.</p>
+      <form class="bg-transparent border border-neutral-800 rounded-xl p-8 space-y-6" autocomplete="off">
+        <div class="md:flex md:space-x-6 space-y-6 md:space-y-0">
+          <div class="flex-1">
+            <label for="name" class="block font-bold text-white mb-2 font-mono">Name<span class="text-red-500">*</span></label>
+            <input id="name" name="name" type="text" placeholder="Your Name" class="w-full px-5 py-3 rounded-lg bg-transparent border border-neutral-700 text-white font-mono focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder:text-neutral-500" required />
+          </div>
+          <div class="flex-1">
+            <label for="email" class="block font-bold text-white mb-2 font-mono">Email<span class="text-red-500">*</span></label>
+            <input id="email" name="email" type="email" placeholder="john@doe.com" class="w-full px-5 py-3 rounded-lg bg-transparent border border-neutral-700 text-white font-mono focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder:text-neutral-500" required />
+          </div>
+        </div>
+        <div>
+          <label for="message" class="block font-bold text-white mb-2 font-mono">Message<span class="text-red-500">*</span></label>
+          <textarea id="message" name="message" rows="5" placeholder="Hello there, I would like to ask you about..." class="w-full px-5 py-3 rounded-lg bg-transparent border border-neutral-700 text-white font-mono focus:outline-none focus:ring-2 focus:ring-orange-400 placeholder:text-neutral-500" required></textarea>
+        </div>
+        <button type="submit" class="px-8 py-3 rounded-lg bg-gradient-to-r from-orange-500 to-yellow-400 text-white font-bold text-lg shadow hover:scale-105 transition-transform tracking-wide font-mono">Send Message</button>
+      </form>
     </div>
   </section>
   `;
-} 
+}

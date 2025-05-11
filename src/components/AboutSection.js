@@ -2,7 +2,7 @@ export function AboutSection() {
   return `
   <section id="about" class="rockstar-section bg-rockstar">
     <div class="section-content">
-      <h2 class="rockstar-subheading text-gradient appear-on-scroll">About Me</h2>
+      <h2 class="rockstar-subheading text-gradient appear-on-scroll mb-12">About Me</h2>
       
       <div class="about-container">
         <p class="about-main-text text-gradient">
