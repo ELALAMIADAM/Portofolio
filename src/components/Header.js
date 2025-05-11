@@ -52,8 +52,8 @@ export function Header() {
           <span class="color-loop-text text-white">EL ALAMI Adam</span>
         </div>
       </div>
-      <ul class="nav-links">
-        <li><a href="#home" class="nav-link">Home</a></li>
+      <ul class="nav-links ">
+        <li><a href="#home" class="nav-link ">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>

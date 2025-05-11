@@ -19,16 +19,16 @@ export function AboutSection() {
     <div class="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
       <!-- Left: Text -->
       <div class="flex-1">
-        <div class="uppercase tracking-widest text-sm text-gray-400 font-semibold mb-2">Know About Me</div>
+        <div class="uppercase tracking-widest text-sm text-gray-400 font-semibold mt-12">Know About Me</div>
         <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight text-white drop-shadow-lg">
           Software Engineer and a little bit of<br/>
           <span class="inline-block"> <span class="bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent font-bold">everything</span></span>
         </h2>
         <div class="space-y-6 text-white/90">
           <p class="about-paragraph text-lg leading-relaxed">
-I'm a software engineer passionate about building efficient systems and solving complex problems. With expertise in backend development and data engineering, I enjoy working with Python, Java, and JavaScript to create scalable solutions.           </p>
+            I'm a software engineer passionate about building efficient systems and solving complex problems. With expertise in backend development and data engineering, I enjoy working with Python, Java, and JavaScript to create scalable solutions.           </p>
           <p class="about-paragraph text-lg leading-relaxed">
-A lifelong learner at heart, I thrive in dynamic environments where I can grow my skills while delivering impactful results. Fluent in French, English, and Arabic, I bring both technical rigor and a global perspective to every challenge.          </p>
+            A lifelong learner at heart, I thrive in dynamic environments where I can grow my skills while delivering impactful results. Fluent in French, English, and Arabic, I bring both technical rigor and a global perspective to every challenge.          </p>
 
           <p class="about-paragraph text-lg leading-relaxed font-semibold">
             Let's connect and explore the possibilities of technology together!

@@ -2,7 +2,7 @@ export function ProjectsSection() {
   return `
   <section id="projects" class="rockstar-section bg-rockstar ">
     <div class="section-content">
-      <h2 class="rockstar-subheading text-gradient appear-on-scroll mt-32">Projects</h2>
+      <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-[#f5cb5c] via-[#e63946] to-[#4cc9f0] bg-clip-text text-transparent text-center mt-32">Projects</h2>
       
       <div class="grid md:grid-cols-2 gap-12 mt-8 mb-20">
         <!-- Timesheet Management App (inspired card) -->
