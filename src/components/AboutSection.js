@@ -46,7 +46,7 @@ export function AboutSection() {
                 class="absolute inset-0 w-full h-full object-contain transition-opacity duration-500 group-hover:opacity-0"
               />
               <img
-                src="src/images/adam.jpg"
+                src="src/images/IMG_20250330_215752_781.webp"
                 alt="Adam"
                 class="absolute inset-0 w-full h-full object-cover rounded-full opacity-0 transition-opacity duration-500 group-hover:opacity-100"
               />
