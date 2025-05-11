@@ -20,16 +20,39 @@ export function HeroSection() {
         const target = parseInt(el.getAttribute('data-target'), 10);
         animateStat(el, target);
       });
-      // Image carousel logic
-      var track = document.getElementById('carousel-track');
-      if (track) {
-        var images = track.children;
-        var current = 0;
-        setInterval(function() {
-          current = (current + 1) % images.length;
-          track.style.transform = 'translateX(-' + (current * 224) + 'px)'; // 224px = 14rem = w-56
-        }, 2000);
-      }
+      // Card-stack auto-cycling logic with animation
+      const images = [
+        "src/images/adam.jpg",
+        "src/images/adamm.png",
+        "src/images/adammm.jpg",
+      ];
+      let current = 0;
+      setInterval(() => {
+        current = (current + 1) % images.length;
+        const left = document.getElementById('hero-img-left');
+        const right = document.getElementById('hero-img-right');
+        const main = document.getElementById('hero-img-main');
+        const leftIdx = (current - 1 + images.length) % images.length;
+        const rightIdx = (current + 1) % images.length;
+        if (left) {
+          left.src = images[leftIdx];
+          left.classList.remove('hero-img-animate');
+          void left.offsetWidth;
+          left.classList.add('hero-img-animate');
+        }
+        if (main) {
+          main.src = images[current];
+          main.classList.remove('hero-img-animate');
+          void main.offsetWidth;
+          main.classList.add('hero-img-animate');
+        }
+        if (right) {
+          right.src = images[rightIdx];
+          right.classList.remove('hero-img-animate');
+          void right.offsetWidth;
+          right.classList.add('hero-img-animate');
+        }
+      }, 2500);
     });
   }
   return `
@@ -45,21 +68,32 @@ export function HeroSection() {
           <a href="#about" class="ml-2 border font-semibold px-6 py-2 rounded-lg shadow transition-colors text-gradient border-yellow-400 hover:bg-yellow-400 hover:scale-105 hover:border-yellow-400 focus:bg-yellow-400 focus:text-black focus:border-yellow-400">Check Portfolio</a>
         </div>
       </div>
-      <!-- Right: Image Carousel -->
+      <!-- Right: Image Card Stack -->
       <div class="md:w-1/2 w-full flex justify-center md:justify-end">
-        <div id="hero-image-carousel" class="relative w-56 h-56 overflow-hidden">
-          <div id="carousel-track" class="flex transition-transform duration-700 w-[28rem] h-full">
-            <img
-              src="src/images/adam.jpg"
-              alt="EL ALAMI ADAM 2"
-              class="rounded-2xl w-56 h-56 object-cover border-4 shadow-lg appear-on-scroll border-yellow-400 flex-shrink-0"
-            />
-            <img
-              src="src/images/adamm.png"
-              alt="EL ALAMI ADAM"
-              class="rounded-2xl w-56 h-56 object-cover border-4 shadow-lg appear-on-scroll border-yellow-400 flex-shrink-0"
-            />
-          </div>
+        <div class="relative w-64 h-80 flex items-center justify-center">
+          <!-- Left blurred image -->
+          <img
+            id="hero-img-left"
+            src="src/images/adam.jpg"
+            alt="Adam"
+            class="absolute left-0 top-4 w-56 h-72 object-cover rounded-3xl opacity-40 blur-sm scale-90 z-0"
+            style="transform: translateX(-40px) rotate(-8deg);"
+          />
+          <!-- Right blurred image -->
+          <img
+            id="hero-img-right"
+            src="src/images/adamm.png"
+            alt="Adam"
+            class="absolute right-0 top-4 w-56 h-72 object-cover rounded-3xl opacity-40 blur-sm scale-90 z-0"
+            style="transform: translateX(40px) rotate(8deg);"
+          />
+          <!-- Main image -->
+          <img
+            id="hero-img-main"
+            src="src/images/adammm.jpg"
+            alt="Adam"
+            class="relative w-64 h-80 object-cover rounded-3xl shadow-2xl z-10 transition-transform duration-500"
+          />
         </div>
       </div>
     </div>

@@ -444,4 +444,31 @@ header.scrolled {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* About Section Animations */
+.about-paragraph {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 1s ease;
+}
+
+.about-paragraph.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero image fade-in animation */
+.hero-img-animate {
+  animation: heroImgFadeIn 0.7s;
+}
+@keyframes heroImgFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 } 
