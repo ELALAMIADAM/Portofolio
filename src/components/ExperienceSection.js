@@ -23,20 +23,27 @@ export function ExperienceSection() {
           var logo1 = document.getElementById('exp-logo-1');
           var logo2 = document.getElementById('exp-logo-2');
           var logo3 = document.getElementById('exp-logo-3');
-          if (logo0 && logo1 && logo2 && logo3) {
+          var logo4 = document.getElementById('exp-logo-4');
+          var logo5 = document.getElementById('exp-logo-5');
+          if (logo0 && logo1 && logo2 && logo3 && logo4 && logo5) {
             // Reset all
-            [logo0, logo1, logo2, logo3].forEach(function(el) {
-              el.classList.remove('ring-2','ring-purple-400','bg-gradient-to-r','from-purple-700','to-indigo-500','text-white','font-bold','scale-105');
+            [logo0, logo1, logo2, logo3, logo4, logo5].forEach(function(el) {
+              el.classList.remove('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','text-white','font-bold','scale-105');
               el.classList.add('border-neutral-700','bg-neutral-900/70','text-white');
             });
             if(idx === 0) {
-              logo0.classList.add('ring-2','ring-purple-400','bg-gradient-to-r','from-purple-700','to-indigo-500','font-bold','scale-105');
-              logo3.classList.add('ring-2','ring-purple-400','bg-gradient-to-r','from-purple-700','to-indigo-500','font-bold','scale-105');
+              logo0.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
+              logo3.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
             } else if(idx === 1) {
-              logo1.classList.add('ring-2','ring-purple-400','bg-gradient-to-r','from-purple-700','to-indigo-500','font-bold','scale-105');
+              logo1.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
             } else if(idx === 2) {
-              logo2.classList.add('ring-2','ring-purple-400','bg-gradient-to-r','from-purple-700','to-indigo-500','font-bold','scale-105');
-            }
+              logo2.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
+              logo4.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');            
+            } else if(idx === 3) {
+              logo3.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
+              logo5.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
+            
+            } 
           }
         }
         function scrollCarousel() {
@@ -134,17 +141,17 @@ export function ExperienceSection() {
           </div>
           <div class="mt-8 grid md:grid-cols-2 gap-8">
             <div>
-              <ul class="list-disc pl-5 space-y-3">
-                <li class="experience-arkeabs-desc" data-index="0">Designed and implemented dynamic Oracle Analytics Cloud dashboards by first analyzing client workflows and pain points, then structuring data models for intuitive self-service analytics.</li>
-                <li class="experience-arkeabs-desc hidden" data-index="1">Built scalable data pipelines to ingest and transform multi-source data into lakehouse formats, enhancing data accessibility and processing speed for analytics teams.</li>
-                <li class="experience-arkeabs-desc hidden" data-index="2">Developed a Python-based conversion tool to transform legacy Hadoop PIG scripts into optimized Starburst-compatible SQL, preserving business logic and partitioning schemes.</li>
-              </ul>
+              
+                <p class="experience-arkeabs-desc" data-index="0">Designed and implemented dynamic Oracle Analytics Cloud dashboards by first analyzing client workflows and pain points, then structuring data models for intuitive self-service analytics.</li>
+                <p class="experience-arkeabs-desc hidden" data-index="1">Built scalable data pipelines to ingest and transform multi-source data into lakehouse formats, enhancing data accessibility and processing speed for analytics teams.</li>
+                <p class="experience-arkeabs-desc hidden" data-index="2">Developed a Python-based conversion tool to transform legacy Hadoop PIG scripts into optimized Starburst-compatible SQL, preserving business logic and partitioning schemes.</li>
+              
             </div>
             <div class="rounded-lg overflow-hidden">
               <div class="h-64 flex items-center justify-center rounded-lg relative">
                 <div id="experience-carousel-track" class="flex transition-transform duration-700 w-[56rem] h-full">
                   <img
-                    src="https://www.techtarget.com/rms/onlineimages/Oracle_Explain_ability_mobile.jpg"
+                    src="src/images/viz.png"
                     alt="ARKEA Project 1"
                     class="object-cover flex-shrink-0 mx-auto"
                   />
@@ -166,18 +173,26 @@ export function ExperienceSection() {
             <span id="exp-logo-0" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
               <img src="src/images/oracle.png" alt="Oracle Analytics" class="h-6 w-6 object-contain" /> Oracle Analytics
             </span>
+            <span id="exp-logo-3" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/sql.png" alt="SQL" class="h-6 w-6 object-contain" /> SQL
+            </span>
             <span id="exp-logo-1" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="src/images/tailwind.png" alt="TailwindCSS" class="h-6 w-6 object-contain" /> TailwindCSS
+              <img src="src/images/etl.png" alt="ETL" class="h-6 w-6 object-contain" /> ETL
             </span>
             <span id="exp-logo-2" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="src/images/nextjs.png" alt="Next.js" class="h-6 w-6 object-contain" /> Next.js
+              <img src="src/images/python.png" alt="python" class="h-6 w-6 object-contain" /> Python
             </span>
-            <span id="exp-logo-3" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="src/images/prisma.png" alt="Prisma" class="h-6 w-6 object-contain" /> Prisma
+            <span id="exp-logo-4" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/pig.png" alt="PIG Latin" class="h-6 w-6 object-contain" /> PIG Latin
             </span>
+            <span id="exp-logo-5" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/80 text-white text-base font-medium shadow transition-all duration-200">
+              <img src="src/images/python.png" alt="python" class="h-6 w-6 object-contain" /> Python
+            </span>
+            
+
           </div>
           <div class="flex justify-center mt-2">
-            <a href="#" class="px-6 py-2 rounded-lg bg-gradient-to-r from-red-600 to-yellow-400 text-white font-semibold shadow hover:scale-105 transition-transform">Rapport de Stage</a>
+              <a href="#" class="px-6 py-2 rounded-lg bg-gradient-to-r from-red-600 to-yellow-400 text-white font-semibold shadow hover:scale-105 transition-transform">Rapport de Stage</a>
           </div>
         </div>
         
@@ -232,7 +247,7 @@ export function ExperienceSection() {
             </span>
           </div>
           <div class="flex justify-center mt-2">
-            <a href="#" class="px-6 py-2 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-400 text-white font-semibold shadow hover:scale-105 transition-transform">Rapport de Stage</a>
+            <a href="#" class="px-6 py-2 rounded-lg bg-gradient-to-r from-red-600 to-orange-400 text-white font-semibold shadow hover:scale-105 transition-transform">Rapport de Stage</a>
           </div>
         </div>
       </div>
