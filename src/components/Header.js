@@ -17,6 +17,23 @@ export function Header() {
         );
         observer.observe(skillsSection);
       }
+
+      // // Language selector functionality
+      // const langButton = document.getElementById('lang-button');
+      // const langDropdown = document.getElementById('lang-dropdown');
+      
+      // if (langButton && langDropdown) {
+      //   langButton.addEventListener('click', () => {
+      //     langDropdown.classList.toggle('hidden');
+      //   });
+
+      //   // Close dropdown when clicking outside
+      //   document.addEventListener('click', (e) => {
+      //     if (!langButton.contains(e.target) && !langDropdown.contains(e.target)) {
+      //       langDropdown.classList.add('hidden');
+      //     }
+      //   });
+      // }
     });
   }
   return `
@@ -47,13 +64,40 @@ export function Header() {
 
   <header class="smooth-header fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300">
     <nav>
-      <div class="flex items-center">
+      <div class="flex items-center justify-between px-6 py-4">
         <div id="header-name" class="text-2xl font-bold opacity-0 transform translate-y-2 transition-all duration-1000">
           <span class="color-loop-text text-white">EL ALAMI Adam</span>
         </div>
+        
+        <!-- Language Selector -->
+        <div class="relative">
+          <button id="lang-button" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-900/80 text-white hover:bg-neutral-800 transition-colors border border-neutral-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span>EN</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </button>
+          
+          <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-neutral-900 rounded-lg shadow-lg border border-neutral-700 overflow-hidden">
+            <button class="w-full px-4 py-2 text-left text-white hover:bg-neutral-800 transition-colors flex items-center gap-2">
+              <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-4 h-3 object-cover"/>
+              English
+            </button>
+            <button class="w-full px-4 py-2 text-left text-white hover:bg-neutral-800 transition-colors flex items-center gap-2">
+              <img src="https://flagcdn.com/w20/fr.png" alt="Français" class="w-4 h-3 object-cover"/>
+              Français
+            </button>
+          </div>
+        </div>
       </div>
-      <ul class="nav-links ">
-        <li><a href="#home" class="nav-link ">Home</a></li>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#education" class="nav-link">Education</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
