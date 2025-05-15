@@ -157,7 +157,7 @@
       transition: transform 0.3s ease;
     }
   </style>
-  `}function HeroSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function o(r,e){let t=0;const s=Math.ceil(e/1e4),n=()=>{t+=s,t>=e?r.textContent=e+(e===365?"":"+"):(r.textContent=t,requestAnimationFrame(n))};n()}document.querySelectorAll(".stat-number").forEach(r=>{const e=parseInt(r.getAttribute("data-target"),10);o(r,e)});const a=["src/images/adam.jpg","src/images/adamm.png","src/images/adammm.jpg"];let l=0;setInterval(()=>{l=(l+1)%a.length;const r=document.getElementById("hero-img-left"),e=document.getElementById("hero-img-right"),t=document.getElementById("hero-img-main"),s=(l-1+a.length)%a.length,n=(l+1)%a.length;r&&(r.src=a[s],r.classList.remove("hero-img-animate"),r.offsetWidth,r.classList.add("hero-img-animate")),t&&(t.src=a[l],t.classList.remove("hero-img-animate"),t.offsetWidth,t.classList.add("hero-img-animate")),e&&(e.src=a[n],e.classList.remove("hero-img-animate"),e.offsetWidth,e.classList.add("hero-img-animate"))},2500)}),`
+  `}function HeroSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function o(r,e){let t=0;const s=Math.ceil(e/1e4),n=()=>{t+=s,t>=e?r.textContent=e+(e===365?"":"+"):(r.textContent=t,requestAnimationFrame(n))};n()}document.querySelectorAll(".stat-number").forEach(r=>{const e=parseInt(r.getAttribute("data-target"),10);o(r,e)});const a=["/profile/images/adam.jpg","/profile/images/adamm.png","/profile/images/adammm.jpg"];let l=0;setInterval(()=>{l=(l+1)%a.length;const r=document.getElementById("hero-img-left"),e=document.getElementById("hero-img-right"),t=document.getElementById("hero-img-main"),s=(l-1+a.length)%a.length,n=(l+1)%a.length;r&&(r.src=a[s],r.classList.remove("hero-img-animate"),r.offsetWidth,r.classList.add("hero-img-animate")),t&&(t.src=a[l],t.classList.remove("hero-img-animate"),t.offsetWidth,t.classList.add("hero-img-animate")),e&&(e.src=a[n],e.classList.remove("hero-img-animate"),e.offsetWidth,e.classList.add("hero-img-animate"))},2500)}),`
   <section id="home" class="rockstar-section bg-black py-16 ">
     <div class="section-content max-w-5xl mx-auto mt-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
       <!-- Left: Description -->
@@ -176,7 +176,7 @@
           <!-- Left blurred image -->
           <img
             id="hero-img-left"
-            src="src/images/adam.jpg"
+            src="/profile/images/adam.jpg"
             alt="Adam"
             class="absolute left-0 top-4 w-56 h-72 object-cover rounded-3xl opacity-40 blur-sm scale-90 z-0"
             style="transform: translateX(-40px) rotate(-8deg);"
@@ -184,7 +184,7 @@
           <!-- Right blurred image -->
           <img
             id="hero-img-right"
-            src="src/images/adamm.png"
+            src="/profile/images/adamm.png"
             alt="Adam"
             class="absolute right-0 top-4 w-56 h-72 object-cover rounded-3xl opacity-40 blur-sm scale-90 z-0"
             style="transform: translateX(40px) rotate(8deg);"
@@ -192,7 +192,7 @@
           <!-- Main image -->
           <img
             id="hero-img-main"
-            src="src/images/adammm.jpg"
+            src="/profile/images/adammm.jpg"
             alt="Adam"
             class="relative w-64 h-80 object-cover rounded-3xl shadow-2xl z-10 transition-transform duration-500"
           />
