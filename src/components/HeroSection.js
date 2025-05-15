@@ -22,7 +22,7 @@ export function HeroSection() {
       });
       // Card-stack auto-cycling logic with animation
       const images = [
-        "/profile/images/adam.jpg",
+        "/profile/images/Adam.jpg",
         "/profile/images/adamm.png",
         "/profile/images/adammm.jpg",
       ];
@@ -74,7 +74,7 @@ export function HeroSection() {
           <!-- Left blurred image -->
           <img
             id="hero-img-left"
-            src="/profile/images/adam.jpg"
+            src="/profile/images/adamm.png"
             alt="Adam"
             class="absolute left-0 top-4 w-56 h-72 object-cover rounded-3xl opacity-40 blur-sm scale-90 z-0"
             style="transform: translateX(-40px) rotate(-8deg);"
