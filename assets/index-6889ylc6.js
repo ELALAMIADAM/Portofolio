@@ -157,7 +157,7 @@
       transition: transform 0.3s ease;
     }
   </style>
-  `}function HeroSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function e(r,o){let s=0;const l=Math.ceil(o/1e4),n=()=>{s+=l,s>=o?r.textContent=o+(o===365?"":"+"):(r.textContent=s,requestAnimationFrame(n))};n()}document.querySelectorAll(".stat-number").forEach(r=>{const o=parseInt(r.getAttribute("data-target"),10);e(r,o)});const a=["/profile/images/adam.jpg","/profile/images/adamm.png","/profile/images/adammm.jpg"];let t=0;setInterval(()=>{t=(t+1)%a.length;const r=document.getElementById("hero-img-left"),o=document.getElementById("hero-img-right"),s=document.getElementById("hero-img-main"),l=(t-1+a.length)%a.length,n=(t+1)%a.length;r&&(r.src=a[l],r.classList.remove("hero-img-animate"),r.offsetWidth,r.classList.add("hero-img-animate")),s&&(s.src=a[t],s.classList.remove("hero-img-animate"),s.offsetWidth,s.classList.add("hero-img-animate")),o&&(o.src=a[n],o.classList.remove("hero-img-animate"),o.offsetWidth,o.classList.add("hero-img-animate"))},2500)}),`
+  `}function HeroSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function e(r,o){let s=0;const l=Math.ceil(o/1e4),n=()=>{s+=l,s>=o?r.textContent=o+(o===365?"":"+"):(r.textContent=s,requestAnimationFrame(n))};n()}document.querySelectorAll(".stat-number").forEach(r=>{const o=parseInt(r.getAttribute("data-target"),10);e(r,o)});const a=["/profile/images/Adam.jpg","/profile/images/adamm.png","/profile/images/adammm.jpg"];let t=0;setInterval(()=>{t=(t+1)%a.length;const r=document.getElementById("hero-img-left"),o=document.getElementById("hero-img-right"),s=document.getElementById("hero-img-main"),l=(t-1+a.length)%a.length,n=(t+1)%a.length;r&&(r.src=a[l],r.classList.remove("hero-img-animate"),r.offsetWidth,r.classList.add("hero-img-animate")),s&&(s.src=a[t],s.classList.remove("hero-img-animate"),s.offsetWidth,s.classList.add("hero-img-animate")),o&&(o.src=a[n],o.classList.remove("hero-img-animate"),o.offsetWidth,o.classList.add("hero-img-animate"))},2500)}),`
   <section id="home" class="rockstar-section bg-black py-16 ">
     <div class="section-content max-w-5xl mx-auto mt-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
       <!-- Left: Description -->
@@ -451,7 +451,7 @@
               <img src="/profile/images/sql.png" alt="SQL" class="h-6 w-6 object-contain" /> SQL
             </span>
             <span id="exp-logo-1" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/etl.png" alt="ETL" class="h-6 w-6 object-contain" /> ETL
+              <img src="/profile/images/ETL.png" alt="ETL" class="h-6 w-6 object-contain" /> ETL
             </span>
             <span id="exp-logo-2" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
               <img src="/profile/images/python.png" alt="python" class="h-6 w-6 object-contain" /> Python
