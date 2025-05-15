@@ -135,7 +135,10 @@ export function ExperienceSection() {
         <!-- Data Analyst at ARKEA BANKING SERVICE -->
         <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
           <div class="flex justify-between items-center mb-6">
-            <h3 class="text-2xl font-bold text-white">Data Analyst | Apprenticeship</h3>
+            <div>
+              <h3 class="text-2xl font-bold text-white">Data Analyst | Apprenticeship</h3>
+              <p class="text-gray-400 mt-1">September 2023 - Present</p>
+            </div>
             <a href="https://www.arkea-banking-services.com/public/cms/c_5386/fr/accueil" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-neutral-800/50 px-4 py-2 rounded-xl border border-neutral-700 hover:bg-neutral-800 hover:border-neutral-600 hover:scale-105 transition-all duration-300 cursor-pointer group">
               <img src="/profile/images/arkea.png" alt="ARKEA" class="h-8 w-8 object-contain group-hover:scale-110 transition-transform duration-300" />
               <span class="text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@ARKEA</span>
@@ -235,8 +238,11 @@ export function ExperienceSection() {
         
         <!-- Full-Stack Developer at FREERAY -->
         <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600 mb-12">
-          <div class="flex justify-between items-center ">
-            <h3 class="text-2xl font-bold text-white">Full-Stack Developer | Intern</h3>
+          <div class="flex justify-between items-center">
+            <div>
+              <h3 class="text-2xl font-bold text-white">Full-Stack Developer | Intern</h3>
+              <p class="text-gray-400 mt-1">June 2023 - August 2023</p>
+            </div>
             <a href="https://freeray.ma" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-neutral-800/50 px-4 py-2 rounded-xl border border-neutral-700 hover:bg-neutral-800 hover:border-neutral-600 hover:scale-105 transition-all duration-300 cursor-pointer group">
               <img src="/profile/images/freeray_logo.jpeg" alt="FREERAY" class="h-8 w-8 object-contain rounded-full group-hover:scale-110 transition-transform duration-300" />
               <span class="text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@FREERAY</span>
