@@ -23,11 +23,10 @@ export function ExperienceSection() {
           var logo1 = document.getElementById('exp-logo-1');
           var logo2 = document.getElementById('exp-logo-2');
           var logo3 = document.getElementById('exp-logo-3');
-          var logo4 = document.getElementById('exp-logo-4');
           var logo5 = document.getElementById('exp-logo-5');
-          if (logo0 && logo1 && logo2 && logo3 && logo4 && logo5) {
+          if (logo0 && logo1 && logo2 && logo3 && logo5) {
             // Reset all
-            [logo0, logo1, logo2, logo3, logo4, logo5].forEach(function(el) {
+            [logo0, logo1, logo2, logo3, logo5].forEach(function(el) {
               el.classList.remove('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','text-white','font-bold','scale-105');
               el.classList.add('border-neutral-700','bg-neutral-900/70','text-white');
             });
@@ -40,7 +39,6 @@ export function ExperienceSection() {
               logo5.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
             } else if(idx === 2) {
               logo2.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
-              logo4.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
               logo3.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
               logo5.classList.add('ring-2','ring-red-400','bg-gradient-to-r','from-orange-700','to-yellow-500','font-bold','scale-105');
             } 
@@ -133,7 +131,7 @@ export function ExperienceSection() {
     <div class="section-content">
       <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-[#f5cb5c] via-[#e63946] to-[#4cc9f0] bg-clip-text text-transparent text-center mt-34">Professional Experience</h2>
       
-      <div class="space-y-24">
+      <div class="flex flex-col gap-24">
         <!-- Data Analyst at ARKEA BANKING SERVICE -->
         <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
           <div class="flex justify-between items-center mb-6">
@@ -144,10 +142,67 @@ export function ExperienceSection() {
             </a>
           </div>
           <div class="mt-8 grid md:grid-cols-2 gap-8">
-            <div>
-              <p class="experience-arkeabs-desc text-white/80 text-base" data-index="0">Designed and implemented dynamic Oracle Analytics Cloud dashboards by first analyzing client workflows and pain points, then structuring data models for intuitive self-service analytics.</p>
-              <p class="experience-arkeabs-desc hidden text-white/80 text-base" data-index="1">Built scalable data pipelines to ingest and transform multi-source data into lakehouse formats, enhancing data accessibility and processing speed for analytics teams.</p>
-              <p class="experience-arkeabs-desc hidden text-white/80 text-base" data-index="2">Developed a Python-based conversion tool to transform legacy Hadoop PIG scripts into optimized Starburst-compatible SQL, preserving business logic and partitioning schemes.</p>
+            <div class="min-h-[300px]">
+              <div class="experience-arkeabs-desc" data-index="0">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
+                    <span>Clients struggled with inefficient workflows and unclear data insights.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Task:</span>
+                    <span>Designed dynamic Oracle Analytics Cloud dashboards for self-service analytics.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Action:</span>
+                    <span>Analyzed workflows, identified pain points, and structured intuitive data models.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Result:</span>
+                    <span>Empowered users with dashboards, cutting manual reporting by 30%.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="experience-arkeabs-desc hidden" data-index="1">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
+                    <span>Analytics teams faced challenges with data accessibility and processing speed.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Task:</span>
+                    <span>Create scalable data pipelines to unify and integrate multi-source data for seamless analytics.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Action:</span>
+                    <span>Built data pipelines to ingest and transform data into lakehouse formats.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Result:</span>
+                    <span>Enhanced data accessibility and processing speed for analytics teams.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="experience-arkeabs-desc hidden" data-index="2">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
+                    <span>Legacy Hadoop PIG scripts needed modernization for Starburst compatibility.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Task:</span>
+                    <span>Develop a conversion tool to transform PIG scripts to Starburst SQL.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Action:</span>
+                    <span>Created Python-based conversion tool while preserving business logic and partitioning schemes.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Result:</span>
+                    <span>Successfully migrated legacy scripts to optimized Starburst-compatible SQL.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700">
               <div class="h-64 flex items-center justify-center rounded-lg relative">
@@ -172,9 +227,6 @@ export function ExperienceSection() {
             <span id="exp-logo-2" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
               <img src="src/images/python.png" alt="python" class="h-6 w-6 object-contain" /> Python
             </span>
-            <span id="exp-logo-4" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="src/images/pig.png" alt="PIG Latin" class="h-6 w-6 object-contain" /> PIG Latin 
-            </span>
             <span id="exp-logo-5" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
               <img src="src/images/starburst.png" alt="Starburst" class="h-6 w-6 object-contain" /> Starburst
             </span>
@@ -182,8 +234,8 @@ export function ExperienceSection() {
         </div>
         
         <!-- Full-Stack Developer at FREERAY -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
-          <div class="flex justify-between items-center mb-6">
+        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600 mb-12">
+          <div class="flex justify-between items-center ">
             <h3 class="text-2xl font-bold text-white">Full-Stack Developer | Intern</h3>
             <a href="https://freeray.ma" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-neutral-800/50 px-4 py-2 rounded-xl border border-neutral-700 hover:bg-neutral-800 hover:border-neutral-600 hover:scale-105 transition-all duration-300 cursor-pointer group">
               <img src="src/images/freeray_logo.jpeg" alt="FREERAY" class="h-8 w-8 object-contain rounded-full group-hover:scale-110 transition-transform duration-300" />
@@ -191,12 +243,67 @@ export function ExperienceSection() {
             </a>
           </div>
           <div class="mt-8 grid md:grid-cols-2 gap-8">
-            <div>
-              <ul class="list-disc pl-5 space-y-3">
-                <li class="experience-freeray-desc text-white/80 text-base" data-index="0">Developed solar monitoring dashboard that reduced client reporting time by 40% through React visualization of 15+ data metrics.</li>
-                <li class="experience-freeray-desc hidden text-white/80 text-base" data-index="1">Designed MySQL database with 18+ tables to centralize solar project management and device tracking.</li>
-                <li class="experience-freeray-desc hidden text-white/80 text-base" data-index="2">Optimized solar device data collection by implementing TCP/IP protocol, reducing data latency by 30% for 50+ connected Huawei devices.</li>
-              </ul>
+            <div class="min-h-[300px]">
+              <div class="experience-freeray-desc" data-index="0">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
+                    <span>Solar monitoring clients needed better data visualization and reporting tools.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Task:</span>
+                    <span>Develop a comprehensive solar monitoring dashboard with real-time data visualization.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Action:</span>
+                    <span>Built React-based dashboard with 15+ data metrics and implemented MySQL database with 18+ tables.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Result:</span>
+                    <span>Reduced client reporting time by 40% and improved data accessibility for project management.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="experience-freeray-desc hidden" data-index="1">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
+                    <span>Need for centralized solar project management and device tracking system.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Task:</span>
+                    <span>Design and implement a robust database system for solar project management.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Action:</span>
+                    <span>Created MySQL database architecture with 18+ tables and implemented efficient data relationships.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Result:</span>
+                    <span>Established a scalable database system that improved project tracking and device management efficiency.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="experience-freeray-desc hidden" data-index="2">
+                <ul class="list-none space-y-3">
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
+                    <span>High latency in solar device data collection affecting real-time monitoring.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Task:</span>
+                    <span>Optimize data collection for 50+ connected Huawei solar devices.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Action:</span>
+                    <span>Implemented TCP/IP protocol and optimized data transmission protocols.</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="font-semibold text-orange-400 min-w-[100px]">Result:</span>
+                    <span>Reduced data latency by 30% and improved real-time monitoring capabilities.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
             <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700">
               <div class="h-64 flex items-center justify-center rounded-lg relative">
