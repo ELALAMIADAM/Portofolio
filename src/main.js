@@ -33,4 +33,10 @@ appElement.innerHTML = `
 document.addEventListener('DOMContentLoaded', () => {
   // Execute animation setup code
   eval(setupAnimations());
+
+  // Initialize contact form
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', window.handleSubmit);
+  }
 });
