@@ -100,11 +100,11 @@ export function HeroSection() {
     <!-- Stats Row -->
     <div class="max-w-3xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center bg-black bg-opacity-40 rounded-xl py-6 px-4 appear-on-scroll">
       <div>
-        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="20">0</p>
+        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="10">0</p>
         <p class="text-sm text-white">Repositories</p>
       </div>
       <div>
-        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="50">0</p>
+        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="30">0</p>
         <p class="text-sm text-white">Technologies Mastered</p>
       </div>
       <div>
