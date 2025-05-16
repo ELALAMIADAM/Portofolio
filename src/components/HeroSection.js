@@ -22,9 +22,9 @@ export function HeroSection() {
       });
       // Card-stack auto-cycling logic with animation
       const images = [
-        "/profile/images/Adam.jpg",
-        "/profile/images/adamm.png",
-        "/profile/images/adammm.jpg",
+        "/images/Adam.jpg",
+        "/images/adamm.png",
+        "/images/adammm.jpg",
       ];
       let current = 0;
       setInterval(() => {
@@ -74,7 +74,7 @@ export function HeroSection() {
           <!-- Left blurred image -->
           <img
             id="hero-img-left"
-            src="/profile/images/adamm.png"
+            src="/images/adamm.png"
             alt="Adam"
             class="absolute left-0 top-4 w-56 h-72 object-cover rounded-3xl opacity-40 blur-sm scale-90 z-0"
             style="transform: translateX(-40px) rotate(-8deg);"
@@ -82,7 +82,7 @@ export function HeroSection() {
           <!-- Right blurred image -->
           <img
             id="hero-img-right"
-            src="/profile/images/adamm.png"
+            src="/images/adamm.png"
             alt="Adam"
             class="absolute right-0 top-4 w-56 h-72 object-cover rounded-3xl opacity-40 blur-sm scale-90 z-0"
             style="transform: translateX(40px) rotate(8deg);"
@@ -90,7 +90,7 @@ export function HeroSection() {
           <!-- Main image -->
           <img
             id="hero-img-main"
-            src="/profile/images/adammm.jpg"
+            src="/images/adammm.jpg"
             alt="Adam"
             class="relative w-64 h-80 object-cover rounded-3xl shadow-2xl z-10 transition-transform duration-500"
           />

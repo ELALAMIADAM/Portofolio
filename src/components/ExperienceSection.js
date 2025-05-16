@@ -140,7 +140,7 @@ export function ExperienceSection() {
               <p class="text-gray-400 mt-1">September 2023 - Present</p>
             </div>
             <a href="https://www.arkea-banking-services.com/public/cms/c_5386/fr/accueil" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-neutral-800/50 px-4 py-2 rounded-xl border border-neutral-700 hover:bg-neutral-800 hover:border-neutral-600 hover:scale-105 transition-all duration-300 cursor-pointer group">
-              <img src="/profile/images/arkea.png" alt="ARKEA" class="h-8 w-8 object-contain group-hover:scale-110 transition-transform duration-300" />
+              <img src="/images/arkea.png" alt="ARKEA" class="h-8 w-8 object-contain group-hover:scale-110 transition-transform duration-300" />
               <span class="text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@ARKEA</span>
             </a>
           </div>
@@ -210,28 +210,28 @@ export function ExperienceSection() {
             <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700">
               <div class="h-64 flex items-center justify-center rounded-lg relative">
                 <div id="experience-carousel-track" class="flex transition-transform duration-700 w-full h-full">
-                  <img src="/profile/images/viz.png" alt="oracle analytics" class="w-full h-full object-contain flex-shrink-0"/>
-                  <img src="/profile/images/datalakehouse.png" alt="datalakehouse" class="w-full h-full object-contain flex-shrink-0"/>
-                  <img src="/profile/images/Pig-Latin-script.png" alt="Pig-Latin-script" class="w-full h-full object-contain flex-shrink-0"/>
+                  <img src="/images/viz.png" alt="oracle analytics" class="w-full h-full object-contain flex-shrink-0"/>
+                  <img src="/images/datalakehouse.png" alt="datalakehouse" class="w-full h-full object-contain flex-shrink-0"/>
+                  <img src="/images/Pig-Latin-script.png" alt="Pig-Latin-script" class="w-full h-full object-contain flex-shrink-0"/>
                 </div>
               </div>
             </div>
           </div>
           <div class="flex flex-wrap gap-4 mb-6 mt-6 justify-center" id="experience-logos-row">
             <span id="exp-logo-0" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/oracle.png" alt="Oracle Analytics" class="h-6 w-6 object-contain" /> Oracle Analytics
+              <img src="/images/oracle.png" alt="Oracle Analytics" class="h-6 w-6 object-contain" /> Oracle Analytics
             </span>
             <span id="exp-logo-3" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/sql.png" alt="SQL" class="h-6 w-6 object-contain" /> SQL
+              <img src="/images/sql.png" alt="SQL" class="h-6 w-6 object-contain" /> SQL
             </span>
             <span id="exp-logo-1" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/ETL.png" alt="ETL" class="h-6 w-6 object-contain" /> ETL
+              <img src="/images/ETL.png" alt="ETL" class="h-6 w-6 object-contain" /> ETL
             </span>
             <span id="exp-logo-2" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/python.png" alt="python" class="h-6 w-6 object-contain" /> Python
+              <img src="/images/python.png" alt="python" class="h-6 w-6 object-contain" /> Python
             </span>
             <span id="exp-logo-5" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/starburst.png" alt="Starburst" class="h-6 w-6 object-contain" /> Starburst
+              <img src="/images/starburst.png" alt="Starburst" class="h-6 w-6 object-contain" /> Starburst
             </span>
           </div>
         </div>
@@ -244,7 +244,7 @@ export function ExperienceSection() {
               <p class="text-gray-400 mt-1">June 2023 - August 2023</p>
             </div>
             <a href="https://freeray.ma" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-neutral-800/50 px-4 py-2 rounded-xl border border-neutral-700 hover:bg-neutral-800 hover:border-neutral-600 hover:scale-105 transition-all duration-300 cursor-pointer group">
-              <img src="/profile/images/freeray_logo.jpeg" alt="FREERAY" class="h-8 w-8 object-contain rounded-full group-hover:scale-110 transition-transform duration-300" />
+              <img src="/images/freeray_logo.jpeg" alt="FREERAY" class="h-8 w-8 object-contain rounded-full group-hover:scale-110 transition-transform duration-300" />
               <span class="text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@FREERAY</span>
             </a>
           </div>
@@ -314,28 +314,28 @@ export function ExperienceSection() {
             <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700">
               <div class="h-64 flex items-center justify-center rounded-lg relative">
                 <div id="freeray-carousel-track" class="flex transition-transform duration-700 w-full h-full">
-                  <img src="/profile/images/dash.webp" alt="FREERAY Project 1" class="w-full h-full object-contain flex-shrink-0"/>
-                  <img src="/profile/images/hq720.jpg" alt="FREERAY Project 2" class="w-full h-full object-contain flex-shrink-0"/>
-                  <img src="/profile/images/mceclip12.png" alt="FREERAY Project 3" class="w-full h-full object-contain flex-shrink-0"/>
+                  <img src="/images/dash.webp" alt="FREERAY Project 1" class="w-full h-full object-contain flex-shrink-0"/>
+                  <img src="/images/hq720.jpg" alt="FREERAY Project 2" class="w-full h-full object-contain flex-shrink-0"/>
+                  <img src="/images/mceclip12.png" alt="FREERAY Project 3" class="w-full h-full object-contain flex-shrink-0"/>
                 </div>
               </div>
             </div>
           </div>
           <div class="flex flex-wrap gap-4 mb-6 mt-6 justify-center" id="freeray-logos-row">
             <span id="freeray-logo-0" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/react.png" alt="React.js" class="h-6 w-6 object-contain" /> React
+              <img src="/images/react.png" alt="React.js" class="h-6 w-6 object-contain" /> React
             </span>
             <span id="freeray-logo-1" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/nodejs.png" alt="Node.js" class="h-6 w-6 object-contain" /> Node.js
+              <img src="/images/nodejs.png" alt="Node.js" class="h-6 w-6 object-contain" /> Node.js
             </span>
             <span id="freeray-logo-4" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/expressjs.png" alt="express" class="h-6 w-6 object-contain" /> Express
+              <img src="/images/expressjs.png" alt="express" class="h-6 w-6 object-contain" /> Express
             </span>
             <span id="freeray-logo-2" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/mysql.png" alt="MySQL" class="h-6 w-6 object-contain" /> MySQL
+              <img src="/images/mysql.png" alt="MySQL" class="h-6 w-6 object-contain" /> MySQL
             </span>
             <span id="freeray-logo-3" class="flex items-center gap-2 px-4 py-2 rounded-xl border border-neutral-700 bg-neutral-900/70 text-white text-base font-medium shadow transition-all duration-200">
-              <img src="/profile/images/tcp.png" alt="TCP/IP" class="h-6 w-6 object-contain" /> TCP/IP
+              <img src="/images/tcp.png" alt="TCP/IP" class="h-6 w-6 object-contain" /> TCP/IP
             </span>
           </div>
         </div>
