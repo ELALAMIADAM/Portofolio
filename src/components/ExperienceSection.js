@@ -133,7 +133,7 @@ export function ExperienceSection() {
       
       <div class="flex flex-col gap-24">
         <!-- Data Analyst at ARKEA BANKING SERVICE -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
+        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600 min-h-[600px] flex flex-col">
           <div class="flex justify-between items-center mb-6">
             <div>
               <h3 class="text-2xl font-bold text-white">Data Analyst | Apprenticeship</h3>
@@ -141,12 +141,12 @@ export function ExperienceSection() {
             </div>
             <a href="https://www.arkea-banking-services.com/public/cms/c_5386/fr/accueil" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-neutral-800/50 px-4 py-2 rounded-xl border border-neutral-700 hover:bg-neutral-800 hover:border-neutral-600 hover:scale-105 transition-all duration-300 cursor-pointer group">
               <img src="/images/arkea.png" alt="ARKEA" class="h-8 w-8 object-contain group-hover:scale-110 transition-transform duration-300" />
-              <span class="text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@ARKEA</span>
+              <span class="text-sm md:text-base text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@ARKEA</span>
             </a>
           </div>
-          <div class="mt-8 grid md:grid-cols-2 gap-8">
-            <div class="min-h-[300px]">
-              <div class="experience-arkeabs-desc" data-index="0">
+          <div class="mt-8 grid md:grid-cols-2 gap-8 flex-grow">
+            <div class="min-h-[300px] flex flex-col">
+              <div class="experience-arkeabs-desc flex-grow" data-index="0">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -166,7 +166,7 @@ export function ExperienceSection() {
                   </li>
                 </ul>
               </div>
-              <div class="experience-arkeabs-desc hidden" data-index="1">
+              <div class="experience-arkeabs-desc hidden flex-grow" data-index="1">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -186,7 +186,7 @@ export function ExperienceSection() {
                   </li>
                 </ul>
               </div>
-              <div class="experience-arkeabs-desc hidden" data-index="2">
+              <div class="experience-arkeabs-desc hidden flex-grow" data-index="2">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -207,8 +207,8 @@ export function ExperienceSection() {
                 </ul>
               </div>
             </div>
-            <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700">
-              <div class="h-64 flex items-center justify-center rounded-lg relative">
+            <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700 h-full">
+              <div class="h-full flex items-center justify-center rounded-lg relative">
                 <div id="experience-carousel-track" class="flex transition-transform duration-700 w-full h-full">
                   <img src="/images/viz.png" alt="oracle analytics" class="w-full h-full object-contain flex-shrink-0"/>
                   <img src="/images/datalakehouse.png" alt="datalakehouse" class="w-full h-full object-contain flex-shrink-0"/>
@@ -237,7 +237,7 @@ export function ExperienceSection() {
         </div>
         
         <!-- Full-Stack Developer at FREERAY -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600 mb-12">
+        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600 min-h-[600px] flex flex-col mb-12">
           <div class="flex justify-between items-center">
             <div>
               <h3 class="text-2xl font-bold text-white">Full-Stack Developer | Intern</h3>
@@ -245,12 +245,12 @@ export function ExperienceSection() {
             </div>
             <a href="https://freeray.ma" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-neutral-800/50 px-4 py-2 rounded-xl border border-neutral-700 hover:bg-neutral-800 hover:border-neutral-600 hover:scale-105 transition-all duration-300 cursor-pointer group">
               <img src="/images/freeray_logo.jpeg" alt="FREERAY" class="h-8 w-8 object-contain rounded-full group-hover:scale-110 transition-transform duration-300" />
-              <span class="text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@FREERAY</span>
+              <span class="text-sm md:text-base text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@FREERAY</span>
             </a>
           </div>
-          <div class="mt-8 grid md:grid-cols-2 gap-8">
-            <div class="min-h-[300px]">
-              <div class="experience-freeray-desc" data-index="0">
+          <div class="mt-8 grid md:grid-cols-2 gap-8 flex-grow">
+            <div class="min-h-[300px] flex flex-col">
+              <div class="experience-freeray-desc flex-grow" data-index="0">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -270,7 +270,7 @@ export function ExperienceSection() {
                   </li>
                 </ul>
               </div>
-              <div class="experience-freeray-desc hidden" data-index="1">
+              <div class="experience-freeray-desc hidden flex-grow" data-index="1">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -290,7 +290,7 @@ export function ExperienceSection() {
                   </li>
                 </ul>
               </div>
-              <div class="experience-freeray-desc hidden" data-index="2">
+              <div class="experience-freeray-desc hidden flex-grow" data-index="2">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -311,8 +311,8 @@ export function ExperienceSection() {
                 </ul>
               </div>
             </div>
-            <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700">
-              <div class="h-64 flex items-center justify-center rounded-lg relative">
+            <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700 h-full">
+              <div class="h-full flex items-center justify-center rounded-lg relative">
                 <div id="freeray-carousel-track" class="flex transition-transform duration-700 w-full h-full">
                   <img src="/images/dash.webp" alt="FREERAY Project 1" class="w-full h-full object-contain flex-shrink-0"/>
                   <img src="/images/hq720.jpg" alt="FREERAY Project 2" class="w-full h-full object-contain flex-shrink-0"/>
