@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))r(o);new MutationObserver(o=>{for(const s of o)if(s.type==="childList")for(const n of s.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&r(n)}).observe(document,{childList:!0,subtree:!0});function t(o){const s={};return o.integrity&&(s.integrity=o.integrity),o.referrerPolicy&&(s.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?s.credentials="include":o.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(o){if(o.ep)return;o.ep=!0;const s=t(o);fetch(o.href,s)}})();function Header(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".mobile-menu-button"),a=document.querySelector(".mobile-menu"),t=document.querySelectorAll(".mobile-menu a");e&&a&&(e.addEventListener("click",()=>{a.classList.toggle("hidden"),e.classList.toggle("active")}),t.forEach(n=>{n.addEventListener("click",()=>{a.classList.add("hidden"),e.classList.remove("active")})}));const r=document.querySelectorAll("section[id]"),o=document.querySelectorAll(".nav-link");function s(){const n=window.pageYOffset;r.forEach(l=>{const p=l.offsetHeight,u=l.offsetTop-150,c=l.getAttribute("id");n>u&&n<=u+p&&o.forEach(i=>{i.classList.remove("active"),i.getAttribute("href").substring(1)===c&&i.classList.add("active")})})}window.addEventListener("scroll",s),s()}),`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))r(o);new MutationObserver(o=>{for(const s of o)if(s.type==="childList")for(const l of s.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&r(l)}).observe(document,{childList:!0,subtree:!0});function t(o){const s={};return o.integrity&&(s.integrity=o.integrity),o.referrerPolicy&&(s.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?s.credentials="include":o.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function r(o){if(o.ep)return;o.ep=!0;const s=t(o);fetch(o.href,s)}})();function Header(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".mobile-menu-button"),a=document.querySelector(".mobile-menu"),t=document.querySelectorAll(".mobile-menu a");e&&a&&(e.addEventListener("click",()=>{a.classList.toggle("hidden"),e.classList.toggle("active")}),t.forEach(l=>{l.addEventListener("click",()=>{a.classList.add("hidden"),e.classList.remove("active")})}));const r=document.querySelectorAll("section[id]"),o=document.querySelectorAll(".nav-link");function s(){const l=window.pageYOffset;r.forEach(n=>{const p=n.offsetHeight,u=n.offsetTop-150,c=n.getAttribute("id");l>u&&l<=u+p&&o.forEach(i=>{i.classList.remove("active"),i.getAttribute("href").substring(1)===c&&i.classList.add("active")})})}window.addEventListener("scroll",s),s()}),`
 
 
   <!-- Left-aligned contact info bar - Hidden on mobile -->
@@ -157,7 +157,7 @@
       transition: transform 0.3s ease;
     }
   </style>
-  `}function HeroSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function e(r,o){let s=0;const n=Math.ceil(o/1e4),l=()=>{s+=n,s>=o?r.textContent=o+(o===365?"":"+"):(r.textContent=s,requestAnimationFrame(l))};l()}document.querySelectorAll(".stat-number").forEach(r=>{const o=parseInt(r.getAttribute("data-target"),10);e(r,o)});const a=["/images/Adam.jpg","/images/adamm.png","/images/adammm.jpg"];let t=0;setInterval(()=>{t=(t+1)%a.length;const r=document.getElementById("hero-img-left"),o=document.getElementById("hero-img-right"),s=document.getElementById("hero-img-main"),n=(t-1+a.length)%a.length,l=(t+1)%a.length;r&&(r.src=a[n],r.classList.remove("hero-img-animate"),r.offsetWidth,r.classList.add("hero-img-animate")),s&&(s.src=a[t],s.classList.remove("hero-img-animate"),s.offsetWidth,s.classList.add("hero-img-animate")),o&&(o.src=a[l],o.classList.remove("hero-img-animate"),o.offsetWidth,o.classList.add("hero-img-animate"))},2500)}),`
+  `}function HeroSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function e(r,o){let s=0;const l=Math.ceil(o/1e4),n=()=>{s+=l,s>=o?r.textContent=o+(o===365?"":"+"):(r.textContent=s,requestAnimationFrame(n))};n()}document.querySelectorAll(".stat-number").forEach(r=>{const o=parseInt(r.getAttribute("data-target"),10);e(r,o)});const a=["/images/Adam.jpg","/images/adamm.png","/images/adammm.jpg"];let t=0;setInterval(()=>{t=(t+1)%a.length;const r=document.getElementById("hero-img-left"),o=document.getElementById("hero-img-right"),s=document.getElementById("hero-img-main"),l=(t-1+a.length)%a.length,n=(t+1)%a.length;r&&(r.src=a[l],r.classList.remove("hero-img-animate"),r.offsetWidth,r.classList.add("hero-img-animate")),s&&(s.src=a[t],s.classList.remove("hero-img-animate"),s.offsetWidth,s.classList.add("hero-img-animate")),o&&(o.src=a[n],o.classList.remove("hero-img-animate"),o.offsetWidth,o.classList.add("hero-img-animate"))},2500)}),`
   <section id="home" class="rockstar-section bg-black py-16 ">
     <div class="section-content max-w-5xl mx-auto mt-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
       <!-- Left: Description -->
@@ -202,11 +202,11 @@
     <!-- Stats Row -->
     <div class="max-w-3xl mx-auto mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center bg-black bg-opacity-40 rounded-xl py-6 px-4 appear-on-scroll">
       <div>
-        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="20">0</p>
+        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="10">0</p>
         <p class="text-sm text-white">Repositories</p>
       </div>
       <div>
-        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="50">0</p>
+        <p class="text-3xl font-extrabold text-gradient stat-number" data-target="30">0</p>
         <p class="text-sm text-white">Technologies Mastered</p>
       </div>
       <div>
@@ -355,14 +355,14 @@
       <p class="text-center text-white/70 mt-6">...and many more!</p>
     </div>
   </section>
-  `}function ExperienceSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("experience-carousel-track"),a=document.querySelectorAll(".experience-arkeabs-desc"),t=!1;if(e&&a.length){let b=function(m){a.forEach(function(d,y){y===m?d.classList.remove("hidden"):d.classList.add("hidden")});var h=document.getElementById("exp-logo-0"),x=document.getElementById("exp-logo-1"),w=document.getElementById("exp-logo-2"),g=document.getElementById("exp-logo-3"),f=document.getElementById("exp-logo-5");h&&x&&w&&g&&f&&([h,x,w,g,f].forEach(function(d){d.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","text-white","font-bold","scale-105"),d.classList.add("border-neutral-700","bg-neutral-900/70","text-white")}),m===0?(h.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),g.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):m===1?(x.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),g.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):m===2&&(w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),g.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")))},v=function(){t||(s=e.offsetWidth,o=(o+1)%r.length,e.style.transform=`translateX(-${o*s}px)`,b(o))};var k=b,L=v,r=e.children,o=0,s=e.offsetWidth;setInterval(v,2e3),e.addEventListener("mouseenter",function(){t=!0}),e.addEventListener("mouseleave",function(){t=!1}),window.addEventListener("resize",function(){s=e.offsetWidth,e.style.transform=`translateX(-${o*s}px)`}),b(0)}var n=document.getElementById("freeray-carousel-track"),l=document.querySelectorAll(".experience-freeray-desc"),p=!1;if(n&&l.length){let b=function(m){l.forEach(function(d,y){y===m?d.classList.remove("hidden"):d.classList.add("hidden")});var h=document.getElementById("freeray-logo-0"),x=document.getElementById("freeray-logo-1"),w=document.getElementById("freeray-logo-2"),g=document.getElementById("freeray-logo-3"),f=document.getElementById("freeray-logo-4");h&&x&&w&&g&&f&&([h,x,w,g,f].forEach(function(d){d.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),d.classList.add("border-neutral-700","bg-neutral-900/80","text-white")}),m===0?(f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),h.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),x.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):m===1?w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"):m===2&&g.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"))},v=function(){p||(i=n.offsetWidth,c=(c+1)%u.length,n.style.transform=`translateX(-${c*i}px)`,b(c))};var S=b,j=v,u=n.children,c=0,i=n.offsetWidth;setInterval(v,2e3),n.addEventListener("mouseenter",function(){p=!0}),n.addEventListener("mouseleave",function(){p=!1}),window.addEventListener("resize",function(){i=n.offsetWidth,n.style.transform=`translateX(-${c*i}px)`}),b(0)}}),`
+  `}function ExperienceSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("experience-carousel-track"),a=document.querySelectorAll(".experience-arkeabs-desc"),t=!1;if(e&&a.length){let b=function(m){a.forEach(function(d,y){y===m?d.classList.remove("hidden"):d.classList.add("hidden")});var h=document.getElementById("exp-logo-0"),x=document.getElementById("exp-logo-1"),w=document.getElementById("exp-logo-2"),g=document.getElementById("exp-logo-3"),f=document.getElementById("exp-logo-5");h&&x&&w&&g&&f&&([h,x,w,g,f].forEach(function(d){d.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","text-white","font-bold","scale-105"),d.classList.add("border-neutral-700","bg-neutral-900/70","text-white")}),m===0?(h.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),g.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):m===1?(x.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),g.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):m===2&&(w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),g.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")))},v=function(){t||(s=e.offsetWidth,o=(o+1)%r.length,e.style.transform=`translateX(-${o*s}px)`,b(o))};var k=b,L=v,r=e.children,o=0,s=e.offsetWidth;setInterval(v,2e3),e.addEventListener("mouseenter",function(){t=!0}),e.addEventListener("mouseleave",function(){t=!1}),window.addEventListener("resize",function(){s=e.offsetWidth,e.style.transform=`translateX(-${o*s}px)`}),b(0)}var l=document.getElementById("freeray-carousel-track"),n=document.querySelectorAll(".experience-freeray-desc"),p=!1;if(l&&n.length){let b=function(m){n.forEach(function(d,y){y===m?d.classList.remove("hidden"):d.classList.add("hidden")});var h=document.getElementById("freeray-logo-0"),x=document.getElementById("freeray-logo-1"),w=document.getElementById("freeray-logo-2"),g=document.getElementById("freeray-logo-3"),f=document.getElementById("freeray-logo-4");h&&x&&w&&g&&f&&([h,x,w,g,f].forEach(function(d){d.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),d.classList.add("border-neutral-700","bg-neutral-900/80","text-white")}),m===0?(f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),h.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),x.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):m===1?w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"):m===2&&g.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"))},v=function(){p||(i=l.offsetWidth,c=(c+1)%u.length,l.style.transform=`translateX(-${c*i}px)`,b(c))};var S=b,j=v,u=l.children,c=0,i=l.offsetWidth;setInterval(v,2e3),l.addEventListener("mouseenter",function(){p=!0}),l.addEventListener("mouseleave",function(){p=!1}),window.addEventListener("resize",function(){i=l.offsetWidth,l.style.transform=`translateX(-${c*i}px)`}),b(0)}}),`
   <section id="experience" class="rockstar-section bg-rockstar bg-cover bg-center bg-no-repeat">
     <div class="section-content">
       <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-[#f5cb5c] via-[#e63946] to-[#4cc9f0] bg-clip-text text-transparent text-center mt-34">Professional Experience</h2>
       
       <div class="flex flex-col gap-24">
         <!-- Data Analyst at ARKEA BANKING SERVICE -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
+        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600 min-h-[600px] flex flex-col">
           <div class="flex justify-between items-center mb-6">
             <div>
               <h3 class="text-2xl font-bold text-white">Data Analyst | Apprenticeship</h3>
@@ -370,12 +370,12 @@
             </div>
             <a href="https://www.arkea-banking-services.com/public/cms/c_5386/fr/accueil" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-neutral-800/50 px-4 py-2 rounded-xl border border-neutral-700 hover:bg-neutral-800 hover:border-neutral-600 hover:scale-105 transition-all duration-300 cursor-pointer group">
               <img src="/images/arkea.png" alt="ARKEA" class="h-8 w-8 object-contain group-hover:scale-110 transition-transform duration-300" />
-              <span class="text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@ARKEA</span>
+              <span class="text-sm md:text-base text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@ARKEA</span>
             </a>
           </div>
-          <div class="mt-8 grid md:grid-cols-2 gap-8">
-            <div class="min-h-[300px]">
-              <div class="experience-arkeabs-desc" data-index="0">
+          <div class="mt-8 grid md:grid-cols-2 gap-8 flex-grow">
+            <div class="min-h-[300px] flex flex-col">
+              <div class="experience-arkeabs-desc flex-grow" data-index="0">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -395,7 +395,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="experience-arkeabs-desc hidden" data-index="1">
+              <div class="experience-arkeabs-desc hidden flex-grow" data-index="1">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -415,7 +415,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="experience-arkeabs-desc hidden" data-index="2">
+              <div class="experience-arkeabs-desc hidden flex-grow" data-index="2">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -436,8 +436,8 @@
                 </ul>
               </div>
             </div>
-            <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700">
-              <div class="h-64 flex items-center justify-center rounded-lg relative">
+            <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700 h-full">
+              <div class="h-full flex items-center justify-center rounded-lg relative">
                 <div id="experience-carousel-track" class="flex transition-transform duration-700 w-full h-full">
                   <img src="/images/viz.png" alt="oracle analytics" class="w-full h-full object-contain flex-shrink-0"/>
                   <img src="/images/datalakehouse.png" alt="datalakehouse" class="w-full h-full object-contain flex-shrink-0"/>
@@ -466,7 +466,7 @@
         </div>
         
         <!-- Full-Stack Developer at FREERAY -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600 mb-12">
+        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600 min-h-[600px] flex flex-col mb-12">
           <div class="flex justify-between items-center">
             <div>
               <h3 class="text-2xl font-bold text-white">Full-Stack Developer | Intern</h3>
@@ -474,12 +474,12 @@
             </div>
             <a href="https://freeray.ma" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 bg-neutral-800/50 px-4 py-2 rounded-xl border border-neutral-700 hover:bg-neutral-800 hover:border-neutral-600 hover:scale-105 transition-all duration-300 cursor-pointer group">
               <img src="/images/freeray_logo.jpeg" alt="FREERAY" class="h-8 w-8 object-contain rounded-full group-hover:scale-110 transition-transform duration-300" />
-              <span class="text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@FREERAY</span>
+              <span class="text-sm md:text-base text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors duration-300">@FREERAY</span>
             </a>
           </div>
-          <div class="mt-8 grid md:grid-cols-2 gap-8">
-            <div class="min-h-[300px]">
-              <div class="experience-freeray-desc" data-index="0">
+          <div class="mt-8 grid md:grid-cols-2 gap-8 flex-grow">
+            <div class="min-h-[300px] flex flex-col">
+              <div class="experience-freeray-desc flex-grow" data-index="0">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -499,7 +499,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="experience-freeray-desc hidden" data-index="1">
+              <div class="experience-freeray-desc hidden flex-grow" data-index="1">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -519,7 +519,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="experience-freeray-desc hidden" data-index="2">
+              <div class="experience-freeray-desc hidden flex-grow" data-index="2">
                 <ul class="list-none space-y-3">
                   <li class="flex items-start">
                     <span class="font-semibold text-orange-400 min-w-[100px]">Situation:</span>
@@ -540,8 +540,8 @@
                 </ul>
               </div>
             </div>
-            <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700">
-              <div class="h-64 flex items-center justify-center rounded-lg relative">
+            <div class="rounded-lg overflow-hidden bg-neutral-800/50 border border-neutral-700 h-full">
+              <div class="h-full flex items-center justify-center rounded-lg relative">
                 <div id="freeray-carousel-track" class="flex transition-transform duration-700 w-full h-full">
                   <img src="/images/dash.webp" alt="FREERAY Project 1" class="w-full h-full object-contain flex-shrink-0"/>
                   <img src="/images/hq720.jpg" alt="FREERAY Project 2" class="w-full h-full object-contain flex-shrink-0"/>
@@ -577,6 +577,23 @@
     <h2 class="text-2xl md:text-4xl font-bold mt-20 pt-12 bg-gradient-to-r from-[#f5cb5c] via-[#e63946] to-[#4cc9f0] bg-clip-text text-transparent text-center">Projects</h2>
       
       <div class="grid md:grid-cols-2 gap-8 mt-8 mb-20"> 
+        <!-- Blood Donation App -->
+        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 flex flex-col hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-2xl font-bold text-white">Blood Donation App</h3>
+            <a href="https://github.com/ELALAMIADAM/blood-connect" target="_blank" class="text-white/80 hover:text-white transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">Python</span>
+            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">Scrapy</span>
+            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">PostgreSQL</span>
+            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">JWT</span>
+          </div>
+          <p class="text-white/80 text-base">Developed a full-stack app to connect blood donors and recipients, addressing delays in emergency blood supply. Implemented Vue.js frontend and Node.js backend with JWT authentication and geolocation matching. Resulted in a 40% faster donor response time, recognized for social impact.</p>
+        </div>
+
         <!-- Job Market Analytics Scraper -->
         <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 flex flex-col hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
           <div class="flex items-center justify-between mb-4">
@@ -668,7 +685,7 @@
       </div>
     </div>
   </section>
-  `}class EmailJSResponseStatus{constructor(a=0,t="Network Error"){this.status=a,this.text=t}}const createWebStorage=()=>{if(!(typeof localStorage>"u"))return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,a)=>Promise.resolve(localStorage.setItem(e,a)),remove:e=>Promise.resolve(localStorage.removeItem(e))}},store={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:createWebStorage()},buildOptions=e=>e?typeof e=="string"?{publicKey:e}:e.toString()==="[object Object]"?e:{}:{},init=(e,a="https://api.emailjs.com")=>{if(!e)return;const t=buildOptions(e);store.publicKey=t.publicKey,store.blockHeadless=t.blockHeadless,store.storageProvider=t.storageProvider,store.blockList=t.blockList,store.limitRate=t.limitRate,store.origin=t.origin||a},sendPost=async(e,a,t={})=>{const r=await fetch(store.origin+e,{method:"POST",headers:t,body:a}),o=await r.text(),s=new EmailJSResponseStatus(r.status,o);if(r.ok)return s;throw s},validateParams=(e,a,t)=>{if(!e||typeof e!="string")throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!a||typeof a!="string")throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!t||typeof t!="string")throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},validateTemplateParams=e=>{if(e&&e.toString()!=="[object Object]")throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"},isHeadless=e=>e.webdriver||!e.languages||e.languages.length===0,headlessError=()=>new EmailJSResponseStatus(451,"Unavailable For Headless Browser"),validateBlockListParams=(e,a)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if(typeof a!="string")throw"The BlockList watchVariable has to be a string"},isBlockListDisabled=e=>{var a;return!((a=e.list)!=null&&a.length)||!e.watchVariable},getValue=(e,a)=>e instanceof FormData?e.get(a):e[a],isBlockedValueInParams=(e,a)=>{if(isBlockListDisabled(e))return!1;validateBlockListParams(e.list,e.watchVariable);const t=getValue(a,e.watchVariable);return typeof t!="string"?!1:e.list.includes(t)},blockedEmailError=()=>new EmailJSResponseStatus(403,"Forbidden"),validateLimitRateParams=(e,a)=>{if(typeof e!="number"||e<0)throw"The LimitRate throttle has to be a positive number";if(a&&typeof a!="string")throw"The LimitRate ID has to be a non-empty string"},getLeftTime=async(e,a,t)=>{const r=Number(await t.get(e)||0);return a-Date.now()+r},isLimitRateHit=async(e,a,t)=>{if(!a.throttle||!t)return!1;validateLimitRateParams(a.throttle,a.id);const r=a.id||e;return await getLeftTime(r,a.throttle,t)>0?!0:(await t.set(r,Date.now().toString()),!1)},limitRateError=()=>new EmailJSResponseStatus(429,"Too Many Requests"),send=async(e,a,t,r)=>{const o=buildOptions(r),s=o.publicKey||store.publicKey,n=o.blockHeadless||store.blockHeadless,l=o.storageProvider||store.storageProvider,p={...store.blockList,...o.blockList},u={...store.limitRate,...o.limitRate};return n&&isHeadless(navigator)?Promise.reject(headlessError()):(validateParams(s,e,a),validateTemplateParams(t),t&&isBlockedValueInParams(p,t)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,u,l)?Promise.reject(limitRateError()):sendPost("/api/v1.0/email/send",JSON.stringify({lib_version:"4.4.1",user_id:s,service_id:e,template_id:a,template_params:t}),{"Content-type":"application/json"}))},validateForm=e=>{if(!e||e.nodeName!=="FORM")throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"},findHTMLForm=e=>typeof e=="string"?document.querySelector(e):e,sendForm=async(e,a,t,r)=>{const o=buildOptions(r),s=o.publicKey||store.publicKey,n=o.blockHeadless||store.blockHeadless,l=store.storageProvider||o.storageProvider,p={...store.blockList,...o.blockList},u={...store.limitRate,...o.limitRate};if(n&&isHeadless(navigator))return Promise.reject(headlessError());const c=findHTMLForm(t);validateParams(s,e,a),validateForm(c);const i=new FormData(c);return isBlockedValueInParams(p,i)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,u,l)?Promise.reject(limitRateError()):(i.append("lib_version","4.4.1"),i.append("service_id",e),i.append("template_id",a),i.append("user_id",s),sendPost("/api/v1.0/email/send-form",i))},emailjs={init,send,sendForm,EmailJSResponseStatus};function ContactSection(){return emailjs.init("EgxOaVTRVLeDEABrb"),window.handleSubmit=function(e){e.preventDefault();const a=e.target,t=a.querySelector('button[type="submit"]'),r=t.textContent;t.innerHTML=`
+  `}class EmailJSResponseStatus{constructor(a=0,t="Network Error"){this.status=a,this.text=t}}const createWebStorage=()=>{if(!(typeof localStorage>"u"))return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,a)=>Promise.resolve(localStorage.setItem(e,a)),remove:e=>Promise.resolve(localStorage.removeItem(e))}},store={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:createWebStorage()},buildOptions=e=>e?typeof e=="string"?{publicKey:e}:e.toString()==="[object Object]"?e:{}:{},init=(e,a="https://api.emailjs.com")=>{if(!e)return;const t=buildOptions(e);store.publicKey=t.publicKey,store.blockHeadless=t.blockHeadless,store.storageProvider=t.storageProvider,store.blockList=t.blockList,store.limitRate=t.limitRate,store.origin=t.origin||a},sendPost=async(e,a,t={})=>{const r=await fetch(store.origin+e,{method:"POST",headers:t,body:a}),o=await r.text(),s=new EmailJSResponseStatus(r.status,o);if(r.ok)return s;throw s},validateParams=(e,a,t)=>{if(!e||typeof e!="string")throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!a||typeof a!="string")throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!t||typeof t!="string")throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},validateTemplateParams=e=>{if(e&&e.toString()!=="[object Object]")throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"},isHeadless=e=>e.webdriver||!e.languages||e.languages.length===0,headlessError=()=>new EmailJSResponseStatus(451,"Unavailable For Headless Browser"),validateBlockListParams=(e,a)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if(typeof a!="string")throw"The BlockList watchVariable has to be a string"},isBlockListDisabled=e=>{var a;return!((a=e.list)!=null&&a.length)||!e.watchVariable},getValue=(e,a)=>e instanceof FormData?e.get(a):e[a],isBlockedValueInParams=(e,a)=>{if(isBlockListDisabled(e))return!1;validateBlockListParams(e.list,e.watchVariable);const t=getValue(a,e.watchVariable);return typeof t!="string"?!1:e.list.includes(t)},blockedEmailError=()=>new EmailJSResponseStatus(403,"Forbidden"),validateLimitRateParams=(e,a)=>{if(typeof e!="number"||e<0)throw"The LimitRate throttle has to be a positive number";if(a&&typeof a!="string")throw"The LimitRate ID has to be a non-empty string"},getLeftTime=async(e,a,t)=>{const r=Number(await t.get(e)||0);return a-Date.now()+r},isLimitRateHit=async(e,a,t)=>{if(!a.throttle||!t)return!1;validateLimitRateParams(a.throttle,a.id);const r=a.id||e;return await getLeftTime(r,a.throttle,t)>0?!0:(await t.set(r,Date.now().toString()),!1)},limitRateError=()=>new EmailJSResponseStatus(429,"Too Many Requests"),send=async(e,a,t,r)=>{const o=buildOptions(r),s=o.publicKey||store.publicKey,l=o.blockHeadless||store.blockHeadless,n=o.storageProvider||store.storageProvider,p={...store.blockList,...o.blockList},u={...store.limitRate,...o.limitRate};return l&&isHeadless(navigator)?Promise.reject(headlessError()):(validateParams(s,e,a),validateTemplateParams(t),t&&isBlockedValueInParams(p,t)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,u,n)?Promise.reject(limitRateError()):sendPost("/api/v1.0/email/send",JSON.stringify({lib_version:"4.4.1",user_id:s,service_id:e,template_id:a,template_params:t}),{"Content-type":"application/json"}))},validateForm=e=>{if(!e||e.nodeName!=="FORM")throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"},findHTMLForm=e=>typeof e=="string"?document.querySelector(e):e,sendForm=async(e,a,t,r)=>{const o=buildOptions(r),s=o.publicKey||store.publicKey,l=o.blockHeadless||store.blockHeadless,n=store.storageProvider||o.storageProvider,p={...store.blockList,...o.blockList},u={...store.limitRate,...o.limitRate};if(l&&isHeadless(navigator))return Promise.reject(headlessError());const c=findHTMLForm(t);validateParams(s,e,a),validateForm(c);const i=new FormData(c);return isBlockedValueInParams(p,i)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,u,n)?Promise.reject(limitRateError()):(i.append("lib_version","4.4.1"),i.append("service_id",e),i.append("template_id",a),i.append("user_id",s),sendPost("/api/v1.0/email/send-form",i))},emailjs={init,send,sendForm,EmailJSResponseStatus};function ContactSection(){return emailjs.init("EgxOaVTRVLeDEABrb"),window.handleSubmit=function(e){e.preventDefault();const a=e.target,t=a.querySelector('button[type="submit"]'),r=t.textContent;t.innerHTML=`
       <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -684,7 +701,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
         Error! Try Again
-      `,t.classList.remove("from-orange-500","to-yellow-400"),t.classList.add("bg-red-500");const n=document.createElement("div");n.className="fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 translate-y-0 opacity-100",n.innerHTML="Failed to send message. Please try again.",document.body.appendChild(n),setTimeout(()=>{n.classList.add("translate-y-2","opacity-0"),setTimeout(()=>n.remove(),500)},3e3),setTimeout(()=>{t.innerHTML=r,t.classList.remove("bg-red-500"),t.classList.add("from-orange-500","to-yellow-400"),t.disabled=!1,t.classList.remove("opacity-75")},3e3),console.error("Error sending email:",s)})},`
+      `,t.classList.remove("from-orange-500","to-yellow-400"),t.classList.add("bg-red-500");const l=document.createElement("div");l.className="fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 translate-y-0 opacity-100",l.innerHTML="Failed to send message. Please try again.",document.body.appendChild(l),setTimeout(()=>{l.classList.add("translate-y-2","opacity-0"),setTimeout(()=>l.remove(),500)},3e3),setTimeout(()=>{t.innerHTML=r,t.classList.remove("bg-red-500"),t.classList.add("from-orange-500","to-yellow-400"),t.disabled=!1,t.classList.remove("opacity-75")},3e3),console.error("Error sending email:",s)})},`
   <section id="contact" class="rockstar-section bg-rockstar ">
     <div class="section-content max-w-4xl mx-auto">
       <h2 class="text-4xl font-extrabold text-white mb-2 text-left mt-24">Contact <span class="text-gradient">me.</span></h2>
