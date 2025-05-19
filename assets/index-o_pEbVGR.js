@@ -586,8 +586,8 @@
             </a>
           </div>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">Python</span>
-            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">Scrapy</span>
+            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">Vue.js</span>
+            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">Node.js</span>
             <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">PostgreSQL</span>
             <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">JWT</span>
           </div>
