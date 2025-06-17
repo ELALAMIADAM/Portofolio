@@ -17,45 +17,13 @@ export function HeroSection() {
         update();
       }
       document.querySelectorAll('.stat-number').forEach(el => {
-        const target = parseInt(el.getAttribute('data-target'), 10);
+        const target = parseInt(el.getAttribute('data-target'), 20);
         animateStat(el, target);
       });
-      // Card-stack auto-cycling logic with animation
-      const images = [
-        "/images/Adam.jpg",
-        "/images/adamm.png",
-        "/images/adammm.jpg",
-      ];
-      let current = 0;
-      setInterval(() => {
-        current = (current + 1) % images.length;
-        const left = document.getElementById('hero-img-left');
-        const right = document.getElementById('hero-img-right');
-        const main = document.getElementById('hero-img-main');
-        const leftIdx = (current - 1 + images.length) % images.length;
-        const rightIdx = (current + 1) % images.length;
-        if (left) {
-          left.src = images[leftIdx];
-          left.classList.remove('hero-img-animate');
-          void left.offsetWidth;
-          left.classList.add('hero-img-animate');
-        }
-        if (main) {
-          main.src = images[current];
-          main.classList.remove('hero-img-animate');
-          void main.offsetWidth;
-          main.classList.add('hero-img-animate');
-        }
-        if (right) {
-          right.src = images[rightIdx];
-          right.classList.remove('hero-img-animate');
-          void right.offsetWidth;
-          right.classList.add('hero-img-animate');
-        }
-      }, 2500);
     });
   }
   return `
+  
   <section id="home" class="rockstar-section bg-black py-16 ">
     <div class="section-content max-w-5xl mx-auto mt-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
       <!-- Left: Description -->
@@ -68,31 +36,14 @@ export function HeroSection() {
           <a href="#about" class="ml-2 border font-semibold px-6 py-2 rounded-lg shadow transition-colors text-gradient border-yellow-400 hover:bg-yellow-400 hover:scale-105 hover:border-yellow-400 focus:bg-yellow-400 focus:text-black focus:border-yellow-400">Check Portfolio</a>
         </div>
       </div>
-      <!-- Right: Image Card Stack -->
+      <!-- Right: Single Image -->
       <div class="md:w-1/2 w-full flex justify-center md:justify-end">
         <div class="relative w-64 h-80 flex items-center justify-center">
-          <!-- Left blurred image -->
+          <!-- Single main image -->
           <img
-            id="hero-img-left"
-            src="/images/adamm.png"
+            src="/images/Adam.jpg"
             alt="Adam"
-            class="absolute left-0 top-4 w-56 h-72 object-cover rounded-3xl opacity-40 blur-sm scale-90 z-0"
-            style="transform: translateX(-40px) rotate(-8deg);"
-          />
-          <!-- Right blurred image -->
-          <img
-            id="hero-img-right"
-            src="/images/adamm.png"
-            alt="Adam"
-            class="absolute right-0 top-4 w-56 h-72 object-cover rounded-3xl opacity-40 blur-sm scale-90 z-0"
-            style="transform: translateX(40px) rotate(8deg);"
-          />
-          <!-- Main image -->
-          <img
-            id="hero-img-main"
-            src="/images/adammm.jpg"
-            alt="Adam"
-            class="relative w-64 h-80 object-cover rounded-3xl shadow-2xl z-10 transition-transform duration-500"
+            class="relative w-64 h-80 object-cover rounded-3xl shadow-2xl z-10"
           />
         </div>
       </div>

@@ -24,7 +24,7 @@ export function SkillsSection() {
   return `
   <section id="skills" class="rockstar-section bg-rockstar">
     <div class="section-content relative">
-      <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-[#f5cb5c] via-[#e63946] to-[#4cc9f0] bg-clip-text text-transparent text-center">Skills</h2>
+      <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent text-center">Skills</h2>
       <div class="flex flex-wrap gap-3 mb-4 justify-center" id="skills-filter-row">
         <button class="px-4 py-1 rounded-lg border border-neutral-700 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white text-sm font-bold shadow ring-2 ring-orange-200 scale-105 transition-all" data-skilltype="all">All</button>
         <button class="px-4 py-1 rounded-lg border border-neutral-700 bg-neutral-900/80 text-white text-sm font-medium shadow hover:bg-orange-700 transition-all" data-skilltype="dev">Dev</button>

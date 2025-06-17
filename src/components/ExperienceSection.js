@@ -129,7 +129,7 @@ export function ExperienceSection() {
   return `
   <section id="experience" class="rockstar-section bg-rockstar bg-cover bg-center bg-no-repeat">
     <div class="section-content">
-      <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-[#f5cb5c] via-[#e63946] to-[#4cc9f0] bg-clip-text text-transparent text-center mt-34">Professional Experience</h2>
+      <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r  from-red-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent text-center mt-34">Professional  Experience</h2>
       
       <div class="flex flex-col gap-24">
         <!-- Data Analyst at ARKEA BANKING SERVICE -->
