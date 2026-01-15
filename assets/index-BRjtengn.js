@@ -1,8 +1,4 @@
-(function(){const i=document.createElement("link").relList;if(i&&i.supports&&i.supports("modulepreload"))return;for(const c of document.querySelectorAll('link[rel="modulepreload"]'))l(c);new MutationObserver(c=>{for(const d of c)if(d.type==="childList")for(const x of d.addedNodes)x.tagName==="LINK"&&x.rel==="modulepreload"&&l(x)}).observe(document,{childList:!0,subtree:!0});function r(c){const d={};return c.integrity&&(d.integrity=c.integrity),c.referrerPolicy&&(d.referrerPolicy=c.referrerPolicy),c.crossOrigin==="use-credentials"?d.credentials="include":c.crossOrigin==="anonymous"?d.credentials="omit":d.credentials="same-origin",d}function l(c){if(c.ep)return;c.ep=!0;const d=r(c);fetch(c.href,d)}})();function Header(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){const s=document.querySelector(".splash-toggle");let i=!window.matchMedia("(max-width: 768px)").matches;function r(){const t=document.querySelector(".splash-toggle"),b=document.querySelector(".splash-toggle-icon"),S=document.querySelector(".splash-toggle-text");i?(t.classList.add("active"),b.innerHTML=`
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          `,S.textContent="ON"):(t.classList.remove("active"),b.innerHTML=`
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728L18 12M6 6l12 12"></path>
-          `,S.textContent="OFF")}s&&s.addEventListener("click",()=>{i=!i,r(),window.dispatchEvent(new CustomEvent("splashToggle",{detail:{enabled:i}}))}),r(),window.addEventListener("resize",()=>{window.matchMedia("(max-width: 768px)").matches&&i&&(i=!1,r(),window.dispatchEvent(new CustomEvent("splashToggle",{detail:{enabled:!1}})))});const l=document.querySelector(".mobile-menu-button"),c=document.querySelector(".mobile-menu"),d=document.querySelectorAll(".mobile-menu a");l&&c&&(l.addEventListener("click",()=>{c.classList.toggle("hidden"),l.classList.toggle("active")}),d.forEach(t=>{t.addEventListener("click",()=>{c.classList.add("hidden"),l.classList.remove("active")})}));const x=document.querySelectorAll("section[id]"),w=document.querySelectorAll(".nav-link");function y(){const t=window.pageYOffset;x.forEach(b=>{const S=b.offsetHeight,A=b.offsetTop-150,O=b.getAttribute("id");t>A&&t<=A+S&&w.forEach(N=>{N.classList.remove("active"),N.getAttribute("href").substring(1)===O&&N.classList.add("active")})})}window.addEventListener("scroll",y),y()}),`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))n(o);new MutationObserver(o=>{for(const s of o)if(s.type==="childList")for(const l of s.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&n(l)}).observe(document,{childList:!0,subtree:!0});function t(o){const s={};return o.integrity&&(s.integrity=o.integrity),o.referrerPolicy&&(s.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?s.credentials="include":o.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(o){if(o.ep)return;o.ep=!0;const s=t(o);fetch(o.href,s)}})();function Header(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".mobile-menu-button"),a=document.querySelector(".mobile-menu"),t=document.querySelectorAll(".mobile-menu a");e&&a&&(e.addEventListener("click",()=>{a.classList.toggle("hidden"),e.classList.toggle("active")}),t.forEach(l=>{l.addEventListener("click",()=>{a.classList.add("hidden"),e.classList.remove("active")})}));const n=document.querySelectorAll("section[id]"),o=document.querySelectorAll(".nav-link");function s(){const l=window.pageYOffset;n.forEach(p=>{const d=p.offsetHeight,b=p.offsetTop-150,u=p.getAttribute("id");l>b&&l<=b+d&&o.forEach(m=>{m.classList.remove("active"),m.getAttribute("href").substring(1)===u&&m.classList.add("active")})})}window.addEventListener("scroll",s),s()}),`
   <!-- Left-aligned contact info bar - Hidden on mobile -->
   <div class="fixed left-2 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col items-center gap-4 bg-black/40 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-800">
     <a href="mailto:adamelalami27@gmail.com" target="_blank" rel="noopener" class="group" aria-label="Email">
@@ -14,26 +10,6 @@
     <a href="https://www.linkedin.com/in/adam-el-alami-502170215/" target="_blank" rel="noopener" class="group" aria-label="LinkedIn">
       <svg class="w-5 h-5 text-gray-300 group-hover:text-orange-400 transition-all duration-300 transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.034 0 3.595 1.997 3.595 4.594v5 .606z"/></svg>
     </a>
-  </div>
-
-  <!-- Right-aligned splash cursor toggle - Hidden on mobile -->
-  <div class="fixed right-2 top-1/2 -translate-y-1/2 z-50 hidden md:block">
-    <button class="splash-toggle group relative bg-black/40 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-800 hover:bg-black/60 transition-all duration-300 hover:scale-105" aria-label="Toggle Splash Cursor">
-      <div class="flex flex-col items-center gap-2">
-        <div class="relative overflow-hidden">
-          <svg class="splash-toggle-icon w-5 h-5 text-gray-300 group-hover:text-orange-400 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          </svg>
-        </div>
-        <span class="splash-toggle-text text-xs font-mono text-gray-400 group-hover:text-orange-400 transition-colors duration-300">ON</span>
-      </div>
-      
-      <!-- Animated background effect -->
-      <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-500/20 to-yellow-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      
-      <!-- Pulse effect when active -->
-      <div class="absolute inset-0 rounded-lg bg-orange-400/10 opacity-0 transition-opacity duration-300"></div>
-    </button>
   </div>
 
   <header class="smooth-header fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300">
@@ -178,53 +154,8 @@
     .mobile-menu-button svg {
       transition: transform 0.3s ease;
     }
-    
-    /* Splash toggle animations */
-    .splash-toggle.active {
-      background: rgba(255, 107, 53, 0.15) !important;
-      border-color: rgba(255, 107, 53, 0.3);
-      box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
-    }
-    
-    .splash-toggle.active .splash-toggle-icon {
-      color: #ff6b35;
-      animation: pulseGlow 2s ease-in-out infinite;
-    }
-    
-    .splash-toggle.active .splash-toggle-text {
-      color: #ff6b35;
-    }
-    
-    .splash-toggle.active .absolute:last-child {
-      opacity: 1;
-      animation: pulseBackground 2s ease-in-out infinite;
-    }
-    
-    @keyframes pulseGlow {
-      0%, 100% {
-        filter: drop-shadow(0 0 5px rgba(255, 107, 53, 0.5));
-        transform: scale(1);
-      }
-      50% {
-        filter: drop-shadow(0 0 15px rgba(255, 107, 53, 0.8));
-        transform: scale(1.05);
-      }
-    }
-    
-    @keyframes pulseBackground {
-      0%, 100% {
-        opacity: 0.1;
-      }
-      50% {
-        opacity: 0.2;
-      }
-    }
-    
-    .splash-toggle-icon svg {
-      transition: all 0.3s ease;
-    }
   </style>
-  `}function HeroSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function s(i,r){let l=0;const c=Math.ceil(r/1e4),d=()=>{l+=c,l>=r?i.textContent=r+(r===365?"":"+"):(i.textContent=l,requestAnimationFrame(d))};d()}document.querySelectorAll(".stat-number").forEach(i=>{const r=parseInt(i.getAttribute("data-target"),20);s(i,r)})}),`
+  `}function HeroSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function e(a,t){let n=0;const o=Math.ceil(t/1e4),s=()=>{n+=o,n>=t?a.textContent=t+(t===365?"":"+"):(a.textContent=n,requestAnimationFrame(s))};s()}document.querySelectorAll(".stat-number").forEach(a=>{const t=parseInt(a.getAttribute("data-target"),20);e(a,t)})}),`
   
   <section id="home" class="rockstar-section bg-black py-16 ">
     <div class="section-content max-w-5xl mx-auto mt-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
@@ -277,7 +208,7 @@
       </a>
     </div>
   </section>
-  `}function AboutSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){const s=new IntersectionObserver(i=>{i.forEach(r=>{r.isIntersecting&&r.target.classList.add("show")})},{threshold:.1});document.querySelectorAll(".about-paragraph").forEach(i=>{s.observe(i)})}),`
+  `}function AboutSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){const e=new IntersectionObserver(a=>{a.forEach(t=>{t.isIntersecting&&t.target.classList.add("show")})},{threshold:.1});document.querySelectorAll(".about-paragraph").forEach(a=>{e.observe(a)})}),`
   <section id="about" class="min-h-screen w-full flex items-center justify-center bg-gradient-to-b from-black via-[#090909] to-[#1a1a1a] py-16">
     <div class="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
       <!-- Left: Text -->
@@ -319,7 +250,7 @@
       </div>
     </div>
   </section>
-  `}function EducationSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function s(){const i=document.getElementById("education");if(!i)return;const r={glitchColors:["#ff6b35","#ffd93d","#ff8500"],glitchSpeed:80,fontSize:16,charWidth:10,charHeight:20},l=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","!","@","#","$","&","*","(",")","-","_","+","=","/","[","]","{","}",";",":","<",">",",","0","1","2","3","4","5","6","7","8","9"],c=document.createElement("div");c.style.cssText=`
+  `}function EducationSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function e(){const a=document.getElementById("education");if(!a)return;const t={glitchColors:["#ff6b35","#ffd93d","#ff8500"],glitchSpeed:80,fontSize:16,charWidth:10,charHeight:20},n=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","!","@","#","$","&","*","(",")","-","_","+","=","/","[","]","{","}",";",":","<",">",",","0","1","2","3","4","5","6","7","8","9"],o=document.createElement("div");o.style.cssText=`
           position: absolute;
           top: 0;
           left: 0;
@@ -329,11 +260,11 @@
           overflow: hidden;
           z-index: 1;
           pointer-events: none;
-        `;const d=document.createElement("canvas");d.style.cssText=`
+        `;const s=document.createElement("canvas");s.style.cssText=`
           display: block;
           width: 100%;
           height: 100%;
-        `;const x=document.createElement("div");x.style.cssText=`
+        `;const l=document.createElement("div");l.style.cssText=`
           position: absolute;
           top: 0;
           left: 0;
@@ -341,10 +272,10 @@
           height: 100%;
           pointer-events: none;
           background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.9) 100%);
-        `,c.appendChild(d),c.appendChild(x),i.style.position="relative",i.insertBefore(c,i.firstChild);const w=d.getContext("2d");let y=[],t={columns:0},b,S=Date.now();function A(){return l[Math.floor(Math.random()*l.length)]}function O(){return r.glitchColors[Math.floor(Math.random()*r.glitchColors.length)]}function N(p){const h=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;p=p.replace(h,(P,T,D,g)=>T+T+D+D+g+g);const v=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(p);return v?{r:parseInt(v[1],16),g:parseInt(v[2],16),b:parseInt(v[3],16)}:null}function _(p,h,v){const P={r:Math.round(p.r+(h.r-p.r)*v),g:Math.round(p.g+(h.g-p.g)*v),b:Math.round(p.b+(h.b-p.b)*v)};return`rgb(${P.r}, ${P.g}, ${P.b})`}function B(p,h){const v=Math.ceil(p/r.charWidth),P=Math.ceil(h/r.charHeight);return{columns:v,rows:P}}function H(p,h){t={columns:p,rows:h};const v=p*h;y=Array.from({length:v},()=>({char:A(),color:O(),targetColor:O(),colorProgress:1}))}function k(){const p=i.getBoundingClientRect(),h=window.devicePixelRatio||1;d.width=p.width*h,d.height=p.height*h,d.style.width=`${p.width}px`,d.style.height=`${p.height}px`,w.setTransform(h,0,0,h,0,0);const{columns:v,rows:P}=B(p.width,p.height);H(v,P),j()}function j(){if(!w||y.length===0)return;const p=i.getBoundingClientRect();w.clearRect(0,0,p.width,p.height),w.font=`${r.fontSize}px monospace`,w.textBaseline="top",y.forEach((h,v)=>{const P=v%t.columns*r.charWidth,T=Math.floor(v/t.columns)*r.charHeight;w.fillStyle=h.color,w.fillText(h.char,P,T)})}function F(){if(!y||y.length===0)return;const p=Math.max(1,Math.floor(y.length*.05));for(let h=0;h<p;h++){const v=Math.floor(Math.random()*y.length);y[v]&&(y[v].char=A(),y[v].targetColor=O(),y[v].colorProgress=0)}}function z(){let p=!1;y.forEach(h=>{if(h.colorProgress<1){h.colorProgress+=.05,h.colorProgress>1&&(h.colorProgress=1);const v=N(h.color),P=N(h.targetColor);v&&P&&(h.color=_(v,P,h.colorProgress),p=!0)}}),p&&j()}function M(){const p=Date.now();p-S>=r.glitchSpeed&&(F(),j(),S=p),z(),b=requestAnimationFrame(M)}k(),M();let C;function R(){clearTimeout(C),C=setTimeout(()=>{cancelAnimationFrame(b),k(),M()},100)}window.addEventListener("resize",R),window.addEventListener("beforeunload",()=>{cancelAnimationFrame(b),window.removeEventListener("resize",R)})}s()}),`
+        `,o.appendChild(s),o.appendChild(l),a.style.position="relative",a.insertBefore(o,a.firstChild);const p=s.getContext("2d");let d=[],b={columns:0},u,m=Date.now();function S(){return n[Math.floor(Math.random()*n.length)]}function A(){return t.glitchColors[Math.floor(Math.random()*t.glitchColors.length)]}function M(r){const i=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;r=r.replace(i,(h,E,T,P)=>E+E+T+T+P+P);const c=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(r);return c?{r:parseInt(c[1],16),g:parseInt(c[2],16),b:parseInt(c[3],16)}:null}function I(r,i,c){const h={r:Math.round(r.r+(i.r-r.r)*c),g:Math.round(r.g+(i.g-r.g)*c),b:Math.round(r.b+(i.b-r.b)*c)};return`rgb(${h.r}, ${h.g}, ${h.b})`}function y(r,i){const c=Math.ceil(r/t.charWidth),h=Math.ceil(i/t.charHeight);return{columns:c,rows:h}}function j(r,i){b={columns:r,rows:i};const c=r*i;d=Array.from({length:c},()=>({char:S(),color:A(),targetColor:A(),colorProgress:1}))}function x(){const r=a.getBoundingClientRect(),i=window.devicePixelRatio||1;s.width=r.width*i,s.height=r.height*i,s.style.width=`${r.width}px`,s.style.height=`${r.height}px`,p.setTransform(i,0,0,i,0,0);const{columns:c,rows:h}=y(r.width,r.height);j(c,h),v()}function v(){if(!p||d.length===0)return;const r=a.getBoundingClientRect();p.clearRect(0,0,r.width,r.height),p.font=`${t.fontSize}px monospace`,p.textBaseline="top",d.forEach((i,c)=>{const h=c%b.columns*t.charWidth,E=Math.floor(c/b.columns)*t.charHeight;p.fillStyle=i.color,p.fillText(i.char,h,E)})}function k(){if(!d||d.length===0)return;const r=Math.max(1,Math.floor(d.length*.05));for(let i=0;i<r;i++){const c=Math.floor(Math.random()*d.length);d[c]&&(d[c].char=S(),d[c].targetColor=A(),d[c].colorProgress=0)}}function L(){let r=!1;d.forEach(i=>{if(i.colorProgress<1){i.colorProgress+=.05,i.colorProgress>1&&(i.colorProgress=1);const c=M(i.color),h=M(i.targetColor);c&&h&&(i.color=I(c,h,i.colorProgress),r=!0)}}),r&&v()}function f(){const r=Date.now();r-m>=t.glitchSpeed&&(k(),v(),m=r),L(),u=requestAnimationFrame(f)}x(),f();let w;function g(){clearTimeout(w),w=setTimeout(()=>{cancelAnimationFrame(u),x(),f()},100)}window.addEventListener("resize",g),window.addEventListener("beforeunload",()=>{cancelAnimationFrame(u),window.removeEventListener("resize",g)})}e()}),`
   <section id="education" class="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-black via-[#090909] to-[#1a1a1a] py-16 overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 relative z-10">
-      <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent text-center bg-white/10 backdrop-blur-md rounded-2xl p-6 m-70 -mt-10 shadow-lg border border-white/10">Education</h2>
+      <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent text-center">Education</h2>
       <div class="space-y-10">
         <!-- ENIB Brest -->
         <div class="flex flex-col md:flex-row items-center md:items-start gap-6 bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-white/10 transition-transform hover:scale-105 hover:shadow-2xl appear-on-scroll relative z-20">
@@ -379,7 +310,7 @@
       </div>
     </div>
   </section>
-  `}function SkillsSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){var s=document.querySelectorAll("#skills-filter-row button"),i=document.querySelectorAll(".skill-pill");s.forEach(function(r){r.addEventListener("click",function(){var l=r.getAttribute("data-skilltype");s.forEach(c=>{c.classList.remove("bg-gradient-to-r","from-red-500","via-orange-500","to-yellow-500","text-white","font-bold","ring-2","ring-orange-400","scale-105")}),r.classList.add("bg-gradient-to-r","from-red-500","via-orange-500","to-yellow-500","text-white","font-bold","ring-2","ring-orange-400","scale-105"),i.forEach(function(c){l==="all"||c.getAttribute("data-skilltype")===l?c.style.display="":c.style.display="none"})})})}),`
+  `}function SkillsSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){var e=document.querySelectorAll("#skills-filter-row button"),a=document.querySelectorAll(".skill-pill");e.forEach(function(t){t.addEventListener("click",function(){var n=t.getAttribute("data-skilltype");e.forEach(o=>{o.classList.remove("bg-gradient-to-r","from-red-500","via-orange-500","to-yellow-500","text-white","font-bold","ring-2","ring-orange-400","scale-105")}),t.classList.add("bg-gradient-to-r","from-red-500","via-orange-500","to-yellow-500","text-white","font-bold","ring-2","ring-orange-400","scale-105"),a.forEach(function(o){n==="all"||o.getAttribute("data-skilltype")===n?o.style.display="":o.style.display="none"})})})}),`
   <section id="skills" class="rockstar-section bg-rockstar">
     <div class="section-content relative">
       <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent text-center">Skills</h2>
@@ -428,7 +359,7 @@
       <p class="text-center text-white/70 mt-6">...and many more!</p>
     </div>
   </section>
-  `}function ExperienceSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){var s=document.getElementById("experience-carousel-track"),i=document.querySelectorAll(".experience-arkeabs-desc"),r=!1;if(s&&i.length){let B=function(k){i.forEach(function(R,p){p===k?R.classList.remove("hidden"):R.classList.add("hidden")});var j=document.getElementById("exp-logo-0"),F=document.getElementById("exp-logo-1"),z=document.getElementById("exp-logo-2"),M=document.getElementById("exp-logo-3"),C=document.getElementById("exp-logo-5");j&&F&&z&&M&&C&&([j,F,z,M,C].forEach(function(R){R.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","text-white","font-bold","scale-105"),R.classList.add("border-neutral-700","bg-neutral-900/70","text-white")}),k===0?(j.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),M.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):k===1?(F.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),M.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),C.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):k===2&&(z.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),M.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),C.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")))},H=function(){r||(d=s.offsetWidth,c=(c+1)%l.length,s.style.transform=`translateX(-${c*d}px)`,B(c))};var A=B,O=H,l=s.children,c=0,d=s.offsetWidth;setInterval(H,2e3),s.addEventListener("mouseenter",function(){r=!0}),s.addEventListener("mouseleave",function(){r=!1}),window.addEventListener("resize",function(){d=s.offsetWidth,s.style.transform=`translateX(-${c*d}px)`}),B(0)}var x=document.getElementById("freeray-carousel-track"),w=document.querySelectorAll(".experience-freeray-desc"),y=!1;if(x&&w.length){let B=function(k){w.forEach(function(R,p){p===k?R.classList.remove("hidden"):R.classList.add("hidden")});var j=document.getElementById("freeray-logo-0"),F=document.getElementById("freeray-logo-1"),z=document.getElementById("freeray-logo-2"),M=document.getElementById("freeray-logo-3"),C=document.getElementById("freeray-logo-4");j&&F&&z&&M&&C&&([j,F,z,M,C].forEach(function(R){R.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),R.classList.add("border-neutral-700","bg-neutral-900/80","text-white")}),k===0?(C.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),j.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),F.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):k===1?z.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"):k===2&&M.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"))},H=function(){y||(S=x.offsetWidth,b=(b+1)%t.length,x.style.transform=`translateX(-${b*S}px)`,B(b))};var N=B,_=H,t=x.children,b=0,S=x.offsetWidth;setInterval(H,2e3),x.addEventListener("mouseenter",function(){y=!0}),x.addEventListener("mouseleave",function(){y=!1}),window.addEventListener("resize",function(){S=x.offsetWidth,x.style.transform=`translateX(-${b*S}px)`}),B(0)}}),`
+  `}function ExperienceSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("experience-carousel-track"),a=document.querySelectorAll(".experience-arkeabs-desc"),t=!1;if(e&&a.length){let y=function(x){a.forEach(function(g,r){r===x?g.classList.remove("hidden"):g.classList.add("hidden")});var v=document.getElementById("exp-logo-0"),k=document.getElementById("exp-logo-1"),L=document.getElementById("exp-logo-2"),f=document.getElementById("exp-logo-3"),w=document.getElementById("exp-logo-5");v&&k&&L&&f&&w&&([v,k,L,f,w].forEach(function(g){g.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","text-white","font-bold","scale-105"),g.classList.add("border-neutral-700","bg-neutral-900/70","text-white")}),x===0?(v.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):x===1?(k.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):x===2&&(L.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")))},j=function(){t||(s=e.offsetWidth,o=(o+1)%n.length,e.style.transform=`translateX(-${o*s}px)`,y(o))};var S=y,A=j,n=e.children,o=0,s=e.offsetWidth;setInterval(j,2e3),e.addEventListener("mouseenter",function(){t=!0}),e.addEventListener("mouseleave",function(){t=!1}),window.addEventListener("resize",function(){s=e.offsetWidth,e.style.transform=`translateX(-${o*s}px)`}),y(0)}var l=document.getElementById("freeray-carousel-track"),p=document.querySelectorAll(".experience-freeray-desc"),d=!1;if(l&&p.length){let y=function(x){p.forEach(function(g,r){r===x?g.classList.remove("hidden"):g.classList.add("hidden")});var v=document.getElementById("freeray-logo-0"),k=document.getElementById("freeray-logo-1"),L=document.getElementById("freeray-logo-2"),f=document.getElementById("freeray-logo-3"),w=document.getElementById("freeray-logo-4");v&&k&&L&&f&&w&&([v,k,L,f,w].forEach(function(g){g.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),g.classList.add("border-neutral-700","bg-neutral-900/80","text-white")}),x===0?(w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),v.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),k.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):x===1?L.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"):x===2&&f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"))},j=function(){d||(m=l.offsetWidth,u=(u+1)%b.length,l.style.transform=`translateX(-${u*m}px)`,y(u))};var M=y,I=j,b=l.children,u=0,m=l.offsetWidth;setInterval(j,2e3),l.addEventListener("mouseenter",function(){d=!0}),l.addEventListener("mouseleave",function(){d=!1}),window.addEventListener("resize",function(){m=l.offsetWidth,l.style.transform=`translateX(-${u*m}px)`}),y(0)}}),`
   <section id="experience" class="rockstar-section bg-rockstar bg-cover bg-center bg-no-repeat">
     <div class="section-content">
       <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r  from-red-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent text-center mt-34">Professional  Experience</h2>
@@ -650,168 +581,368 @@
     <h2 class="text-2xl md:text-4xl font-bold mt-20 pt-12 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent text-center">Projects</h2>
       
       <div class="grid md:grid-cols-2 gap-8 mt-8 mb-20"> 
+        <!-- Tetris with AI -->
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-cyan-500">
+          <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
+          <div class="project-preview absolute inset-0 z-10 transition-opacity duration-500 group-hover:opacity-0">
+            <img src="/images/tetris.png" alt="Tetris Game Preview" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+              <div class="text-center">
+                <svg class="w-16 h-16 mx-auto mb-4 text-cyan-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <p class="text-white text-xl font-bold">Hover to see details</p>
+                <p class="text-cyan-300 text-sm mt-2">Click links to play live!</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project Details (hidden by default, shown on hover) -->
+          <div class="project-details relative z-20 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Tetris with AI - Deep Q-Learning</h3>
+              <div class="flex gap-4">
+                <a href="https://github.com/ELALAMIADAM/tetris" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://elalamiadam.github.io/tetris/" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-cyan-300">Completion</span>
+                <span class="text-sm font-bold text-cyan-300">100%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-cyan-500 to-blue-500 h-2.5 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-cyan-900/50 text-cyan-200 rounded-full text-sm">JavaScript</span>
+              <span class="px-3 py-1 bg-cyan-900/50 text-cyan-200 rounded-full text-sm">TensorFlow.js</span>
+              <span class="px-3 py-1 bg-cyan-900/50 text-cyan-200 rounded-full text-sm">Double DQN</span>
+              <span class="px-3 py-1 bg-cyan-900/50 text-cyan-200 rounded-full text-sm">Reinforcement Learning</span>
+            </div>
+            <p class="text-white/80 text-base">An advanced Tetris game featuring a Double DQN AI that learns to play through reinforcement learning. The AI uses 30+ reward factors and can be trained in background mode. Features classic gameplay with multiple difficulty levels, sound effects, and the ability to watch the AI learn and play in real-time.</p>
+          </div>
+        </div>
+
         <!-- Blood Donation App -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 flex flex-col hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-white">Blood Donation App</h3>
-            <a href="https://github.com/ELALAMIADAM/blood-connect" target="_blank" class="text-white/80 hover:text-white transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-yellow-500">
+          <div class="project-details relative z-20 p-6 opacity-100">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Blood Donation App</h3>
+              <a href="https://github.com/ELALAMIADAM/blood-connect" target="_blank" class="text-white/80 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-yellow-300">Completion</span>
+                <span class="text-sm font-bold text-yellow-300">95%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-yellow-500 to-orange-500 h-2.5 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">Vue.js</span>
+              <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">Node.js</span>
+              <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">PostgreSQL</span>
+              <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">JWT</span>
+            </div>
+            <p class="text-white/80 text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">Developed a full-stack app to connect blood donors and recipients, addressing delays in emergency blood supply. Implemented Vue.js frontend and Node.js backend with JWT authentication and geolocation matching. Resulted in a 40% faster donor response time, recognized for social impact.</p>
           </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">Vue.js</span>
-            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">Node.js</span>
-            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">PostgreSQL</span>
-            <span class="px-3 py-1 bg-yellow-900/50 text-yellow-200 rounded-full text-sm">JWT</span>
-          </div>
-          <p class="text-white/80 text-base">Developed a full-stack app to connect blood donors and recipients, addressing delays in emergency blood supply. Implemented Vue.js frontend and Node.js backend with JWT authentication and geolocation matching. Resulted in a 40% faster donor response time, recognized for social impact.</p>
         </div>
 
         <!-- Job Market Analytics Scraper -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 flex flex-col hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-white">Job Market Analytics Scraper</h3>
-            <a href="https://github.com/ELALAMIADAM/Job-Market-Analytics-Scraper" target="_blank" class="text-white/80 hover:text-white transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-purple-500">
+          <div class="project-details relative z-20 p-6 opacity-100">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Job Market Analytics Scraper</h3>
+              <a href="https://github.com/ELALAMIADAM/Job-Market-Analytics-Scraper" target="_blank" class="text-white/80 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-purple-300">Completion</span>
+                <span class="text-sm font-bold text-purple-300">90%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Python</span>
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Scrapy</span>
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Streamlit</span>
+            </div>
+            <p class="text-white/80 text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">Developed a data pipeline to scrape, analyze and visualize job market trends from LinkedIn and Indeed using Python and Scrapy. Built an interactive dashboard using Streamlit to visualize key insights about job market demands and skill trends.</p>
           </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Python</span>
-            <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Scrapy</span>
-            <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Streamlit</span>
-          </div>
-          <p class="text-white/80 text-base">Developed a data pipeline to scrape, analyze and visualize job market trends from LinkedIn and Indeed using Python and Scrapy. Built an interactive dashboard using Streamlit to visualize key insights about job market demands and skill trends.</p>
         </div>
 
         <!-- Smart Menu Web App -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 flex flex-col hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-white">Smart Menu Web App</h3>
-            <a href="https://github.com/ELALAMIADAM/Smart-Menu-Web-App-for-Restaurant" target="_blank" class="text-white/80 hover:text-white transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-red-500">
+          <div class="project-details relative z-20 p-6 opacity-100">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Smart Menu Web App</h3>
+              <a href="https://github.com/ELALAMIADAM/Smart-Menu-Web-App-for-Restaurant" target="_blank" class="text-white/80 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-red-300">Completion</span>
+                <span class="text-sm font-bold text-red-300">85%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-red-500 to-pink-500 h-2.5 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">Figma</span>
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">UX/UI</span>
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">Tailwind CSS</span>
+            </div>
+            <p class="text-white/80 text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">A digital ordering solution for restaurants, reducing service friction through UX research, prototyping, and web development.</p>
           </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">React</span>
-            <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">Figma</span>
-            <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">UX/UI</span>
-            <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">Tailwind CSS</span>
-          </div>
-          <p class="text-white/80 text-base">A digital ordering solution for restaurants, reducing service friction through UX research, prototyping, and web development.</p>
         </div>
 
         <!-- Wood Block Puzzle AI Game -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 flex flex-col hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-white">Block Puzzle AI Game</h3>
-            <div class="flex gap-4">
-            <a href="https://github.com/ELALAMIADAM/Block-Puzzle-" target="_blank" class="text-white/80 hover:text-white transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-            <a href="https://elalamiadam.github.io/Block-Puzzle-/" target="_blank" class="text-white/80 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                </svg>
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-orange-500">
+          <div class="project-details relative z-20 p-6 opacity-100">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Wood Block Puzzle AI Game</h3>
+              <a href="https://github.com/ELALAMIADAM/Block-Puzzle-" target="_blank" class="text-white/80 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               </a>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-orange-300">Completion</span>
+                <span class="text-sm font-bold text-orange-300">100%</span>
               </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2.5 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm">Tensorflow</span>
+              <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm">RL/DQN</span>
+            </div>
+            <p class="text-white/80 text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">Built a React puzzle game with a self-learning AI using TensorFlow.js. Designed game mechanics, DQN-based reinforcement learning, and interactive UI to train and visualize AI performance. Demonstrated full-stack JS skills in game dev and ML.</p>
           </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm">React</span>
-            <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm">Tensorflow</span>
-            <span class="px-3 py-1 bg-red-500 text-white rounded-full text-sm">RL/DQN</span>
-          </div>
-          <p class="text-white/80 text-base">Built a React puzzle game with a self-learning AI using TensorFlow.js. Designed game mechanics, DQN-based reinforcement learning, and interactive UI to train and visualize AI performance. Demonstrated full-stack JS skills in game dev and ML.</p>
         </div>
+        
         <!-- Market Sales Management Application -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 flex flex-col hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-white">Market Sales Management</h3>
-            <a href="https://github.com/ELALAMIADAM/logiciel-caisse" target="_blank" class="text-white/80 hover:text-white transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-green-500">
+          <div class="project-details relative z-20 p-6 opacity-100">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Market Sales Management</h3>
+              <a href="https://github.com/ELALAMIADAM/logiciel-caisse" target="_blank" class="text-white/80 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-green-300">Completion</span>
+                <span class="text-sm font-bold text-green-300">80%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-green-500 to-emerald-500 h-2.5 rounded-full" style="width: 80%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">React</span>
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">Flask</span>
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">SQLite</span>
+            </div>
+            <p class="text-white/80 text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">A market sales management app to track and manage sales transactions, with robust analytics for performance evaluation and business optimization.</p>
           </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">React</span>
-            <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">Flask</span>
-            <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">SQLite</span>
-          </div>
-          <p class="text-white/80 text-base">A market sales management app to track and manage sales transactions, with robust analytics for performance evaluation and business optimization.</p>
         </div>
 
         <!-- AI-Powered Career Management Platform -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 flex flex-col hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-white">AI Career Management Platform</h3>
-            <a href="https://github.com/ELALAMIADAM/careervoid" target="_blank" class="text-white/80 hover:text-white transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-blue-500">
+          <div class="project-details relative z-20 p-6 opacity-100">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">AI Career Management Platform</h3>
+              <a href="https://github.com/ELALAMIADAM/careervoid" target="_blank" class="text-white/80 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-blue-300">Completion</span>
+                <span class="text-sm font-bold text-blue-300">75%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2.5 rounded-full" style="width: 75%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-blue-900/50 text-blue-200 rounded-full text-sm">Next.js</span>
+              <span class="px-3 py-1 bg-blue-900/50 text-blue-200 rounded-full text-sm">NLP</span>
+              <span class="px-3 py-1 bg-blue-900/50 text-blue-200 rounded-full text-sm">Node.js</span>
+              <span class="px-3 py-1 bg-blue-900/50 text-blue-200 rounded-full text-sm">PostgreSQL</span>
+            </div>
+            <p class="text-white/80 text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">A full-stack AI-powered career management platform using Next.js, Node.js, and TypeScript, integrating OpenAI for resume optimization and job matching.</p>
           </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-blue-900/50 text-blue-200 rounded-full text-sm">Next.js</span>
-            <span class="px-3 py-1 bg-blue-900/50 text-blue-200 rounded-full text-sm">NLP</span>
-            <span class="px-3 py-1 bg-blue-900/50 text-blue-200 rounded-full text-sm">Node.js</span>
-            <span class="px-3 py-1 bg-blue-900/50 text-blue-200 rounded-full text-sm">PostgreSQL</span>
-          </div>
-          <p class="text-white/80 text-base">A full-stack AI-powered career management platform using Next.js, Node.js, and TypeScript, integrating OpenAI for resume optimization and job matching.</p>
         </div>
 
         <!-- Emergency Location Sender -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 flex flex-col hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-white">Emergency Location Sender</h3>
-            <a href="https://github.com/ELALAMIADAM/send-position-with-speech" target="_blank" class="text-white/80 hover:text-white transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-          </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-white text-black rounded-full text-sm">Java</span>
-            <span class="px-3 py-1 bg-white text-black rounded-full text-sm">Android Studio</span>
-            <span class="px-3 py-1 bg-white text-black rounded-full text-sm">GPS/SMS</span>
-          </div>
-          <p class="text-white/80 text-base">Android app that automatically detects emergency button presses (even when screen is off) and sends GPS coordinates via SMS to predefined contacts, with auto-response to location requests. Built with Java using Accessibility Service and FusedLocationProvider.</p>
-        </div>
-        <!-- Virtual Museum -->
-        <div class="appear-on-scroll bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl p-6 flex flex-col hover:shadow-2xl transition-all hover:scale-[1.02] hover:border-neutral-600">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="text-2xl font-bold text-white">Virtual Museum</h3>
-            <div class="flex gap-4">
-              <a href="https://github.com/ayoubachak/museum-babylon" target="_blank" class="text-white/80 hover:text-white transition-colors">
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-gray-500">
+          <div class="project-details relative z-20 p-6 opacity-100">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Emergency Location Sender</h3>
+              <a href="https://github.com/ELALAMIADAM/send-position-with-speech" target="_blank" class="text-white/80 hover:text-white transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
               </a>
-              <a href="https://ayoubachak.github.io/museum-babylon/" target="_blank" class="text-white/80 hover:text-white transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-gray-300">Completion</span>
+                <span class="text-sm font-bold text-gray-300">100%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-gray-500 to-gray-700 h-2.5 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-white text-black rounded-full text-sm">Java</span>
+              <span class="px-3 py-1 bg-white text-black rounded-full text-sm">Android Studio</span>
+              <span class="px-3 py-1 bg-white text-black rounded-full text-sm">GPS/SMS</span>
+            </div>
+            <p class="text-white/80 text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">Android app that automatically detects emergency button presses (even when screen is off) and sends GPS coordinates via SMS to predefined contacts, with auto-response to location requests. Built with Java using Accessibility Service and FusedLocationProvider.</p>
+          </div>
+        </div>
+        
+        <!-- Virtual Museum -->
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-purple-500">
+          <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
+          <div class="project-preview absolute inset-0 z-10 transition-opacity duration-500 group-hover:opacity-0">
+            <img src="/images/musuem.png" alt="Virtual Museum Preview" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+              <div class="text-center">
+                <svg class="w-16 h-16 mx-auto mb-4 text-purple-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
-              </a>
+                <p class="text-white text-xl font-bold">Hover to see details</p>
+                <p class="text-purple-300 text-sm mt-2">Click links to explore live!</p>
+              </div>
             </div>
           </div>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">JavaScript</span>
-            <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Babylon.js</span>
-            <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">3D</span>
+          
+          <!-- Project Details (hidden by default, shown on hover) -->
+          <div class="project-details relative z-20 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Virtual Museum</h3>
+              <div class="flex gap-4">
+                <a href="https://github.com/ayoubachak/museum-babylon" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://ayoubachak.github.io/museum-babylon/" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-purple-300">Completion</span>
+                <span class="text-sm font-bold text-purple-300">100%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-2.5 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">JavaScript</span>
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Babylon.js</span>
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">3D</span>
+            </div>
+            <p class="text-white/80 text-base">A first-person immersive platform using JavaScript and Babylon.js. Explore a virtual museum, interact with visitors, and discover interactive exhibits.</p>
           </div>
-          <p class="text-white/80 text-base">A first-person immersive platform using JavaScript and Babylon.js. Explore a virtual museum, interact with visitors, and discover interactive exhibits.</p>
         </div>
       </div>
     </div>
   </section>
-  `}class EmailJSResponseStatus{constructor(i=0,r="Network Error"){this.status=i,this.text=r}}const createWebStorage=()=>{if(!(typeof localStorage>"u"))return{get:s=>Promise.resolve(localStorage.getItem(s)),set:(s,i)=>Promise.resolve(localStorage.setItem(s,i)),remove:s=>Promise.resolve(localStorage.removeItem(s))}},store={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:createWebStorage()},buildOptions=s=>s?typeof s=="string"?{publicKey:s}:s.toString()==="[object Object]"?s:{}:{},init=(s,i="https://api.emailjs.com")=>{if(!s)return;const r=buildOptions(s);store.publicKey=r.publicKey,store.blockHeadless=r.blockHeadless,store.storageProvider=r.storageProvider,store.blockList=r.blockList,store.limitRate=r.limitRate,store.origin=r.origin||i},sendPost=async(s,i,r={})=>{const l=await fetch(store.origin+s,{method:"POST",headers:r,body:i}),c=await l.text(),d=new EmailJSResponseStatus(l.status,c);if(l.ok)return d;throw d},validateParams=(s,i,r)=>{if(!s||typeof s!="string")throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!i||typeof i!="string")throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!r||typeof r!="string")throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},validateTemplateParams=s=>{if(s&&s.toString()!=="[object Object]")throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"},isHeadless=s=>s.webdriver||!s.languages||s.languages.length===0,headlessError=()=>new EmailJSResponseStatus(451,"Unavailable For Headless Browser"),validateBlockListParams=(s,i)=>{if(!Array.isArray(s))throw"The BlockList list has to be an array";if(typeof i!="string")throw"The BlockList watchVariable has to be a string"},isBlockListDisabled=s=>{var i;return!((i=s.list)!=null&&i.length)||!s.watchVariable},getValue=(s,i)=>s instanceof FormData?s.get(i):s[i],isBlockedValueInParams=(s,i)=>{if(isBlockListDisabled(s))return!1;validateBlockListParams(s.list,s.watchVariable);const r=getValue(i,s.watchVariable);return typeof r!="string"?!1:s.list.includes(r)},blockedEmailError=()=>new EmailJSResponseStatus(403,"Forbidden"),validateLimitRateParams=(s,i)=>{if(typeof s!="number"||s<0)throw"The LimitRate throttle has to be a positive number";if(i&&typeof i!="string")throw"The LimitRate ID has to be a non-empty string"},getLeftTime=async(s,i,r)=>{const l=Number(await r.get(s)||0);return i-Date.now()+l},isLimitRateHit=async(s,i,r)=>{if(!i.throttle||!r)return!1;validateLimitRateParams(i.throttle,i.id);const l=i.id||s;return await getLeftTime(l,i.throttle,r)>0?!0:(await r.set(l,Date.now().toString()),!1)},limitRateError=()=>new EmailJSResponseStatus(429,"Too Many Requests"),send=async(s,i,r,l)=>{const c=buildOptions(l),d=c.publicKey||store.publicKey,x=c.blockHeadless||store.blockHeadless,w=c.storageProvider||store.storageProvider,y={...store.blockList,...c.blockList},t={...store.limitRate,...c.limitRate};return x&&isHeadless(navigator)?Promise.reject(headlessError()):(validateParams(d,s,i),validateTemplateParams(r),r&&isBlockedValueInParams(y,r)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,t,w)?Promise.reject(limitRateError()):sendPost("/api/v1.0/email/send",JSON.stringify({lib_version:"4.4.1",user_id:d,service_id:s,template_id:i,template_params:r}),{"Content-type":"application/json"}))},validateForm=s=>{if(!s||s.nodeName!=="FORM")throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"},findHTMLForm=s=>typeof s=="string"?document.querySelector(s):s,sendForm=async(s,i,r,l)=>{const c=buildOptions(l),d=c.publicKey||store.publicKey,x=c.blockHeadless||store.blockHeadless,w=store.storageProvider||c.storageProvider,y={...store.blockList,...c.blockList},t={...store.limitRate,...c.limitRate};if(x&&isHeadless(navigator))return Promise.reject(headlessError());const b=findHTMLForm(r);validateParams(d,s,i),validateForm(b);const S=new FormData(b);return isBlockedValueInParams(y,S)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,t,w)?Promise.reject(limitRateError()):(S.append("lib_version","4.4.1"),S.append("service_id",s),S.append("template_id",i),S.append("user_id",d),sendPost("/api/v1.0/email/send-form",S))},emailjs={init,send,sendForm,EmailJSResponseStatus};function ContactSection(){return emailjs.init("EgxOaVTRVLeDEABrb"),window.handleSubmit=function(s){s.preventDefault();const i=s.target,r=i.querySelector('button[type="submit"]'),l=r.textContent;r.innerHTML=`
+  
+  <style>
+    .project-card {
+      min-height: 400px;
+      position: relative;
+    }
+    
+    /* For projects with live previews */
+    .project-card .project-preview {
+      background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%);
+    }
+    
+    .project-card .project-details {
+      background: rgba(23, 23, 23, 0.95);
+      backdrop-filter: blur(10px);
+    }
+    
+    /* Ensure links are clickable even when details are visible */
+    .project-card a {
+      position: relative;
+      z-index: 40;
+    }
+  </style>
+  `}class EmailJSResponseStatus{constructor(a=0,t="Network Error"){this.status=a,this.text=t}}const createWebStorage=()=>{if(!(typeof localStorage>"u"))return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,a)=>Promise.resolve(localStorage.setItem(e,a)),remove:e=>Promise.resolve(localStorage.removeItem(e))}},store={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:createWebStorage()},buildOptions=e=>e?typeof e=="string"?{publicKey:e}:e.toString()==="[object Object]"?e:{}:{},init=(e,a="https://api.emailjs.com")=>{if(!e)return;const t=buildOptions(e);store.publicKey=t.publicKey,store.blockHeadless=t.blockHeadless,store.storageProvider=t.storageProvider,store.blockList=t.blockList,store.limitRate=t.limitRate,store.origin=t.origin||a},sendPost=async(e,a,t={})=>{const n=await fetch(store.origin+e,{method:"POST",headers:t,body:a}),o=await n.text(),s=new EmailJSResponseStatus(n.status,o);if(n.ok)return s;throw s},validateParams=(e,a,t)=>{if(!e||typeof e!="string")throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!a||typeof a!="string")throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!t||typeof t!="string")throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},validateTemplateParams=e=>{if(e&&e.toString()!=="[object Object]")throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"},isHeadless=e=>e.webdriver||!e.languages||e.languages.length===0,headlessError=()=>new EmailJSResponseStatus(451,"Unavailable For Headless Browser"),validateBlockListParams=(e,a)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if(typeof a!="string")throw"The BlockList watchVariable has to be a string"},isBlockListDisabled=e=>{var a;return!((a=e.list)!=null&&a.length)||!e.watchVariable},getValue=(e,a)=>e instanceof FormData?e.get(a):e[a],isBlockedValueInParams=(e,a)=>{if(isBlockListDisabled(e))return!1;validateBlockListParams(e.list,e.watchVariable);const t=getValue(a,e.watchVariable);return typeof t!="string"?!1:e.list.includes(t)},blockedEmailError=()=>new EmailJSResponseStatus(403,"Forbidden"),validateLimitRateParams=(e,a)=>{if(typeof e!="number"||e<0)throw"The LimitRate throttle has to be a positive number";if(a&&typeof a!="string")throw"The LimitRate ID has to be a non-empty string"},getLeftTime=async(e,a,t)=>{const n=Number(await t.get(e)||0);return a-Date.now()+n},isLimitRateHit=async(e,a,t)=>{if(!a.throttle||!t)return!1;validateLimitRateParams(a.throttle,a.id);const n=a.id||e;return await getLeftTime(n,a.throttle,t)>0?!0:(await t.set(n,Date.now().toString()),!1)},limitRateError=()=>new EmailJSResponseStatus(429,"Too Many Requests"),send=async(e,a,t,n)=>{const o=buildOptions(n),s=o.publicKey||store.publicKey,l=o.blockHeadless||store.blockHeadless,p=o.storageProvider||store.storageProvider,d={...store.blockList,...o.blockList},b={...store.limitRate,...o.limitRate};return l&&isHeadless(navigator)?Promise.reject(headlessError()):(validateParams(s,e,a),validateTemplateParams(t),t&&isBlockedValueInParams(d,t)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,b,p)?Promise.reject(limitRateError()):sendPost("/api/v1.0/email/send",JSON.stringify({lib_version:"4.4.1",user_id:s,service_id:e,template_id:a,template_params:t}),{"Content-type":"application/json"}))},validateForm=e=>{if(!e||e.nodeName!=="FORM")throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"},findHTMLForm=e=>typeof e=="string"?document.querySelector(e):e,sendForm=async(e,a,t,n)=>{const o=buildOptions(n),s=o.publicKey||store.publicKey,l=o.blockHeadless||store.blockHeadless,p=store.storageProvider||o.storageProvider,d={...store.blockList,...o.blockList},b={...store.limitRate,...o.limitRate};if(l&&isHeadless(navigator))return Promise.reject(headlessError());const u=findHTMLForm(t);validateParams(s,e,a),validateForm(u);const m=new FormData(u);return isBlockedValueInParams(d,m)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,b,p)?Promise.reject(limitRateError()):(m.append("lib_version","4.4.1"),m.append("service_id",e),m.append("template_id",a),m.append("user_id",s),sendPost("/api/v1.0/email/send-form",m))},emailjs={init,send,sendForm,EmailJSResponseStatus};function ContactSection(){return emailjs.init(void 0),window.handleSubmit=function(e){e.preventDefault();const a=e.target,t=a.querySelector('button[type="submit"]'),n=t.textContent;t.innerHTML=`
       <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
       </svg>
       Sending...
-    `,r.disabled=!0,r.classList.add("opacity-75");const c={name:i.name.value,email:i.email.value,message:i.message.value};emailjs.send("service_t0r83jq","template_fcl2ipa",c).then(()=>{r.innerHTML=`
+    `,t.disabled=!0,t.classList.add("opacity-75");const o={name:a.name.value,email:a.email.value,message:a.message.value};emailjs.send(void 0,void 0,o).then(()=>{t.innerHTML=`
         <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
         </svg>
         Message Sent!
-      `,r.classList.remove("from-orange-500","to-yellow-400"),r.classList.add("bg-green-500"),i.reset();const d=document.createElement("div");d.className="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 translate-y-0 opacity-100",d.innerHTML="Your message has been sent successfully!",document.body.appendChild(d),setTimeout(()=>{d.classList.add("translate-y-2","opacity-0"),setTimeout(()=>d.remove(),500)},3e3),setTimeout(()=>{r.innerHTML=l,r.classList.remove("bg-green-500"),r.classList.add("from-orange-500","to-yellow-400"),r.disabled=!1,r.classList.remove("opacity-75")},3e3)}).catch(d=>{r.innerHTML=`
+      `,t.classList.remove("from-orange-500","to-yellow-400"),t.classList.add("bg-green-500"),a.reset();const s=document.createElement("div");s.className="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 translate-y-0 opacity-100",s.innerHTML="Your message has been sent successfully!",document.body.appendChild(s),setTimeout(()=>{s.classList.add("translate-y-2","opacity-0"),setTimeout(()=>s.remove(),500)},3e3),setTimeout(()=>{t.innerHTML=n,t.classList.remove("bg-green-500"),t.classList.add("from-orange-500","to-yellow-400"),t.disabled=!1,t.classList.remove("opacity-75")},3e3)}).catch(s=>{t.innerHTML=`
         <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
         Error! Try Again
-      `,r.classList.remove("from-orange-500","to-yellow-400"),r.classList.add("bg-red-500");const x=document.createElement("div");x.className="fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 translate-y-0 opacity-100",x.innerHTML="Failed to send message. Please try again.",document.body.appendChild(x),setTimeout(()=>{x.classList.add("translate-y-2","opacity-0"),setTimeout(()=>x.remove(),500)},3e3),setTimeout(()=>{r.innerHTML=l,r.classList.remove("bg-red-500"),r.classList.add("from-orange-500","to-yellow-400"),r.disabled=!1,r.classList.remove("opacity-75")},3e3),console.error("Error sending email:",d)})},`
+      `,t.classList.remove("from-orange-500","to-yellow-400"),t.classList.add("bg-red-500");const l=document.createElement("div");l.className="fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 translate-y-0 opacity-100",l.innerHTML="Failed to send message. Please try again.",document.body.appendChild(l),setTimeout(()=>{l.classList.add("translate-y-2","opacity-0"),setTimeout(()=>l.remove(),500)},3e3),setTimeout(()=>{t.innerHTML=n,t.classList.remove("bg-red-500"),t.classList.add("from-orange-500","to-yellow-400"),t.disabled=!1,t.classList.remove("opacity-75")},3e3),console.error("Error sending email:",s)})},`
   <section id="contact" class="rockstar-section bg-rockstar ">
     <div class="section-content max-w-4xl mx-auto">
       <h2 class="text-4xl font-extrabold text-white mb-2 text-left mt-24">Contact <span class="text-gradient">me.</span></h2>
@@ -1138,259 +1269,7 @@
   
   // Trigger the scroll event once to initialize the header state
   window.dispatchEvent(new Event('scroll'));
-  `}function SplashCursor(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){let i=!window.matchMedia("(max-width: 768px)").matches;const r={SIM_RESOLUTION:128,DYE_RESOLUTION:1440,DENSITY_DISSIPATION:3.5,VELOCITY_DISSIPATION:2,PRESSURE:.1,PRESSURE_ITERATIONS:20,CURL:3,SPLAT_RADIUS:.2,SPLAT_FORCE:6e3,SHADING:!0,COLOR_UPDATE_SPEED:10},l=document.createElement("canvas");if(l.id="fluid",l.style.cssText=`
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: 50;
-        pointer-events: none;
-        display: ${i?"block":"none"};
-      `,document.body.appendChild(l),window.addEventListener("splashToggle",e=>{i=e.detail.enabled,l.style.display=i?"block":"none"}),window.addEventListener("resize",()=>{window.matchMedia("(max-width: 768px)").matches&&(i=!1,l.style.display="none")}),!i)return;function c(){this.id=-1,this.texcoordX=0,this.texcoordY=0,this.prevTexcoordX=0,this.prevTexcoordY=0,this.deltaX=0,this.deltaY=0,this.down=!1,this.moved=!1,this.color=[0,0,0]}let d=[new c];function x(e){const a={alpha:!0,depth:!1,stencil:!1,antialias:!1,preserveDrawingBuffer:!1};let o=e.getContext("webgl2",a);const n=!!o;n||(o=e.getContext("webgl",a)||e.getContext("experimental-webgl",a));let u,m;n?(o.getExtension("EXT_color_buffer_float"),m=o.getExtension("OES_texture_float_linear")):(u=o.getExtension("OES_texture_half_float"),m=o.getExtension("OES_texture_half_float_linear")),o.clearColor(0,0,0,1);const f=n?o.HALF_FLOAT:u&&u.HALF_FLOAT_OES;let L,E,Y;return n?(L=w(o,o.RGBA16F,o.RGBA,f),E=w(o,o.RG16F,o.RG,f),Y=w(o,o.R16F,o.RED,f)):(L=w(o,o.RGBA,o.RGBA,f),E=w(o,o.RGBA,o.RGBA,f),Y=w(o,o.RGBA,o.RGBA,f)),{gl:o,ext:{formatRGBA:L,formatRG:E,formatR:Y,halfFloatTexType:f,supportLinearFiltering:m}}}function w(e,a,o,n){if(!y(e,a,o,n))switch(a){case e.R16F:return w(e,e.RG16F,e.RG,n);case e.RG16F:return w(e,e.RGBA16F,e.RGBA,n);default:return null}return{internalFormat:a,format:o}}function y(e,a,o,n){const u=e.createTexture();e.bindTexture(e.TEXTURE_2D,u),e.texParameteri(e.TEXTURE_2D,e.TEXTURE_MIN_FILTER,e.NEAREST),e.texParameteri(e.TEXTURE_2D,e.TEXTURE_MAG_FILTER,e.NEAREST),e.texParameteri(e.TEXTURE_2D,e.TEXTURE_WRAP_S,e.CLAMP_TO_EDGE),e.texParameteri(e.TEXTURE_2D,e.TEXTURE_WRAP_T,e.CLAMP_TO_EDGE),e.texImage2D(e.TEXTURE_2D,0,a,4,4,0,o,n,null);const m=e.createFramebuffer();return e.bindFramebuffer(e.FRAMEBUFFER,m),e.framebufferTexture2D(e.FRAMEBUFFER,e.COLOR_ATTACHMENT0,e.TEXTURE_2D,u,0),e.checkFramebufferStatus(e.FRAMEBUFFER)===e.FRAMEBUFFER_COMPLETE}const{gl:t,ext:b}=x(l);b.supportLinearFiltering||(r.DYE_RESOLUTION=256,r.SHADING=!1);class S{constructor(a,o){this.vertexShader=a,this.fragmentShaderSource=o,this.programs=[],this.activeProgram=null,this.uniforms=[]}setKeywords(a){let o=0;for(let u=0;u<a.length;u++)o+=H(a[u]);let n=this.programs[o];if(n==null){let u=_(t.FRAGMENT_SHADER,this.fragmentShaderSource,a);n=O(this.vertexShader,u),this.programs[o]=n}n!==this.activeProgram&&(this.uniforms=N(n),this.activeProgram=n)}bind(){t.useProgram(this.activeProgram)}}class A{constructor(a,o){this.uniforms={},this.program=O(a,o),this.uniforms=N(this.program)}bind(){t.useProgram(this.program)}}function O(e,a){let o=t.createProgram();return t.attachShader(o,e),t.attachShader(o,a),t.linkProgram(o),t.getProgramParameter(o,t.LINK_STATUS)||console.trace(t.getProgramInfoLog(o)),o}function N(e){let a=[],o=t.getProgramParameter(e,t.ACTIVE_UNIFORMS);for(let n=0;n<o;n++){let u=t.getActiveUniform(e,n).name;a[u]=t.getUniformLocation(e,u)}return a}function _(e,a,o){a=B(a,o);const n=t.createShader(e);return t.shaderSource(n,a),t.compileShader(n),t.getShaderParameter(n,t.COMPILE_STATUS)||console.trace(t.getShaderInfoLog(n)),n}function B(e,a){if(!a)return e;let o="";return a.forEach(n=>{o+="#define "+n+`
-`}),o+e}function H(e){if(e.length===0)return 0;let a=0;for(let o=0;o<e.length;o++)a=(a<<5)-a+e.charCodeAt(o),a|=0;return a}const k=_(t.VERTEX_SHADER,`
-        precision highp float;
-        attribute vec2 aPosition;
-        varying vec2 vUv;
-        varying vec2 vL;
-        varying vec2 vR;
-        varying vec2 vT;
-        varying vec2 vB;
-        uniform vec2 texelSize;
-
-        void main () {
-            vUv = aPosition * 0.5 + 0.5;
-            vL = vUv - vec2(texelSize.x, 0.0);
-            vR = vUv + vec2(texelSize.x, 0.0);
-            vT = vUv + vec2(0.0, texelSize.y);
-            vB = vUv - vec2(0.0, texelSize.y);
-            gl_Position = vec4(aPosition, 0.0, 1.0);
-        }
-      `),j=_(t.FRAGMENT_SHADER,`
-        precision mediump float;
-        precision mediump sampler2D;
-        varying highp vec2 vUv;
-        uniform sampler2D uTexture;
-
-        void main () {
-            gl_FragColor = texture2D(uTexture, vUv);
-        }
-      `),F=_(t.FRAGMENT_SHADER,`
-        precision mediump float;
-        precision mediump sampler2D;
-        varying highp vec2 vUv;
-        uniform sampler2D uTexture;
-        uniform float value;
-
-        void main () {
-            gl_FragColor = value * texture2D(uTexture, vUv);
-        }
-      `),z=`
-        precision highp float;
-        precision highp sampler2D;
-        varying vec2 vUv;
-        varying vec2 vL;
-        varying vec2 vR;
-        varying vec2 vT;
-        varying vec2 vB;
-        uniform sampler2D uTexture;
-        uniform sampler2D uDithering;
-        uniform vec2 ditherScale;
-        uniform vec2 texelSize;
-
-        vec3 linearToGamma (vec3 color) {
-            color = max(color, vec3(0));
-            return max(1.055 * pow(color, vec3(0.416666667)) - 0.055, vec3(0));
-        }
-
-        void main () {
-            vec3 c = texture2D(uTexture, vUv).rgb;
-            #ifdef SHADING
-                vec3 lc = texture2D(uTexture, vL).rgb;
-                vec3 rc = texture2D(uTexture, vR).rgb;
-                vec3 tc = texture2D(uTexture, vT).rgb;
-                vec3 bc = texture2D(uTexture, vB).rgb;
-
-                float dx = length(rc) - length(lc);
-                float dy = length(tc) - length(bc);
-
-                vec3 n = normalize(vec3(dx, dy, length(texelSize)));
-                vec3 l = vec3(0.0, 0.0, 1.0);
-
-                float diffuse = clamp(dot(n, l) + 0.7, 0.7, 1.0);
-                c *= diffuse;
-            #endif
-
-            float a = max(c.r, max(c.g, c.b));
-            gl_FragColor = vec4(c, a);
-        }
-      `,M=_(t.FRAGMENT_SHADER,`
-        precision highp float;
-        precision highp sampler2D;
-        varying vec2 vUv;
-        uniform sampler2D uTarget;
-        uniform float aspectRatio;
-        uniform vec3 color;
-        uniform vec2 point;
-        uniform float radius;
-
-        void main () {
-            vec2 p = vUv - point.xy;
-            p.x *= aspectRatio;
-            vec3 splat = exp(-dot(p, p) / radius) * color;
-            vec3 base = texture2D(uTarget, vUv).xyz;
-            gl_FragColor = vec4(base + splat, 1.0);
-        }
-      `),C=_(t.FRAGMENT_SHADER,`
-        precision highp float;
-        precision highp sampler2D;
-        varying vec2 vUv;
-        uniform sampler2D uVelocity;
-        uniform sampler2D uSource;
-        uniform vec2 texelSize;
-        uniform vec2 dyeTexelSize;
-        uniform float dt;
-        uniform float dissipation;
-
-        vec4 bilerp (sampler2D sam, vec2 uv, vec2 tsize) {
-            vec2 st = uv / tsize - 0.5;
-            vec2 iuv = floor(st);
-            vec2 fuv = fract(st);
-
-            vec4 a = texture2D(sam, (iuv + vec2(0.5, 0.5)) * tsize);
-            vec4 b = texture2D(sam, (iuv + vec2(1.5, 0.5)) * tsize);
-            vec4 c = texture2D(sam, (iuv + vec2(0.5, 1.5)) * tsize);
-            vec4 d = texture2D(sam, (iuv + vec2(1.5, 1.5)) * tsize);
-
-            return mix(mix(a, b, fuv.x), mix(c, d, fuv.x), fuv.y);
-        }
-
-        void main () {
-            #ifdef MANUAL_FILTERING
-                vec2 coord = vUv - dt * bilerp(uVelocity, vUv, texelSize).xy * texelSize;
-                vec4 result = bilerp(uSource, coord, dyeTexelSize);
-            #else
-                vec2 coord = vUv - dt * texture2D(uVelocity, vUv).xy * texelSize;
-                vec4 result = texture2D(uSource, coord);
-            #endif
-            float decay = 1.0 + dissipation * dt;
-            gl_FragColor = result / decay;
-        }
-      `,b.supportLinearFiltering?null:["MANUAL_FILTERING"]),R=_(t.FRAGMENT_SHADER,`
-        precision mediump float;
-        precision mediump sampler2D;
-        varying highp vec2 vUv;
-        varying highp vec2 vL;
-        varying highp vec2 vR;
-        varying highp vec2 vT;
-        varying highp vec2 vB;
-        uniform sampler2D uVelocity;
-
-        void main () {
-            float L = texture2D(uVelocity, vL).x;
-            float R = texture2D(uVelocity, vR).x;
-            float T = texture2D(uVelocity, vT).y;
-            float B = texture2D(uVelocity, vB).y;
-
-            vec2 C = texture2D(uVelocity, vUv).xy;
-            if (vL.x < 0.0) { L = -C.x; }
-            if (vR.x > 1.0) { R = -C.x; }
-            if (vT.y > 1.0) { T = -C.y; }
-            if (vB.y < 0.0) { B = -C.y; }
-
-            float div = 0.5 * (R - L + T - B);
-            gl_FragColor = vec4(div, 0.0, 0.0, 1.0);
-        }
-      `),p=_(t.FRAGMENT_SHADER,`
-        precision mediump float;
-        precision mediump sampler2D;
-        varying highp vec2 vUv;
-        varying highp vec2 vL;
-        varying highp vec2 vR;
-        varying highp vec2 vT;
-        varying highp vec2 vB;
-        uniform sampler2D uVelocity;
-
-        void main () {
-            float L = texture2D(uVelocity, vL).y;
-            float R = texture2D(uVelocity, vR).y;
-            float T = texture2D(uVelocity, vT).x;
-            float B = texture2D(uVelocity, vB).x;
-            float vorticity = R - L - T + B;
-            gl_FragColor = vec4(0.5 * vorticity, 0.0, 0.0, 1.0);
-        }
-      `),h=_(t.FRAGMENT_SHADER,`
-        precision highp float;
-        precision highp sampler2D;
-        varying vec2 vUv;
-        varying vec2 vL;
-        varying vec2 vR;
-        varying vec2 vT;
-        varying vec2 vB;
-        uniform sampler2D uVelocity;
-        uniform sampler2D uCurl;
-        uniform float curl;
-        uniform float dt;
-
-        void main () {
-            float L = texture2D(uCurl, vL).x;
-            float R = texture2D(uCurl, vR).x;
-            float T = texture2D(uCurl, vT).x;
-            float B = texture2D(uCurl, vB).x;
-            float C = texture2D(uCurl, vUv).x;
-
-            vec2 force = 0.5 * vec2(abs(T) - abs(B), abs(R) - abs(L));
-            force /= length(force) + 0.0001;
-            force *= curl * C;
-            force.y *= -1.0;
-
-            vec2 velocity = texture2D(uVelocity, vUv).xy;
-            velocity += force * dt;
-            velocity = min(max(velocity, -1000.0), 1000.0);
-            gl_FragColor = vec4(velocity, 0.0, 1.0);
-        }
-      `),v=_(t.FRAGMENT_SHADER,`
-        precision mediump float;
-        precision mediump sampler2D;
-        varying highp vec2 vUv;
-        varying highp vec2 vL;
-        varying highp vec2 vR;
-        varying highp vec2 vT;
-        varying highp vec2 vB;
-        uniform sampler2D uPressure;
-        uniform sampler2D uDivergence;
-
-        void main () {
-            float L = texture2D(uPressure, vL).x;
-            float R = texture2D(uPressure, vR).x;
-            float T = texture2D(uPressure, vT).x;
-            float B = texture2D(uPressure, vB).x;
-            float C = texture2D(uPressure, vUv).x;
-            float divergence = texture2D(uDivergence, vUv).x;
-            float pressure = (L + R + B + T - divergence) * 0.25;
-            gl_FragColor = vec4(pressure, 0.0, 0.0, 1.0);
-        }
-      `),P=_(t.FRAGMENT_SHADER,`
-        precision mediump float;
-        precision mediump sampler2D;
-        varying highp vec2 vUv;
-        varying highp vec2 vL;
-        varying highp vec2 vR;
-        varying highp vec2 vT;
-        varying highp vec2 vB;
-        uniform sampler2D uPressure;
-        uniform sampler2D uVelocity;
-
-        void main () {
-            float L = texture2D(uPressure, vL).x;
-            float R = texture2D(uPressure, vR).x;
-            float T = texture2D(uPressure, vT).x;
-            float B = texture2D(uPressure, vB).x;
-            vec2 velocity = texture2D(uVelocity, vUv).xy;
-            velocity.xy -= vec2(R - L, T - B);
-            gl_FragColor = vec4(velocity, 0.0, 1.0);
-        }
-      `),T=(t.bindBuffer(t.ARRAY_BUFFER,t.createBuffer()),t.bufferData(t.ARRAY_BUFFER,new Float32Array([-1,-1,-1,1,1,1,1,-1]),t.STATIC_DRAW),t.bindBuffer(t.ELEMENT_ARRAY_BUFFER,t.createBuffer()),t.bufferData(t.ELEMENT_ARRAY_BUFFER,new Uint16Array([0,1,2,0,2,3]),t.STATIC_DRAW),t.vertexAttribPointer(0,2,t.FLOAT,!1,0,0),t.enableVertexAttribArray(0),(e,a=!1)=>{e==null?(t.viewport(0,0,t.drawingBufferWidth,t.drawingBufferHeight),t.bindFramebuffer(t.FRAMEBUFFER,null)):(t.viewport(0,0,e.width,e.height),t.bindFramebuffer(t.FRAMEBUFFER,e.fbo)),a&&(t.clearColor(0,0,0,1),t.clear(t.COLOR_BUFFER_BIT)),t.drawElements(t.TRIANGLES,6,t.UNSIGNED_SHORT,0)});let D,g,te,ae,X;const ce=new A(k,j),oe=new A(k,F),G=new A(k,M),U=new A(k,C),re=new A(k,R),se=new A(k,p),q=new A(k,h),W=new A(k,v),J=new A(k,P),$=new S(k,z);function V(e,a,o,n,u,m){t.activeTexture(t.TEXTURE0);let f=t.createTexture();t.bindTexture(t.TEXTURE_2D,f),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_MIN_FILTER,m),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_MAG_FILTER,m),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_WRAP_S,t.CLAMP_TO_EDGE),t.texParameteri(t.TEXTURE_2D,t.TEXTURE_WRAP_T,t.CLAMP_TO_EDGE),t.texImage2D(t.TEXTURE_2D,0,o,e,a,0,n,u,null);let L=t.createFramebuffer();return t.bindFramebuffer(t.FRAMEBUFFER,L),t.framebufferTexture2D(t.FRAMEBUFFER,t.COLOR_ATTACHMENT0,t.TEXTURE_2D,f,0),t.viewport(0,0,e,a),t.clear(t.COLOR_BUFFER_BIT),{texture:f,fbo:L,width:e,height:a,texelSizeX:1/e,texelSizeY:1/a,attach(E){return t.activeTexture(t.TEXTURE0+E),t.bindTexture(t.TEXTURE_2D,f),E}}}function ne(e,a,o,n,u,m){let f=V(e,a,o,n,u,m),L=V(e,a,o,n,u,m);return{width:e,height:a,texelSizeX:f.texelSizeX,texelSizeY:f.texelSizeY,get read(){return f},set read(E){f=E},get write(){return L},set write(E){L=E},swap(){let E=f;f=L,L=E}}}function fe(e,a,o,n,u,m,f){let L=V(a,o,n,u,m,f);return ce.bind(),t.uniform1i(ce.uniforms.uTexture,e.attach(0)),T(L),L}function de(e,a,o,n,u,m,f){return e.width===a&&e.height===o||(e.read=fe(e.read,a,o,n,u,m,f),e.write=V(a,o,n,u,m,f),e.width=a,e.height=o,e.texelSizeX=1/a,e.texelSizeY=1/o),e}function ue(e){let a=t.drawingBufferWidth/t.drawingBufferHeight;a<1&&(a=1/a);const o=Math.round(e),n=Math.round(e*a);return t.drawingBufferWidth>t.drawingBufferHeight?{width:n,height:o}:{width:o,height:n}}function pe(){let e=ue(r.SIM_RESOLUTION),a=ue(r.DYE_RESOLUTION);const o=b.halfFloatTexType,n=b.formatRGBA,u=b.formatRG,m=b.formatR,f=b.supportLinearFiltering?t.LINEAR:t.NEAREST;t.disable(t.BLEND),D?D=de(D,a.width,a.height,n.internalFormat,n.format,o,f):D=ne(a.width,a.height,n.internalFormat,n.format,o,f),g?g=de(g,e.width,e.height,u.internalFormat,u.format,o,f):g=ne(e.width,e.height,u.internalFormat,u.format,o,f),te=V(e.width,e.height,m.internalFormat,m.format,o,t.NEAREST),ae=V(e.width,e.height,m.internalFormat,m.format,o,t.NEAREST),X=ne(e.width,e.height,m.internalFormat,m.format,o,t.NEAREST)}function he(){let e=[];r.SHADING&&e.push("SHADING"),$.setKeywords(e)}function I(e){const a=window.devicePixelRatio||1;return Math.floor(e*a)}function xe(){let e=I(l.clientWidth),a=I(l.clientHeight);return l.width!==e||l.height!==a?(l.width=e,l.height=a,!0):!1}function K(){let e=be(Math.random(),1,1);return e.r*=.15,e.g*=.15,e.b*=.15,e}function be(e,a,o){let n,u,m,f,L,E,Y,ee;switch(f=Math.floor(e*6),L=e*6-f,E=o*(1-a),Y=o*(1-L*a),ee=o*(1-(1-L)*a),f%6){case 0:n=o,u=ee,m=E;break;case 1:n=Y,u=o,m=E;break;case 2:n=E,u=o,m=ee;break;case 3:n=E,u=Y,m=o;break;case 4:n=ee,u=E,m=o;break;case 5:n=o,u=E,m=Y;break}return{r:n,g:u,b:m}}function ve(e,a,o){const n=o-a;return(e-a)%n+a}function me(e,a,o,n,u){G.bind(),t.uniform1i(G.uniforms.uTarget,g.read.attach(0)),t.uniform1f(G.uniforms.aspectRatio,l.width/l.height),t.uniform2f(G.uniforms.point,e,a),t.uniform3f(G.uniforms.color,o,n,0),t.uniform1f(G.uniforms.radius,we(r.SPLAT_RADIUS/100)),T(g.write),g.swap(),t.uniform1i(G.uniforms.uTarget,D.read.attach(0)),t.uniform3f(G.uniforms.color,u.r,u.g,u.b),T(D.write),D.swap()}function we(e){let a=l.width/l.height;return a>1&&(e*=a),e}function ye(e){let a=l.width/l.height;return a<1&&(e*=a),e}function ke(e){let a=l.width/l.height;return a>1&&(e/=a),e}function ie(e,a,o,n){e.id=a,e.down=!0,e.moved=!1,e.texcoordX=o/l.width,e.texcoordY=1-n/l.height,e.prevTexcoordX=e.texcoordX,e.prevTexcoordY=e.texcoordY,e.deltaX=0,e.deltaY=0,e.color=K()}function le(e,a,o,n){e.prevTexcoordX=e.texcoordX,e.prevTexcoordY=e.texcoordY,e.texcoordX=a/l.width,e.texcoordY=1-o/l.height,e.deltaX=ye(e.texcoordX-e.prevTexcoordX),e.deltaY=ke(e.texcoordY-e.prevTexcoordY),e.moved=Math.abs(e.deltaX)>0||Math.abs(e.deltaY)>0,e.color=n}function Se(e){e.down=!1}function Ee(e){let a=e.deltaX*r.SPLAT_FORCE,o=e.deltaY*r.SPLAT_FORCE;me(e.texcoordX,e.texcoordY,a,o,e.color)}function Le(e){const a=K();a.r*=10,a.g*=10,a.b*=10;let o=10*(Math.random()-.5),n=30*(Math.random()-.5);me(e.texcoordX,e.texcoordY,o,n,a)}function Te(e){t.disable(t.BLEND),se.bind(),t.uniform2f(se.uniforms.texelSize,g.texelSizeX,g.texelSizeY),t.uniform1i(se.uniforms.uVelocity,g.read.attach(0)),T(ae),q.bind(),t.uniform2f(q.uniforms.texelSize,g.texelSizeX,g.texelSizeY),t.uniform1i(q.uniforms.uVelocity,g.read.attach(0)),t.uniform1i(q.uniforms.uCurl,ae.attach(1)),t.uniform1f(q.uniforms.curl,r.CURL),t.uniform1f(q.uniforms.dt,e),T(g.write),g.swap(),re.bind(),t.uniform2f(re.uniforms.texelSize,g.texelSizeX,g.texelSizeY),t.uniform1i(re.uniforms.uVelocity,g.read.attach(0)),T(te),oe.bind(),t.uniform1i(oe.uniforms.uTexture,X.read.attach(0)),t.uniform1f(oe.uniforms.value,r.PRESSURE),T(X.write),X.swap(),W.bind(),t.uniform2f(W.uniforms.texelSize,g.texelSizeX,g.texelSizeY),t.uniform1i(W.uniforms.uDivergence,te.attach(0));for(let o=0;o<r.PRESSURE_ITERATIONS;o++)t.uniform1i(W.uniforms.uPressure,X.read.attach(1)),T(X.write),X.swap();J.bind(),t.uniform2f(J.uniforms.texelSize,g.texelSizeX,g.texelSizeY),t.uniform1i(J.uniforms.uPressure,X.read.attach(0)),t.uniform1i(J.uniforms.uVelocity,g.read.attach(1)),T(g.write),g.swap(),U.bind(),t.uniform2f(U.uniforms.texelSize,g.texelSizeX,g.texelSizeY),b.supportLinearFiltering||t.uniform2f(U.uniforms.dyeTexelSize,g.texelSizeX,g.texelSizeY);let a=g.read.attach(0);t.uniform1i(U.uniforms.uVelocity,a),t.uniform1i(U.uniforms.uSource,a),t.uniform1f(U.uniforms.dt,e),t.uniform1f(U.uniforms.dissipation,r.VELOCITY_DISSIPATION),T(g.write),g.swap(),b.supportLinearFiltering||t.uniform2f(U.uniforms.dyeTexelSize,D.texelSizeX,D.texelSizeY),t.uniform1i(U.uniforms.uVelocity,g.read.attach(0)),t.uniform1i(U.uniforms.uSource,D.read.attach(1)),t.uniform1f(U.uniforms.dissipation,r.DENSITY_DISSIPATION),T(D.write),D.swap()}function Ae(e){t.blendFunc(t.ONE,t.ONE_MINUS_SRC_ALPHA),t.enable(t.BLEND),Re(e)}function Re(e){let a=t.drawingBufferWidth,o=t.drawingBufferHeight;$.bind(),r.SHADING&&t.uniform2f($.uniforms.texelSize,1/a,1/o),t.uniform1i($.uniforms.uTexture,D.read.attach(0)),T(e)}function De(){d.forEach(e=>{e.moved&&(e.moved=!1,Ee(e))})}function _e(e){Q+=e*r.COLOR_UPDATE_SPEED,Q>=1&&(Q=ve(Q,0,1),d.forEach(a=>{a.color=K()}))}function Me(){let e=Date.now(),a=(e-ge)/1e3;return a=Math.min(a,.016666),ge=e,a}he(),pe();let ge=Date.now(),Q=0;function Z(){const e=Me();xe()&&pe(),_e(e),De(),Te(e),Ae(null),requestAnimationFrame(Z)}window.addEventListener("mousedown",e=>{let a=d[0],o=I(e.clientX),n=I(e.clientY);ie(a,-1,o,n),Le(a)}),document.body.addEventListener("mousemove",function e(a){let o=d[0],n=I(a.clientX),u=I(a.clientY),m=K();Z(),le(o,n,u,m),document.body.removeEventListener("mousemove",e)}),window.addEventListener("mousemove",e=>{let a=d[0],o=I(e.clientX),n=I(e.clientY),u=a.color;le(a,o,n,u)}),document.body.addEventListener("touchstart",function e(a){const o=a.targetTouches;let n=d[0];for(let u=0;u<o.length;u++){let m=I(o[u].clientX),f=I(o[u].clientY);Z(),ie(n,o[u].identifier,m,f)}document.body.removeEventListener("touchstart",e)}),window.addEventListener("touchstart",e=>{const a=e.targetTouches;let o=d[0];for(let n=0;n<a.length;n++){let u=I(a[n].clientX),m=I(a[n].clientY);ie(o,a[n].identifier,u,m)}}),window.addEventListener("touchmove",e=>{const a=e.targetTouches;let o=d[0];for(let n=0;n<a.length;n++){let u=I(a[n].clientX),m=I(a[n].clientY);le(o,u,m,o.color)}},!1),window.addEventListener("touchend",e=>{const a=e.changedTouches;let o=d[0];for(let n=0;n<a.length;n++)Se(o)}),Z()}),""}SplashCursor();const appElement=document.querySelector("#app");appElement.innerHTML=`
+  `}const appElement=document.querySelector("#app");appElement.innerHTML=`
   ${Header()}
   <main>
     ${HeroSection()}
