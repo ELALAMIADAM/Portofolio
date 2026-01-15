@@ -9,7 +9,7 @@ export function ProjectsSection() {
         <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-cyan-500">
           <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
           <div class="project-preview absolute inset-0 z-10 transition-opacity duration-500 group-hover:opacity-0">
-            <iframe src="https://elalamiadam.github.io/tetris/" class="w-full h-full pointer-events-none" title="Tetris Preview"></iframe>
+            <img src="/images/tetris.png" alt="Tetris Game Preview" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
               <div class="text-center">
                 <svg class="w-16 h-16 mx-auto mb-4 text-cyan-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -276,7 +276,7 @@ export function ProjectsSection() {
         <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-purple-500">
           <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
           <div class="project-preview absolute inset-0 z-10 transition-opacity duration-500 group-hover:opacity-0">
-            <iframe src="https://ayoubachak.github.io/museum-babylon/" class="w-full h-full pointer-events-none" title="Virtual Museum Preview"></iframe>
+            <img src="/images/musuem.png" alt="Virtual Museum Preview" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
               <div class="text-center">
                 <svg class="w-16 h-16 mx-auto mb-4 text-purple-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
