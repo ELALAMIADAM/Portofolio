@@ -12,10 +12,6 @@ import { ProjectsSection } from './components/ProjectsSection.js';
 import { ContactSection } from './components/ContactSection.js';
 import { Footer } from './components/Footer.js';
 import { setupAnimations } from './components/animations.js';
-import { SplashCursor } from './components/SplashCursor.js';
-
-// Initialize splash cursor background effect
-SplashCursor();
 
 // Clear previous content
 const appElement = document.querySelector('#app');

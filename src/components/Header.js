@@ -1,59 +1,6 @@
 export function Header() {
   if (typeof window !== 'undefined') {
     document.addEventListener('DOMContentLoaded', function () {
-      // Splash cursor toggle functionality
-      const splashToggle = document.querySelector('.splash-toggle');
-      let splashEnabled = !window.matchMedia('(max-width: 768px)').matches; // Disabled on mobile by default
-      
-      // Update toggle button state
-      function updateToggleButton() {
-        const toggleButton = document.querySelector('.splash-toggle');
-        const toggleIcon = document.querySelector('.splash-toggle-icon');
-        const toggleText = document.querySelector('.splash-toggle-text');
-        
-        if (splashEnabled) {
-          toggleButton.classList.add('active');
-          toggleIcon.innerHTML = `
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          `;
-          toggleText.textContent = 'ON';
-        } else {
-          toggleButton.classList.remove('active');
-          toggleIcon.innerHTML = `
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728L5.636 5.636m12.728 12.728L18 12M6 6l12 12"></path>
-          `;
-          toggleText.textContent = 'OFF';
-        }
-      }
-
-      // Toggle splash cursor
-      if (splashToggle) {
-        splashToggle.addEventListener('click', () => {
-          splashEnabled = !splashEnabled;
-          updateToggleButton();
-          
-          // Dispatch custom event to control splash cursor
-          window.dispatchEvent(new CustomEvent('splashToggle', { 
-            detail: { enabled: splashEnabled } 
-          }));
-        });
-      }
-
-      // Initialize toggle button
-      updateToggleButton();
-
-      // Disable on mobile automatically
-      window.addEventListener('resize', () => {
-        const isMobile = window.matchMedia('(max-width: 768px)').matches;
-        if (isMobile && splashEnabled) {
-          splashEnabled = false;
-          updateToggleButton();
-          window.dispatchEvent(new CustomEvent('splashToggle', { 
-            detail: { enabled: false } 
-          }));
-        }
-      });
-
       // Mobile menu toggle
       const menuButton = document.querySelector('.mobile-menu-button');
       const mobileMenu = document.querySelector('.mobile-menu');
@@ -115,26 +62,6 @@ export function Header() {
     <a href="https://www.linkedin.com/in/adam-el-alami-502170215/" target="_blank" rel="noopener" class="group" aria-label="LinkedIn">
       <svg class="w-5 h-5 text-gray-300 group-hover:text-orange-400 transition-all duration-300 transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm15.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.838-1.563 3.034 0 3.595 1.997 3.595 4.594v5 .606z"/></svg>
     </a>
-  </div>
-
-  <!-- Right-aligned splash cursor toggle - Hidden on mobile -->
-  <div class="fixed right-2 top-1/2 -translate-y-1/2 z-50 hidden md:block">
-    <button class="splash-toggle group relative bg-black/40 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-800 hover:bg-black/60 transition-all duration-300 hover:scale-105" aria-label="Toggle Splash Cursor">
-      <div class="flex flex-col items-center gap-2">
-        <div class="relative overflow-hidden">
-          <svg class="splash-toggle-icon w-5 h-5 text-gray-300 group-hover:text-orange-400 transition-all duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-          </svg>
-        </div>
-        <span class="splash-toggle-text text-xs font-mono text-gray-400 group-hover:text-orange-400 transition-colors duration-300">ON</span>
-      </div>
-      
-      <!-- Animated background effect -->
-      <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-500/20 to-yellow-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      
-      <!-- Pulse effect when active -->
-      <div class="absolute inset-0 rounded-lg bg-orange-400/10 opacity-0 transition-opacity duration-300"></div>
-    </button>
   </div>
 
   <header class="smooth-header fixed top-0 left-0 right-0 z-50 backdrop-blur-md transition-all duration-300">
@@ -278,51 +205,6 @@ export function Header() {
     }
     .mobile-menu-button svg {
       transition: transform 0.3s ease;
-    }
-    
-    /* Splash toggle animations */
-    .splash-toggle.active {
-      background: rgba(255, 107, 53, 0.15) !important;
-      border-color: rgba(255, 107, 53, 0.3);
-      box-shadow: 0 0 20px rgba(255, 107, 53, 0.2);
-    }
-    
-    .splash-toggle.active .splash-toggle-icon {
-      color: #ff6b35;
-      animation: pulseGlow 2s ease-in-out infinite;
-    }
-    
-    .splash-toggle.active .splash-toggle-text {
-      color: #ff6b35;
-    }
-    
-    .splash-toggle.active .absolute:last-child {
-      opacity: 1;
-      animation: pulseBackground 2s ease-in-out infinite;
-    }
-    
-    @keyframes pulseGlow {
-      0%, 100% {
-        filter: drop-shadow(0 0 5px rgba(255, 107, 53, 0.5));
-        transform: scale(1);
-      }
-      50% {
-        filter: drop-shadow(0 0 15px rgba(255, 107, 53, 0.8));
-        transform: scale(1.05);
-      }
-    }
-    
-    @keyframes pulseBackground {
-      0%, 100% {
-        opacity: 0.1;
-      }
-      50% {
-        opacity: 0.2;
-      }
-    }
-    
-    .splash-toggle-icon svg {
-      transition: all 0.3s ease;
     }
   </style>
   `;
