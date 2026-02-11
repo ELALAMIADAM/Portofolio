@@ -5,6 +5,91 @@ export function ProjectsSection() {
     <h2 class="text-2xl md:text-4xl font-bold mt-20 pt-12 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent text-center">Projects</h2>
       
       <div class="grid md:grid-cols-2 gap-8 mt-8 mb-20"> 
+        <!-- Sudoku Battle Game -->
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-red-500">
+          <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
+          <div class="project-preview absolute inset-0 z-10 transition-opacity duration-500 group-hover:opacity-0">
+            <img src="/images/soduko_battles.jpeg" alt="Sudoku Battle Game Preview" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+              <div class="text-center">
+                <svg class="w-16 h-16 mx-auto mb-4 text-red-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <p class="text-white text-xl font-bold">Hover to see details</p>
+                <p class="text-red-300 text-sm mt-2">Click links to play live!</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project Details (hidden by default, shown on hover) -->
+          <div class="project-details relative z-20 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Sudoku Battle Game</h3>
+              <div class="flex gap-4">
+                <a href="https://github.com/ELALAMIADAM/Soduku_Angular" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://elalamiadam.github.io/Soduku_Angular/" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-red-300">Completion</span>
+                <span class="text-sm font-bold text-red-300">90%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-red-500 to-orange-500 h-2.5 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">Angular 19</span>
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">TypeScript</span>
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">Angular Material</span>
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">RxJS</span>
+            </div>
+            <p class="text-white/80 text-base">An immersive Sudoku puzzle game with epic battle themes! Fight enemies by solving Sudoku puzzles. Features Soldiers vs Zombies and Samurais vs Ninjas themes, three difficulty levels, lives system, hint system, notes mode, and dynamic battle scenes with sound effects and background music.</p>
+          </div>
+        </div>
+
+        <!-- Spring Boot Global Project -->
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-green-500">
+          <div class="project-details relative z-20 p-6 opacity-100">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Spring Boot Global Project</h3>
+              <a href="https://github.com/ELALAMIADAM/global-spring-boot-project" target="_blank" class="text-white/80 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-green-300">Completion</span>
+                <span class="text-sm font-bold text-green-300">60%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-green-500 to-emerald-500 h-2.5 rounded-full" style="width: 60%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">Spring Boot</span>
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">Java 21</span>
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">PostgreSQL</span>
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">Spring Security</span>
+            </div>
+            <p class="text-white/80 text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">A comprehensive Spring Boot application implementing complete user authentication and management system. Features Spring Security with BCrypt encryption, Spring Data JPA with PostgreSQL, RESTful API design, Swagger documentation, global exception handling, and Docker containerization.</p>
+          </div>
+        </div>
+
         <!-- Tetris with AI -->
         <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-cyan-500">
           <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
@@ -59,6 +144,60 @@ export function ProjectsSection() {
           </div>
         </div>
 
+        <!-- Virtual Museum -->
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-purple-500">
+          <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
+          <div class="project-preview absolute inset-0 z-10 transition-opacity duration-500 group-hover:opacity-0">
+            <img src="/images/musuem.png" alt="Virtual Museum Preview" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+              <div class="text-center">
+                <svg class="w-16 h-16 mx-auto mb-4 text-purple-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <p class="text-white text-xl font-bold">Hover to see details</p>
+                <p class="text-purple-300 text-sm mt-2">Click links to explore live!</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project Details (hidden by default, shown on hover) -->
+          <div class="project-details relative z-20 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Virtual Museum</h3>
+              <div class="flex gap-4">
+                <a href="https://github.com/ayoubachak/museum-babylon" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://ayoubachak.github.io/museum-babylon/" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-purple-300">Completion</span>
+                <span class="text-sm font-bold text-purple-300">100%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-2.5 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">JavaScript</span>
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Babylon.js</span>
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">3D</span>
+            </div>
+            <p class="text-white/80 text-base">A first-person immersive platform using JavaScript and Babylon.js. Explore a virtual museum, interact with visitors, and discover interactive exhibits.</p>
+          </div>
+        </div>  
+
+
         <!-- Blood Donation App -->
         <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-yellow-500">
           <div class="project-details relative z-20 p-6 opacity-100">
@@ -73,10 +212,10 @@ export function ProjectsSection() {
             <div class="mb-4">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-semibold text-yellow-300">Completion</span>
-                <span class="text-sm font-bold text-yellow-300">95%</span>
+                <span class="text-sm font-bold text-yellow-300">40%</span>
               </div>
               <div class="w-full bg-neutral-800 rounded-full h-2.5">
-                <div class="bg-gradient-to-r from-yellow-500 to-orange-500 h-2.5 rounded-full" style="width: 95%"></div>
+                <div class="bg-gradient-to-r from-yellow-500 to-orange-500 h-2.5 rounded-full" style="width: 40%"></div>
               </div>
             </div>
             
@@ -225,10 +364,10 @@ export function ProjectsSection() {
             <div class="mb-4">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-semibold text-blue-300">Completion</span>
-                <span class="text-sm font-bold text-blue-300">75%</span>
+                <span class="text-sm font-bold text-blue-300">40%</span>
               </div>
               <div class="w-full bg-neutral-800 rounded-full h-2.5">
-                <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2.5 rounded-full" style="width: 75%"></div>
+                <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2.5 rounded-full" style="width: 40%"></div>
               </div>
             </div>
             
@@ -256,10 +395,10 @@ export function ProjectsSection() {
             <div class="mb-4">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-semibold text-gray-300">Completion</span>
-                <span class="text-sm font-bold text-gray-300">100%</span>
+                <span class="text-sm font-bold text-gray-300">80%</span>
               </div>
               <div class="w-full bg-neutral-800 rounded-full h-2.5">
-                <div class="bg-gradient-to-r from-gray-500 to-gray-700 h-2.5 rounded-full" style="width: 100%"></div>
+                <div class="bg-gradient-to-r from-gray-500 to-gray-700 h-2.5 rounded-full" style="width: 80%"></div>
               </div>
             </div>
             
@@ -272,58 +411,6 @@ export function ProjectsSection() {
           </div>
         </div>
         
-        <!-- Virtual Museum -->
-        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-purple-500">
-          <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
-          <div class="project-preview absolute inset-0 z-10 transition-opacity duration-500 group-hover:opacity-0">
-            <img src="/images/musuem.png" alt="Virtual Museum Preview" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
-              <div class="text-center">
-                <svg class="w-16 h-16 mx-auto mb-4 text-purple-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-                <p class="text-white text-xl font-bold">Hover to see details</p>
-                <p class="text-purple-300 text-sm mt-2">Click links to explore live!</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Project Details (hidden by default, shown on hover) -->
-          <div class="project-details relative z-20 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-2xl font-bold text-white">Virtual Museum</h3>
-              <div class="flex gap-4">
-                <a href="https://github.com/ayoubachak/museum-babylon" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-                <a href="https://ayoubachak.github.io/museum-babylon/" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            
-            <!-- Progress Bar -->
-            <div class="mb-4">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-sm font-semibold text-purple-300">Completion</span>
-                <span class="text-sm font-bold text-purple-300">100%</span>
-              </div>
-              <div class="w-full bg-neutral-800 rounded-full h-2.5">
-                <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-2.5 rounded-full" style="width: 100%"></div>
-              </div>
-            </div>
-            
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">JavaScript</span>
-              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Babylon.js</span>
-              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">3D</span>
-            </div>
-            <p class="text-white/80 text-base">A first-person immersive platform using JavaScript and Babylon.js. Explore a virtual museum, interact with visitors, and discover interactive exhibits.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
