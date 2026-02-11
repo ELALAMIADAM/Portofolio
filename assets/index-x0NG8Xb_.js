@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))n(o);new MutationObserver(o=>{for(const s of o)if(s.type==="childList")for(const l of s.addedNodes)l.tagName==="LINK"&&l.rel==="modulepreload"&&n(l)}).observe(document,{childList:!0,subtree:!0});function t(o){const s={};return o.integrity&&(s.integrity=o.integrity),o.referrerPolicy&&(s.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?s.credentials="include":o.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function n(o){if(o.ep)return;o.ep=!0;const s=t(o);fetch(o.href,s)}})();function Header(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".mobile-menu-button"),a=document.querySelector(".mobile-menu"),t=document.querySelectorAll(".mobile-menu a");e&&a&&(e.addEventListener("click",()=>{a.classList.toggle("hidden"),e.classList.toggle("active")}),t.forEach(l=>{l.addEventListener("click",()=>{a.classList.add("hidden"),e.classList.remove("active")})}));const n=document.querySelectorAll("section[id]"),o=document.querySelectorAll(".nav-link");function s(){const l=window.pageYOffset;n.forEach(p=>{const d=p.offsetHeight,b=p.offsetTop-150,u=p.getAttribute("id");l>b&&l<=b+d&&o.forEach(m=>{m.classList.remove("active"),m.getAttribute("href").substring(1)===u&&m.classList.add("active")})})}window.addEventListener("scroll",s),s()}),`
+(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const o of document.querySelectorAll('link[rel="modulepreload"]'))l(o);new MutationObserver(o=>{for(const s of o)if(s.type==="childList")for(const n of s.addedNodes)n.tagName==="LINK"&&n.rel==="modulepreload"&&l(n)}).observe(document,{childList:!0,subtree:!0});function t(o){const s={};return o.integrity&&(s.integrity=o.integrity),o.referrerPolicy&&(s.referrerPolicy=o.referrerPolicy),o.crossOrigin==="use-credentials"?s.credentials="include":o.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function l(o){if(o.ep)return;o.ep=!0;const s=t(o);fetch(o.href,s)}})();function Header(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){const e=document.querySelector(".mobile-menu-button"),a=document.querySelector(".mobile-menu"),t=document.querySelectorAll(".mobile-menu a");e&&a&&(e.addEventListener("click",()=>{a.classList.toggle("hidden"),e.classList.toggle("active")}),t.forEach(n=>{n.addEventListener("click",()=>{a.classList.add("hidden"),e.classList.remove("active")})}));const l=document.querySelectorAll("section[id]"),o=document.querySelectorAll(".nav-link");function s(){const n=window.pageYOffset;l.forEach(p=>{const c=p.offsetHeight,b=p.offsetTop-150,m=p.getAttribute("id");n>b&&n<=b+c&&o.forEach(u=>{u.classList.remove("active"),u.getAttribute("href").substring(1)===m&&u.classList.add("active")})})}window.addEventListener("scroll",s),s()}),`
   <!-- Left-aligned contact info bar - Hidden on mobile -->
   <div class="fixed left-2 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col items-center gap-4 bg-black/40 backdrop-blur-sm rounded-lg p-3 shadow-lg border border-gray-800">
     <a href="mailto:adamelalami27@gmail.com" target="_blank" rel="noopener" class="group" aria-label="Email">
@@ -155,7 +155,7 @@
       transition: transform 0.3s ease;
     }
   </style>
-  `}function HeroSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function e(a,t){let n=0;const o=Math.ceil(t/1e4),s=()=>{n+=o,n>=t?a.textContent=t+(t===365?"":"+"):(a.textContent=n,requestAnimationFrame(s))};s()}document.querySelectorAll(".stat-number").forEach(a=>{const t=parseInt(a.getAttribute("data-target"),20);e(a,t)})}),`
+  `}function HeroSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function e(a,t){let l=0;const o=Math.ceil(t/1e4),s=()=>{l+=o,l>=t?a.textContent=t+(t===365?"":"+"):(a.textContent=l,requestAnimationFrame(s))};s()}document.querySelectorAll(".stat-number").forEach(a=>{const t=parseInt(a.getAttribute("data-target"),20);e(a,t)})}),`
   
   <section id="home" class="rockstar-section bg-black py-16 ">
     <div class="section-content max-w-5xl mx-auto mt-16 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
@@ -250,7 +250,7 @@
       </div>
     </div>
   </section>
-  `}function EducationSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function e(){const a=document.getElementById("education");if(!a)return;const t={glitchColors:["#ff6b35","#ffd93d","#ff8500"],glitchSpeed:80,fontSize:16,charWidth:10,charHeight:20},n=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","!","@","#","$","&","*","(",")","-","_","+","=","/","[","]","{","}",";",":","<",">",",","0","1","2","3","4","5","6","7","8","9"],o=document.createElement("div");o.style.cssText=`
+  `}function EducationSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){function e(){const a=document.getElementById("education");if(!a)return;const t={glitchColors:["#ff6b35","#ffd93d","#ff8500"],glitchSpeed:80,fontSize:16,charWidth:10,charHeight:20},l=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","!","@","#","$","&","*","(",")","-","_","+","=","/","[","]","{","}",";",":","<",">",",","0","1","2","3","4","5","6","7","8","9"],o=document.createElement("div");o.style.cssText=`
           position: absolute;
           top: 0;
           left: 0;
@@ -264,7 +264,7 @@
           display: block;
           width: 100%;
           height: 100%;
-        `;const l=document.createElement("div");l.style.cssText=`
+        `;const n=document.createElement("div");n.style.cssText=`
           position: absolute;
           top: 0;
           left: 0;
@@ -272,7 +272,7 @@
           height: 100%;
           pointer-events: none;
           background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.9) 100%);
-        `,o.appendChild(s),o.appendChild(l),a.style.position="relative",a.insertBefore(o,a.firstChild);const p=s.getContext("2d");let d=[],b={columns:0},u,m=Date.now();function S(){return n[Math.floor(Math.random()*n.length)]}function A(){return t.glitchColors[Math.floor(Math.random()*t.glitchColors.length)]}function M(r){const i=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;r=r.replace(i,(h,E,T,P)=>E+E+T+T+P+P);const c=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(r);return c?{r:parseInt(c[1],16),g:parseInt(c[2],16),b:parseInt(c[3],16)}:null}function I(r,i,c){const h={r:Math.round(r.r+(i.r-r.r)*c),g:Math.round(r.g+(i.g-r.g)*c),b:Math.round(r.b+(i.b-r.b)*c)};return`rgb(${h.r}, ${h.g}, ${h.b})`}function y(r,i){const c=Math.ceil(r/t.charWidth),h=Math.ceil(i/t.charHeight);return{columns:c,rows:h}}function j(r,i){b={columns:r,rows:i};const c=r*i;d=Array.from({length:c},()=>({char:S(),color:A(),targetColor:A(),colorProgress:1}))}function x(){const r=a.getBoundingClientRect(),i=window.devicePixelRatio||1;s.width=r.width*i,s.height=r.height*i,s.style.width=`${r.width}px`,s.style.height=`${r.height}px`,p.setTransform(i,0,0,i,0,0);const{columns:c,rows:h}=y(r.width,r.height);j(c,h),v()}function v(){if(!p||d.length===0)return;const r=a.getBoundingClientRect();p.clearRect(0,0,r.width,r.height),p.font=`${t.fontSize}px monospace`,p.textBaseline="top",d.forEach((i,c)=>{const h=c%b.columns*t.charWidth,E=Math.floor(c/b.columns)*t.charHeight;p.fillStyle=i.color,p.fillText(i.char,h,E)})}function k(){if(!d||d.length===0)return;const r=Math.max(1,Math.floor(d.length*.05));for(let i=0;i<r;i++){const c=Math.floor(Math.random()*d.length);d[c]&&(d[c].char=S(),d[c].targetColor=A(),d[c].colorProgress=0)}}function L(){let r=!1;d.forEach(i=>{if(i.colorProgress<1){i.colorProgress+=.05,i.colorProgress>1&&(i.colorProgress=1);const c=M(i.color),h=M(i.targetColor);c&&h&&(i.color=I(c,h,i.colorProgress),r=!0)}}),r&&v()}function f(){const r=Date.now();r-m>=t.glitchSpeed&&(k(),v(),m=r),L(),u=requestAnimationFrame(f)}x(),f();let w;function g(){clearTimeout(w),w=setTimeout(()=>{cancelAnimationFrame(u),x(),f()},100)}window.addEventListener("resize",g),window.addEventListener("beforeunload",()=>{cancelAnimationFrame(u),window.removeEventListener("resize",g)})}e()}),`
+        `,o.appendChild(s),o.appendChild(n),a.style.position="relative",a.insertBefore(o,a.firstChild);const p=s.getContext("2d");let c=[],b={columns:0},m,u=Date.now();function S(){return l[Math.floor(Math.random()*l.length)]}function A(){return t.glitchColors[Math.floor(Math.random()*t.glitchColors.length)]}function M(r){const i=/^#?([a-f\d])([a-f\d])([a-f\d])$/i;r=r.replace(i,(h,E,I,T)=>E+E+I+I+T+T);const d=/^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(r);return d?{r:parseInt(d[1],16),g:parseInt(d[2],16),b:parseInt(d[3],16)}:null}function P(r,i,d){const h={r:Math.round(r.r+(i.r-r.r)*d),g:Math.round(r.g+(i.g-r.g)*d),b:Math.round(r.b+(i.b-r.b)*d)};return`rgb(${h.r}, ${h.g}, ${h.b})`}function y(r,i){const d=Math.ceil(r/t.charWidth),h=Math.ceil(i/t.charHeight);return{columns:d,rows:h}}function L(r,i){b={columns:r,rows:i};const d=r*i;c=Array.from({length:d},()=>({char:S(),color:A(),targetColor:A(),colorProgress:1}))}function x(){const r=a.getBoundingClientRect(),i=window.devicePixelRatio||1;s.width=r.width*i,s.height=r.height*i,s.style.width=`${r.width}px`,s.style.height=`${r.height}px`,p.setTransform(i,0,0,i,0,0);const{columns:d,rows:h}=y(r.width,r.height);L(d,h),v()}function v(){if(!p||c.length===0)return;const r=a.getBoundingClientRect();p.clearRect(0,0,r.width,r.height),p.font=`${t.fontSize}px monospace`,p.textBaseline="top",c.forEach((i,d)=>{const h=d%b.columns*t.charWidth,E=Math.floor(d/b.columns)*t.charHeight;p.fillStyle=i.color,p.fillText(i.char,h,E)})}function k(){if(!c||c.length===0)return;const r=Math.max(1,Math.floor(c.length*.05));for(let i=0;i<r;i++){const d=Math.floor(Math.random()*c.length);c[d]&&(c[d].char=S(),c[d].targetColor=A(),c[d].colorProgress=0)}}function j(){let r=!1;c.forEach(i=>{if(i.colorProgress<1){i.colorProgress+=.05,i.colorProgress>1&&(i.colorProgress=1);const d=M(i.color),h=M(i.targetColor);d&&h&&(i.color=P(d,h,i.colorProgress),r=!0)}}),r&&v()}function f(){const r=Date.now();r-u>=t.glitchSpeed&&(k(),v(),u=r),j(),m=requestAnimationFrame(f)}x(),f();let w;function g(){clearTimeout(w),w=setTimeout(()=>{cancelAnimationFrame(m),x(),f()},100)}window.addEventListener("resize",g),window.addEventListener("beforeunload",()=>{cancelAnimationFrame(m),window.removeEventListener("resize",g)})}e()}),`
   <section id="education" class="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-b from-black via-[#090909] to-[#1a1a1a] py-16 overflow-hidden">
     <div class="max-w-4xl mx-auto px-6 relative z-10">
       <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent text-center">Education</h2>
@@ -310,7 +310,7 @@
       </div>
     </div>
   </section>
-  `}function SkillsSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){var e=document.querySelectorAll("#skills-filter-row button"),a=document.querySelectorAll(".skill-pill");e.forEach(function(t){t.addEventListener("click",function(){var n=t.getAttribute("data-skilltype");e.forEach(o=>{o.classList.remove("bg-gradient-to-r","from-red-500","via-orange-500","to-yellow-500","text-white","font-bold","ring-2","ring-orange-400","scale-105")}),t.classList.add("bg-gradient-to-r","from-red-500","via-orange-500","to-yellow-500","text-white","font-bold","ring-2","ring-orange-400","scale-105"),a.forEach(function(o){n==="all"||o.getAttribute("data-skilltype")===n?o.style.display="":o.style.display="none"})})})}),`
+  `}function SkillsSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){var e=document.querySelectorAll("#skills-filter-row button"),a=document.querySelectorAll(".skill-pill");e.forEach(function(t){t.addEventListener("click",function(){var l=t.getAttribute("data-skilltype");e.forEach(o=>{o.classList.remove("bg-gradient-to-r","from-red-500","via-orange-500","to-yellow-500","text-white","font-bold","ring-2","ring-orange-400","scale-105")}),t.classList.add("bg-gradient-to-r","from-red-500","via-orange-500","to-yellow-500","text-white","font-bold","ring-2","ring-orange-400","scale-105"),a.forEach(function(o){l==="all"||o.getAttribute("data-skilltype")===l?o.style.display="":o.style.display="none"})})})}),`
   <section id="skills" class="rockstar-section bg-rockstar">
     <div class="section-content relative">
       <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent text-center">Skills</h2>
@@ -359,7 +359,7 @@
       <p class="text-center text-white/70 mt-6">...and many more!</p>
     </div>
   </section>
-  `}function ExperienceSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("experience-carousel-track"),a=document.querySelectorAll(".experience-arkeabs-desc"),t=!1;if(e&&a.length){let y=function(x){a.forEach(function(g,r){r===x?g.classList.remove("hidden"):g.classList.add("hidden")});var v=document.getElementById("exp-logo-0"),k=document.getElementById("exp-logo-1"),L=document.getElementById("exp-logo-2"),f=document.getElementById("exp-logo-3"),w=document.getElementById("exp-logo-5");v&&k&&L&&f&&w&&([v,k,L,f,w].forEach(function(g){g.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","text-white","font-bold","scale-105"),g.classList.add("border-neutral-700","bg-neutral-900/70","text-white")}),x===0?(v.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):x===1?(k.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):x===2&&(L.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")))},j=function(){t||(s=e.offsetWidth,o=(o+1)%n.length,e.style.transform=`translateX(-${o*s}px)`,y(o))};var S=y,A=j,n=e.children,o=0,s=e.offsetWidth;setInterval(j,2e3),e.addEventListener("mouseenter",function(){t=!0}),e.addEventListener("mouseleave",function(){t=!1}),window.addEventListener("resize",function(){s=e.offsetWidth,e.style.transform=`translateX(-${o*s}px)`}),y(0)}var l=document.getElementById("freeray-carousel-track"),p=document.querySelectorAll(".experience-freeray-desc"),d=!1;if(l&&p.length){let y=function(x){p.forEach(function(g,r){r===x?g.classList.remove("hidden"):g.classList.add("hidden")});var v=document.getElementById("freeray-logo-0"),k=document.getElementById("freeray-logo-1"),L=document.getElementById("freeray-logo-2"),f=document.getElementById("freeray-logo-3"),w=document.getElementById("freeray-logo-4");v&&k&&L&&f&&w&&([v,k,L,f,w].forEach(function(g){g.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),g.classList.add("border-neutral-700","bg-neutral-900/80","text-white")}),x===0?(w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),v.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),k.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):x===1?L.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"):x===2&&f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"))},j=function(){d||(m=l.offsetWidth,u=(u+1)%b.length,l.style.transform=`translateX(-${u*m}px)`,y(u))};var M=y,I=j,b=l.children,u=0,m=l.offsetWidth;setInterval(j,2e3),l.addEventListener("mouseenter",function(){d=!0}),l.addEventListener("mouseleave",function(){d=!1}),window.addEventListener("resize",function(){m=l.offsetWidth,l.style.transform=`translateX(-${u*m}px)`}),y(0)}}),`
+  `}function ExperienceSection(){return typeof window<"u"&&document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("experience-carousel-track"),a=document.querySelectorAll(".experience-arkeabs-desc"),t=!1;if(e&&a.length){let y=function(x){a.forEach(function(g,r){r===x?g.classList.remove("hidden"):g.classList.add("hidden")});var v=document.getElementById("exp-logo-0"),k=document.getElementById("exp-logo-1"),j=document.getElementById("exp-logo-2"),f=document.getElementById("exp-logo-3"),w=document.getElementById("exp-logo-5");v&&k&&j&&f&&w&&([v,k,j,f,w].forEach(function(g){g.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","text-white","font-bold","scale-105"),g.classList.add("border-neutral-700","bg-neutral-900/70","text-white")}),x===0?(v.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):x===1?(k.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):x===2&&(j.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")))},L=function(){t||(s=e.offsetWidth,o=(o+1)%l.length,e.style.transform=`translateX(-${o*s}px)`,y(o))};var S=y,A=L,l=e.children,o=0,s=e.offsetWidth;setInterval(L,2e3),e.addEventListener("mouseenter",function(){t=!0}),e.addEventListener("mouseleave",function(){t=!1}),window.addEventListener("resize",function(){s=e.offsetWidth,e.style.transform=`translateX(-${o*s}px)`}),y(0)}var n=document.getElementById("freeray-carousel-track"),p=document.querySelectorAll(".experience-freeray-desc"),c=!1;if(n&&p.length){let y=function(x){p.forEach(function(g,r){r===x?g.classList.remove("hidden"):g.classList.add("hidden")});var v=document.getElementById("freeray-logo-0"),k=document.getElementById("freeray-logo-1"),j=document.getElementById("freeray-logo-2"),f=document.getElementById("freeray-logo-3"),w=document.getElementById("freeray-logo-4");v&&k&&j&&f&&w&&([v,k,j,f,w].forEach(function(g){g.classList.remove("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),g.classList.add("border-neutral-700","bg-neutral-900/80","text-white")}),x===0?(w.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),v.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"),k.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105")):x===1?j.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"):x===2&&f.classList.add("ring-2","ring-red-400","bg-gradient-to-r","from-orange-700","to-yellow-500","font-bold","scale-105"))},L=function(){c||(u=n.offsetWidth,m=(m+1)%b.length,n.style.transform=`translateX(-${m*u}px)`,y(m))};var M=y,P=L,b=n.children,m=0,u=n.offsetWidth;setInterval(L,2e3),n.addEventListener("mouseenter",function(){c=!0}),n.addEventListener("mouseleave",function(){c=!1}),window.addEventListener("resize",function(){u=n.offsetWidth,n.style.transform=`translateX(-${m*u}px)`}),y(0)}}),`
   <section id="experience" class="rockstar-section bg-rockstar bg-cover bg-center bg-no-repeat">
     <div class="section-content">
       <h2 class="text-2xl md:text-4xl font-bold mb-12 bg-gradient-to-r  from-red-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent text-center mt-34">Professional  Experience</h2>
@@ -581,6 +581,91 @@
     <h2 class="text-2xl md:text-4xl font-bold mt-20 pt-12 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-400 bg-clip-text text-transparent text-center">Projects</h2>
       
       <div class="grid md:grid-cols-2 gap-8 mt-8 mb-20"> 
+        <!-- Sudoku Battle Game -->
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-red-500">
+          <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
+          <div class="project-preview absolute inset-0 z-10 transition-opacity duration-500 group-hover:opacity-0">
+            <img src="/images/soduko_battles.jpeg" alt="Sudoku Battle Game Preview" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+              <div class="text-center">
+                <svg class="w-16 h-16 mx-auto mb-4 text-red-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <p class="text-white text-xl font-bold">Hover to see details</p>
+                <p class="text-red-300 text-sm mt-2">Click links to play live!</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project Details (hidden by default, shown on hover) -->
+          <div class="project-details relative z-20 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Sudoku Battle Game</h3>
+              <div class="flex gap-4">
+                <a href="https://github.com/ELALAMIADAM/Soduku_Angular" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://elalamiadam.github.io/Soduku_Angular/" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-red-300">Completion</span>
+                <span class="text-sm font-bold text-red-300">90%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-red-500 to-orange-500 h-2.5 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">Angular 19</span>
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">TypeScript</span>
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">Angular Material</span>
+              <span class="px-3 py-1 bg-red-900/50 text-red-200 rounded-full text-sm">RxJS</span>
+            </div>
+            <p class="text-white/80 text-base">An immersive Sudoku puzzle game with epic battle themes! Fight enemies by solving Sudoku puzzles. Features Soldiers vs Zombies and Samurais vs Ninjas themes, three difficulty levels, lives system, hint system, notes mode, and dynamic battle scenes with sound effects and background music.</p>
+          </div>
+        </div>
+
+        <!-- Spring Boot Global Project -->
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-green-500">
+          <div class="project-details relative z-20 p-6 opacity-100">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Spring Boot Global Project</h3>
+              <a href="https://github.com/ELALAMIADAM/global-spring-boot-project" target="_blank" class="text-white/80 hover:text-white transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-green-300">Completion</span>
+                <span class="text-sm font-bold text-green-300">60%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-green-500 to-emerald-500 h-2.5 rounded-full" style="width: 60%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">Spring Boot</span>
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">Java 21</span>
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">PostgreSQL</span>
+              <span class="px-3 py-1 bg-green-900/50 text-green-200 rounded-full text-sm">Spring Security</span>
+            </div>
+            <p class="text-white/80 text-base opacity-0 group-hover:opacity-100 transition-opacity duration-500">A comprehensive Spring Boot application implementing complete user authentication and management system. Features Spring Security with BCrypt encryption, Spring Data JPA with PostgreSQL, RESTful API design, Swagger documentation, global exception handling, and Docker containerization.</p>
+          </div>
+        </div>
+
         <!-- Tetris with AI -->
         <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-cyan-500">
           <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
@@ -635,6 +720,60 @@
           </div>
         </div>
 
+        <!-- Virtual Museum -->
+        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-purple-500">
+          <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
+          <div class="project-preview absolute inset-0 z-10 transition-opacity duration-500 group-hover:opacity-0">
+            <img src="/images/musuem.png" alt="Virtual Museum Preview" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
+              <div class="text-center">
+                <svg class="w-16 h-16 mx-auto mb-4 text-purple-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <p class="text-white text-xl font-bold">Hover to see details</p>
+                <p class="text-purple-300 text-sm mt-2">Click links to explore live!</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project Details (hidden by default, shown on hover) -->
+          <div class="project-details relative z-20 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-2xl font-bold text-white">Virtual Museum</h3>
+              <div class="flex gap-4">
+                <a href="https://github.com/ayoubachak/museum-babylon" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://ayoubachak.github.io/museum-babylon/" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="mb-4">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-sm font-semibold text-purple-300">Completion</span>
+                <span class="text-sm font-bold text-purple-300">100%</span>
+              </div>
+              <div class="w-full bg-neutral-800 rounded-full h-2.5">
+                <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-2.5 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">JavaScript</span>
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Babylon.js</span>
+              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">3D</span>
+            </div>
+            <p class="text-white/80 text-base">A first-person immersive platform using JavaScript and Babylon.js. Explore a virtual museum, interact with visitors, and discover interactive exhibits.</p>
+          </div>
+        </div>  
+
+
         <!-- Blood Donation App -->
         <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-yellow-500">
           <div class="project-details relative z-20 p-6 opacity-100">
@@ -649,10 +788,10 @@
             <div class="mb-4">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-semibold text-yellow-300">Completion</span>
-                <span class="text-sm font-bold text-yellow-300">95%</span>
+                <span class="text-sm font-bold text-yellow-300">40%</span>
               </div>
               <div class="w-full bg-neutral-800 rounded-full h-2.5">
-                <div class="bg-gradient-to-r from-yellow-500 to-orange-500 h-2.5 rounded-full" style="width: 95%"></div>
+                <div class="bg-gradient-to-r from-yellow-500 to-orange-500 h-2.5 rounded-full" style="width: 40%"></div>
               </div>
             </div>
             
@@ -801,10 +940,10 @@
             <div class="mb-4">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-semibold text-blue-300">Completion</span>
-                <span class="text-sm font-bold text-blue-300">75%</span>
+                <span class="text-sm font-bold text-blue-300">40%</span>
               </div>
               <div class="w-full bg-neutral-800 rounded-full h-2.5">
-                <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2.5 rounded-full" style="width: 75%"></div>
+                <div class="bg-gradient-to-r from-blue-500 to-cyan-500 h-2.5 rounded-full" style="width: 40%"></div>
               </div>
             </div>
             
@@ -832,10 +971,10 @@
             <div class="mb-4">
               <div class="flex justify-between items-center mb-2">
                 <span class="text-sm font-semibold text-gray-300">Completion</span>
-                <span class="text-sm font-bold text-gray-300">100%</span>
+                <span class="text-sm font-bold text-gray-300">80%</span>
               </div>
               <div class="w-full bg-neutral-800 rounded-full h-2.5">
-                <div class="bg-gradient-to-r from-gray-500 to-gray-700 h-2.5 rounded-full" style="width: 100%"></div>
+                <div class="bg-gradient-to-r from-gray-500 to-gray-700 h-2.5 rounded-full" style="width: 80%"></div>
               </div>
             </div>
             
@@ -848,58 +987,6 @@
           </div>
         </div>
         
-        <!-- Virtual Museum -->
-        <div class="project-card appear-on-scroll group relative bg-neutral-900/90 border border-neutral-700 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] hover:border-purple-500">
-          <!-- Project Preview Image (shown by default, hidden on hover for live projects) -->
-          <div class="project-preview absolute inset-0 z-10 transition-opacity duration-500 group-hover:opacity-0">
-            <img src="/images/musuem.png" alt="Virtual Museum Preview" class="w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/60 flex items-center justify-center">
-              <div class="text-center">
-                <svg class="w-16 h-16 mx-auto mb-4 text-purple-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
-                <p class="text-white text-xl font-bold">Hover to see details</p>
-                <p class="text-purple-300 text-sm mt-2">Click links to explore live!</p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Project Details (hidden by default, shown on hover) -->
-          <div class="project-details relative z-20 p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-2xl font-bold text-white">Virtual Museum</h3>
-              <div class="flex gap-4">
-                <a href="https://github.com/ayoubachak/museum-babylon" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-                <a href="https://ayoubachak.github.io/museum-babylon/" target="_blank" class="text-white/80 hover:text-white transition-colors z-30">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            
-            <!-- Progress Bar -->
-            <div class="mb-4">
-              <div class="flex justify-between items-center mb-2">
-                <span class="text-sm font-semibold text-purple-300">Completion</span>
-                <span class="text-sm font-bold text-purple-300">100%</span>
-              </div>
-              <div class="w-full bg-neutral-800 rounded-full h-2.5">
-                <div class="bg-gradient-to-r from-purple-500 to-indigo-500 h-2.5 rounded-full" style="width: 100%"></div>
-              </div>
-            </div>
-            
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">JavaScript</span>
-              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">Babylon.js</span>
-              <span class="px-3 py-1 bg-purple-900/50 text-purple-200 rounded-full text-sm">3D</span>
-            </div>
-            <p class="text-white/80 text-base">A first-person immersive platform using JavaScript and Babylon.js. Explore a virtual museum, interact with visitors, and discover interactive exhibits.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -926,23 +1013,23 @@
       z-index: 40;
     }
   </style>
-  `}class EmailJSResponseStatus{constructor(a=0,t="Network Error"){this.status=a,this.text=t}}const createWebStorage=()=>{if(!(typeof localStorage>"u"))return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,a)=>Promise.resolve(localStorage.setItem(e,a)),remove:e=>Promise.resolve(localStorage.removeItem(e))}},store={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:createWebStorage()},buildOptions=e=>e?typeof e=="string"?{publicKey:e}:e.toString()==="[object Object]"?e:{}:{},init=(e,a="https://api.emailjs.com")=>{if(!e)return;const t=buildOptions(e);store.publicKey=t.publicKey,store.blockHeadless=t.blockHeadless,store.storageProvider=t.storageProvider,store.blockList=t.blockList,store.limitRate=t.limitRate,store.origin=t.origin||a},sendPost=async(e,a,t={})=>{const n=await fetch(store.origin+e,{method:"POST",headers:t,body:a}),o=await n.text(),s=new EmailJSResponseStatus(n.status,o);if(n.ok)return s;throw s},validateParams=(e,a,t)=>{if(!e||typeof e!="string")throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!a||typeof a!="string")throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!t||typeof t!="string")throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},validateTemplateParams=e=>{if(e&&e.toString()!=="[object Object]")throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"},isHeadless=e=>e.webdriver||!e.languages||e.languages.length===0,headlessError=()=>new EmailJSResponseStatus(451,"Unavailable For Headless Browser"),validateBlockListParams=(e,a)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if(typeof a!="string")throw"The BlockList watchVariable has to be a string"},isBlockListDisabled=e=>{var a;return!((a=e.list)!=null&&a.length)||!e.watchVariable},getValue=(e,a)=>e instanceof FormData?e.get(a):e[a],isBlockedValueInParams=(e,a)=>{if(isBlockListDisabled(e))return!1;validateBlockListParams(e.list,e.watchVariable);const t=getValue(a,e.watchVariable);return typeof t!="string"?!1:e.list.includes(t)},blockedEmailError=()=>new EmailJSResponseStatus(403,"Forbidden"),validateLimitRateParams=(e,a)=>{if(typeof e!="number"||e<0)throw"The LimitRate throttle has to be a positive number";if(a&&typeof a!="string")throw"The LimitRate ID has to be a non-empty string"},getLeftTime=async(e,a,t)=>{const n=Number(await t.get(e)||0);return a-Date.now()+n},isLimitRateHit=async(e,a,t)=>{if(!a.throttle||!t)return!1;validateLimitRateParams(a.throttle,a.id);const n=a.id||e;return await getLeftTime(n,a.throttle,t)>0?!0:(await t.set(n,Date.now().toString()),!1)},limitRateError=()=>new EmailJSResponseStatus(429,"Too Many Requests"),send=async(e,a,t,n)=>{const o=buildOptions(n),s=o.publicKey||store.publicKey,l=o.blockHeadless||store.blockHeadless,p=o.storageProvider||store.storageProvider,d={...store.blockList,...o.blockList},b={...store.limitRate,...o.limitRate};return l&&isHeadless(navigator)?Promise.reject(headlessError()):(validateParams(s,e,a),validateTemplateParams(t),t&&isBlockedValueInParams(d,t)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,b,p)?Promise.reject(limitRateError()):sendPost("/api/v1.0/email/send",JSON.stringify({lib_version:"4.4.1",user_id:s,service_id:e,template_id:a,template_params:t}),{"Content-type":"application/json"}))},validateForm=e=>{if(!e||e.nodeName!=="FORM")throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"},findHTMLForm=e=>typeof e=="string"?document.querySelector(e):e,sendForm=async(e,a,t,n)=>{const o=buildOptions(n),s=o.publicKey||store.publicKey,l=o.blockHeadless||store.blockHeadless,p=store.storageProvider||o.storageProvider,d={...store.blockList,...o.blockList},b={...store.limitRate,...o.limitRate};if(l&&isHeadless(navigator))return Promise.reject(headlessError());const u=findHTMLForm(t);validateParams(s,e,a),validateForm(u);const m=new FormData(u);return isBlockedValueInParams(d,m)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,b,p)?Promise.reject(limitRateError()):(m.append("lib_version","4.4.1"),m.append("service_id",e),m.append("template_id",a),m.append("user_id",s),sendPost("/api/v1.0/email/send-form",m))},emailjs={init,send,sendForm,EmailJSResponseStatus};function ContactSection(){return emailjs.init(void 0),window.handleSubmit=function(e){e.preventDefault();const a=e.target,t=a.querySelector('button[type="submit"]'),n=t.textContent;t.innerHTML=`
+  `}class EmailJSResponseStatus{constructor(a=0,t="Network Error"){this.status=a,this.text=t}}const createWebStorage=()=>{if(!(typeof localStorage>"u"))return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,a)=>Promise.resolve(localStorage.setItem(e,a)),remove:e=>Promise.resolve(localStorage.removeItem(e))}},store={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:createWebStorage()},buildOptions=e=>e?typeof e=="string"?{publicKey:e}:e.toString()==="[object Object]"?e:{}:{},init=(e,a="https://api.emailjs.com")=>{if(!e)return;const t=buildOptions(e);store.publicKey=t.publicKey,store.blockHeadless=t.blockHeadless,store.storageProvider=t.storageProvider,store.blockList=t.blockList,store.limitRate=t.limitRate,store.origin=t.origin||a},sendPost=async(e,a,t={})=>{const l=await fetch(store.origin+e,{method:"POST",headers:t,body:a}),o=await l.text(),s=new EmailJSResponseStatus(l.status,o);if(l.ok)return s;throw s},validateParams=(e,a,t)=>{if(!e||typeof e!="string")throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!a||typeof a!="string")throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!t||typeof t!="string")throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},validateTemplateParams=e=>{if(e&&e.toString()!=="[object Object]")throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"},isHeadless=e=>e.webdriver||!e.languages||e.languages.length===0,headlessError=()=>new EmailJSResponseStatus(451,"Unavailable For Headless Browser"),validateBlockListParams=(e,a)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if(typeof a!="string")throw"The BlockList watchVariable has to be a string"},isBlockListDisabled=e=>{var a;return!((a=e.list)!=null&&a.length)||!e.watchVariable},getValue=(e,a)=>e instanceof FormData?e.get(a):e[a],isBlockedValueInParams=(e,a)=>{if(isBlockListDisabled(e))return!1;validateBlockListParams(e.list,e.watchVariable);const t=getValue(a,e.watchVariable);return typeof t!="string"?!1:e.list.includes(t)},blockedEmailError=()=>new EmailJSResponseStatus(403,"Forbidden"),validateLimitRateParams=(e,a)=>{if(typeof e!="number"||e<0)throw"The LimitRate throttle has to be a positive number";if(a&&typeof a!="string")throw"The LimitRate ID has to be a non-empty string"},getLeftTime=async(e,a,t)=>{const l=Number(await t.get(e)||0);return a-Date.now()+l},isLimitRateHit=async(e,a,t)=>{if(!a.throttle||!t)return!1;validateLimitRateParams(a.throttle,a.id);const l=a.id||e;return await getLeftTime(l,a.throttle,t)>0?!0:(await t.set(l,Date.now().toString()),!1)},limitRateError=()=>new EmailJSResponseStatus(429,"Too Many Requests"),send=async(e,a,t,l)=>{const o=buildOptions(l),s=o.publicKey||store.publicKey,n=o.blockHeadless||store.blockHeadless,p=o.storageProvider||store.storageProvider,c={...store.blockList,...o.blockList},b={...store.limitRate,...o.limitRate};return n&&isHeadless(navigator)?Promise.reject(headlessError()):(validateParams(s,e,a),validateTemplateParams(t),t&&isBlockedValueInParams(c,t)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,b,p)?Promise.reject(limitRateError()):sendPost("/api/v1.0/email/send",JSON.stringify({lib_version:"4.4.1",user_id:s,service_id:e,template_id:a,template_params:t}),{"Content-type":"application/json"}))},validateForm=e=>{if(!e||e.nodeName!=="FORM")throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"},findHTMLForm=e=>typeof e=="string"?document.querySelector(e):e,sendForm=async(e,a,t,l)=>{const o=buildOptions(l),s=o.publicKey||store.publicKey,n=o.blockHeadless||store.blockHeadless,p=store.storageProvider||o.storageProvider,c={...store.blockList,...o.blockList},b={...store.limitRate,...o.limitRate};if(n&&isHeadless(navigator))return Promise.reject(headlessError());const m=findHTMLForm(t);validateParams(s,e,a),validateForm(m);const u=new FormData(m);return isBlockedValueInParams(c,u)?Promise.reject(blockedEmailError()):await isLimitRateHit(location.pathname,b,p)?Promise.reject(limitRateError()):(u.append("lib_version","4.4.1"),u.append("service_id",e),u.append("template_id",a),u.append("user_id",s),sendPost("/api/v1.0/email/send-form",u))},emailjs={init,send,sendForm,EmailJSResponseStatus};function ContactSection(){return emailjs.init("EgxOaVTRVLeDEABrb"),window.handleSubmit=function(e){e.preventDefault();const a=e.target,t=a.querySelector('button[type="submit"]'),l=t.textContent;t.innerHTML=`
       <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
       </svg>
       Sending...
-    `,t.disabled=!0,t.classList.add("opacity-75");const o={name:a.name.value,email:a.email.value,message:a.message.value};emailjs.send(void 0,void 0,o).then(()=>{t.innerHTML=`
+    `,t.disabled=!0,t.classList.add("opacity-75");const o={name:a.name.value,email:a.email.value,message:a.message.value};emailjs.send("service_t0r83jq","template_fcl2ipa",o).then(()=>{t.innerHTML=`
         <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
         </svg>
         Message Sent!
-      `,t.classList.remove("from-orange-500","to-yellow-400"),t.classList.add("bg-green-500"),a.reset();const s=document.createElement("div");s.className="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 translate-y-0 opacity-100",s.innerHTML="Your message has been sent successfully!",document.body.appendChild(s),setTimeout(()=>{s.classList.add("translate-y-2","opacity-0"),setTimeout(()=>s.remove(),500)},3e3),setTimeout(()=>{t.innerHTML=n,t.classList.remove("bg-green-500"),t.classList.add("from-orange-500","to-yellow-400"),t.disabled=!1,t.classList.remove("opacity-75")},3e3)}).catch(s=>{t.innerHTML=`
+      `,t.classList.remove("from-orange-500","to-yellow-400"),t.classList.add("bg-green-500"),a.reset();const s=document.createElement("div");s.className="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 translate-y-0 opacity-100",s.innerHTML="Your message has been sent successfully!",document.body.appendChild(s),setTimeout(()=>{s.classList.add("translate-y-2","opacity-0"),setTimeout(()=>s.remove(),500)},3e3),setTimeout(()=>{t.innerHTML=l,t.classList.remove("bg-green-500"),t.classList.add("from-orange-500","to-yellow-400"),t.disabled=!1,t.classList.remove("opacity-75")},3e3)}).catch(s=>{t.innerHTML=`
         <svg class="w-5 h-5 mr-2 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
         </svg>
         Error! Try Again
-      `,t.classList.remove("from-orange-500","to-yellow-400"),t.classList.add("bg-red-500");const l=document.createElement("div");l.className="fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 translate-y-0 opacity-100",l.innerHTML="Failed to send message. Please try again.",document.body.appendChild(l),setTimeout(()=>{l.classList.add("translate-y-2","opacity-0"),setTimeout(()=>l.remove(),500)},3e3),setTimeout(()=>{t.innerHTML=n,t.classList.remove("bg-red-500"),t.classList.add("from-orange-500","to-yellow-400"),t.disabled=!1,t.classList.remove("opacity-75")},3e3),console.error("Error sending email:",s)})},`
+      `,t.classList.remove("from-orange-500","to-yellow-400"),t.classList.add("bg-red-500");const n=document.createElement("div");n.className="fixed bottom-4 right-4 bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg transform transition-all duration-500 translate-y-0 opacity-100",n.innerHTML="Failed to send message. Please try again.",document.body.appendChild(n),setTimeout(()=>{n.classList.add("translate-y-2","opacity-0"),setTimeout(()=>n.remove(),500)},3e3),setTimeout(()=>{t.innerHTML=l,t.classList.remove("bg-red-500"),t.classList.add("from-orange-500","to-yellow-400"),t.disabled=!1,t.classList.remove("opacity-75")},3e3),console.error("Error sending email:",s)})},`
   <section id="contact" class="rockstar-section bg-rockstar ">
     <div class="section-content max-w-4xl mx-auto">
       <h2 class="text-4xl font-extrabold text-white mb-2 text-left mt-24">Contact <span class="text-gradient">me.</span></h2>
